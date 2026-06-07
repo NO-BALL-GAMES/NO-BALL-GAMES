@@ -1,0 +1,18 @@
+{
+  "name": "Charlie Buster - Grime Art",
+  "short_name": "Grime Art",
+  "description": "UK street artist Charlie Buster. Creator of Grime Art. Graffiti Kings London collective member.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#1a1a1a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
