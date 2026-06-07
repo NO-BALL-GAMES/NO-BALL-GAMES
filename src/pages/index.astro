@@ -1,0 +1,111 @@
+---
+import Layout from '../layouts/Layout.astro'; // optional - you can remove if you don't have layouts yet
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charlie Buster | NO BALL GAMES</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    
+    #hero-img {
+      filter: hue-rotate(0deg) saturate(1.8) contrast(1.1) brightness(1.05);
+      transition: filter 0.4s ease;
+      animation: idleMorph 8s infinite linear;
+      width: 100%;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 60px rgba(168, 85, 247, 0.5);
+    }
+    
+    @keyframes idleMorph {
+      0%   { filter: hue-rotate(0deg) saturate(1.8) contrast(1.1) brightness(1.05); }
+      25%  { filter: hue-rotate(90deg) saturate(2.0) contrast(1.2) brightness(1.1); }
+      50%  { filter: hue-rotate(180deg) saturate(1.6) contrast(1.0) brightness(0.95); }
+      75%  { filter: hue-rotate(270deg) saturate(2.2) contrast(1.15) brightness(1.05); }
+      100% { filter: hue-rotate(360deg) saturate(1.8) contrast(1.1) brightness(1.05); }
+    }
+    
+    .speaking #hero-img {
+      animation: speakingMorph 0.6s infinite linear;
+    }
+    
+    @keyframes speakingMorph {
+      0%   { filter: hue-rotate(0deg) saturate(2.8) contrast(1.4) brightness(1.25) drop-shadow(0 0 40px #a855f7); }
+      50%  { filter: hue-rotate(180deg) saturate(3.2) contrast(1.5) brightness(1.35) drop-shadow(0 0 55px #ec4899); }
+      100% { filter: hue-rotate(360deg) saturate(2.8) contrast(1.4) brightness(1.25) drop-shadow(0 0 40px #a855f7); }
+    }
+  </style>
+</head>
+<body class="bg-zinc-950 text-white overflow-hidden">
+  <div class="flex h-screen">
+    <!-- Hero / Avatar Section -->
+    <div class="flex-1 flex flex-col items-center justify-center bg-black relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-950/30 to-black"></div>
+      
+      <div id="avatar-container" class="relative z-10 w-full max-w-[520px] px-6">
+        <img 
+          id="hero-img" 
+          src="https://i.imgur.com/your-charlie-buster-image.jpg" 
+          alt="Charlie Buster"
+          class="mx-auto">
+        
+        <div class="absolute inset-0 rounded-[1.5rem] pointer-events-none" 
+             style="background: radial-gradient(circle at 50% 40%, rgba(168,85,247,0.4) 0%, transparent 70%);"></div>
+      </div>
+      
+      <div class="mt-8 text-center z-10">
+        <h1 class="text-6xl font-bold bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+          CHARLIE BUSTER
+        </h1>
+        <p class="text-zinc-400 mt-1 text-xl">NO BALL GAMES • Grime Art Archive</p>
+      </div>
+    </div>
+
+    <!-- Right Panel (Info + Teaser) -->
+    <div class="w-96 bg-zinc-900 flex flex-col border-l border-zinc-800">
+      <div class="p-6 border-b border-zinc-800">
+        <h2 class="text-2xl font-bold">Welcome to the Archive</h2>
+        <p class="text-zinc-400 mt-2">Grime art, street culture, and raw energy from Charlie Buster.</p>
+      </div>
+      
+      <div class="flex-1 p-6 overflow-y-auto space-y-6">
+        <div class="bg-zinc-800 rounded-3xl p-5">
+          <h3 class="font-medium mb-2">Latest Drop</h3>
+          <p class="text-zinc-400 text-sm">“NO BALL GAMES” series — now live in the research vault.</p>
+        </div>
+        
+        <div class="bg-zinc-800 rounded-3xl p-5">
+          <h3 class="font-medium mb-2">About Charlie Buster</h3>
+          <p class="text-zinc-400 text-sm">Pushing grime art boundaries since 2018. No rules. No ball games.</p>
+        </div>
+      </div>
+      
+      <div class="p-6 border-t border-zinc-800">
+        <a href="/research" 
+           class="block w-full text-center bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 py-4 rounded-2xl font-medium">
+          Enter the Vault →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Rainbow background + idle animation already in CSS
+    const container = document.getElementById('avatar-container');
+    
+    // Optional: click the avatar to trigger "speaking" glow
+    container.addEventListener('click', () => {
+      container.classList.add('speaking');
+      setTimeout(() => container.classList.remove('speaking'), 2500);
+    });
+  </script>
+</body>
+</html>
