@@ -5,18 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Charlie Buster | NO BALL GAMES</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-    
     body {
-      font-family: 'Bangers', system-ui, sans-serif;
+      font-family: 'Orbitron', system-ui, sans-serif;
       margin: 0;
       padding: 0;
       overflow: hidden;
-      height: 100vh;
     }
-    
     .hero-bg {
       animation: rainbowShift 12s linear infinite;
       background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
@@ -26,24 +22,19 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
     }
-    
     @keyframes rainbowShift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-    
     .title {
-      font-size: clamp(5rem, 15vw, 12rem);
-      font-weight: 400;
+      font-size: clamp(5rem, 14vw, 12rem);
+      font-weight: 900;
       letter-spacing: -0.08em;
-      line-height: 0.8;
       text-align: center;
       animation: textRainbow 8s linear infinite;
     }
-    
     @keyframes textRainbow {
       0% { filter: hue-rotate(0deg); }
       100% { filter: hue-rotate(360deg); }
@@ -51,19 +42,19 @@
   </style>
 </head>
 <body>
-  <div class="hero-bg">
-    <div class="text-center px-6">
-      <h1 class="title text-white">CHARLIE BUSTER</h1>
-      <p class="mt-4 text-3xl md:text-4xl font-medium tracking-widest text-white/90">NO BALL GAMES • Grime Art Archive</p>
-      
-      <div class="mt-20">
-        <h2 class="text-4xl font-medium">Welcome to the Archive</h2>
-        <p class="mt-6 text-xl text-white/80 max-w-xl mx-auto">Grime art, street culture, and raw energy from Charlie Buster.</p>
+  <div class="hero-bg text-white">
+    <div class="text-center px-6 max-w-5xl">
+      <h1 class="title">CHARLIE BUSTER</h1>
+      <p class="mt-4 text-3xl md:text-4xl font-medium tracking-[0.15em]">NO BALL GAMES • GRIME ART ARCHIVE</p>
+
+      <div class="mt-20 max-w-xl mx-auto">
+        <h2 class="text-4xl font-medium">WELCOME TO THE ARCHIVE</h2>
+        <p class="mt-6 text-xl text-white/90">Grime art, street culture, and raw energy from Charlie Buster.</p>
       </div>
 
       <div class="mt-16 flex flex-wrap justify-center gap-6">
-        <a href="/research" class="px-10 py-5 bg-white text-black rounded-3xl font-medium text-xl hover:scale-105 transition">Enter the Vault →</a>
-        <a href="/about" class="px-10 py-5 border-2 border-white rounded-3xl font-medium text-xl hover:bg-white hover:text-black transition">About the Artist</a>
+        <a href="/research" class="px-10 py-5 bg-white text-black rounded-3xl font-medium text-xl hover:scale-105 transition">ENTER THE VAULT →</a>
+        <a href="/about" class="px-10 py-5 border-2 border-white rounded-3xl font-medium text-xl hover:bg-white hover:text-black transition">ABOUT THE ARTIST</a>
       </div>
     </div>
   </div>
