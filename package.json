@@ -1,0 +1,22 @@
+{
+  "name": "no-ball-games-website",
+  "version": "1.0.0",
+  "description": "Charlie Buster - Grime Art Artist Archive and Portfolio",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "astro": "astro",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "astro": "^4.0.0",
+    "@astrojs/markdown-remark": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
