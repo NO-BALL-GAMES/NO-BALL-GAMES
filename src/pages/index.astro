@@ -7,15 +7,19 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-    
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
     .hero-bg {
       animation: rainbowShift 12s linear infinite;
       background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
       background-size: 700% 700%;
+      height: 100vh;
+      width: 100vw;
     }
-    
     @keyframes rainbowShift {
       0%   { background-position: 0% 50%; }
       50%  { background-position: 100% 50%; }
@@ -23,23 +27,21 @@
     }
   </style>
 </head>
-<body class="bg-black text-white overflow-hidden">
+<body class="hero-bg text-white">
   <div class="flex h-screen">
-    <!-- Full-screen animated rainbow background -->
-    <div class="hero-bg flex-1 flex flex-col items-center justify-center relative">
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black"></div>
+    <!-- Full-screen rainbow hero -->
+    <div class="flex-1 flex flex-col items-center justify-center relative">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black z-0"></div>
       
-      <div class="relative z-10 text-center px-6 max-w-2xl">
-        <h1 class="text-7xl md:text-8xl font-bold tracking-tighter bg-gradient-to-r from-white via-pink-200 to-cyan-200 bg-clip-text text-transparent">
-          CHARLIE BUSTER
-        </h1>
+      <div class="relative z-10 text-center px-6">
+        <h1 class="text-7xl md:text-8xl font-bold tracking-tighter">CHARLIE BUSTER</h1>
         <p class="mt-3 text-2xl text-white/90">NO BALL GAMES • Grime Art Archive</p>
       </div>
     </div>
 
     <!-- Right sidebar -->
-    <div class="w-96 bg-zinc-900 flex flex-col border-l border-zinc-800">
-      <div class="p-6 border-b border-zinc-800">
+    <div class="w-96 bg-zinc-900/95 backdrop-blur-md flex flex-col border-l border-white/10">
+      <div class="p-6 border-b border-white/10">
         <h2 class="text-2xl font-bold">Welcome to the Archive</h2>
         <p class="text-zinc-400 mt-2">Grime art, street culture, and raw energy from Charlie Buster.</p>
       </div>
@@ -56,9 +58,9 @@
         </div>
       </div>
       
-      <div class="p-6 border-t border-zinc-800 space-y-3">
-        <a href="/research" class="block w-full text-center bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 py-4 rounded-2xl font-medium">Enter the Vault →</a>
-        <a href="/about" class="block w-full text-center border border-zinc-700 hover:bg-zinc-800 py-4 rounded-2xl font-medium">About the Artist</a>
+      <div class="p-6 border-t border-white/10 space-y-3">
+        <a href="/research" class="block w-full text-center bg-white text-black py-4 rounded-2xl font-medium">Enter the Vault →</a>
+        <a href="/about" class="block w-full text-center border border-white/30 hover:bg-white/10 py-4 rounded-2xl font-medium">About the Artist</a>
       </div>
     </div>
   </div>
