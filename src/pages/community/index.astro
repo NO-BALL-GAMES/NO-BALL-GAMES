@@ -3,76 +3,77 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL;
 ---
 <BaseLayout
-  title="NO BALL GAMES Community | Artists, Collectors, Players & Researchers"
-  description="Join the NO BALL GAMES community across street culture, Grime Art, digital collectibles, XRP KIDs lore, gaming and creative collaboration."
+  title="NO BALL GAMES Community | Collectors, Artists, FRET and Lore Contributors"
+  description="Community hub for NO BALL GAMES participation across collectors, artists, XRP KIDs/FRET lore, sign archive contributions and source-proof submissions."
   current="community"
 >
   <section class="page-hero">
     <span class="eyebrow">Community</span>
-    <h1>For the people who played anyway.</h1>
+    <h1>Built by people who still play anyway.</h1>
     <p>
-      The brand only works if people can take part. This page gives the community a clear place to understand the movement, follow updates and connect with future drops, lore threads and research work.
+      NO BALL GAMES community spans collectors, artists, archive builders and the XRP KIDs lore side. FRET framing stays central: fast, grassroots, anti-hype, proof-aware.
     </p>
+  </section>
+
+  <section class="section split-grid">
+    <article class="panel-card">
+      <span class="kicker">FRET framing</span>
+      <h2>Fresh Rapid Elite Team energy.</h2>
+      <p>
+        In internal canon, FRET is the resistance cell behind the 11 free KIDs: artists, coders, collectors, signal runners and people who know the city's back routes.
+      </p>
+      <p>
+        On this public page, that framing becomes a participation model: move fast, submit proof, support culture, keep the signal clean.
+      </p>
+      <a class="inline-link" href={`${base}xrp/`}>Read the XRP canon summary →</a>
+    </article>
+    <article class="panel-card">
+      <span class="kicker">Participation routes</span>
+      <ul class="list-clean">
+        <li><strong>Collectors:</strong> follow physical/digital release lanes.</li>
+        <li><strong>Artists:</strong> submit collaboration ideas and painted work proposals.</li>
+        <li><strong>Lore contributors:</strong> help refine canon pages and timelines.</li>
+        <li><strong>Sign/photo archive:</strong> submit estate sign and wall references.</li>
+        <li><strong>Source/proof submissions:</strong> provide links or records to upgrade claims.</li>
+      </ul>
+    </article>
   </section>
 
   <section class="section card-grid">
     <article class="feature-card">
       <span class="kicker">Collectors</span>
-      <h3>Own the archive</h3>
-      <p>Collectors can follow physical and digital releases, limited drops, signed work and future reward mechanics. Every piece connects to the lore.</p>
-      <a class="inline-link" href={`${base}collections/`}>Browse collections →</a>
+      <h3>Track drops with context</h3>
+      <p>Follow originals, wearables and digital concepts with clear lore-versus-proof language.</p>
+      <a class="inline-link" href={`${base}collections/`}>Open collections →</a>
     </article>
     <article class="feature-card">
       <span class="kicker">Artists</span>
-      <h3>Build the wall</h3>
-      <p>Artists, writers and designers can connect through collaborations, callouts, future challenges and shared street-culture energy. The wall is open.</p>
-      <a class="inline-link" href={`${base}contact/`}>Get involved →</a>
+      <h3>Bring real work</h3>
+      <p>Submit ideas rooted in street culture, painted craft and no-corporate fluff execution.</p>
+      <a class="inline-link" href={`${base}contact/`}>Submit artist enquiry →</a>
     </article>
     <article class="feature-card">
-      <span class="kicker">XRP KIDs</span>
-      <h3>Track the chain-side story</h3>
-      <p>Collectors and lore readers can follow the XRP KIDs branch, the 100 / 89 / 11 canon and the Alpha Aaron / FRET conflict without confusing fiction for verified ledger data.</p>
-      <a class="inline-link" href={`${base}xrp/`}>Read the XRP page →</a>
+      <span class="kicker">Lore contributors</span>
+      <h3>Build canon with discipline</h3>
+      <p>Support timelines, character notes and faction pages while labelling internal canon clearly.</p>
+      <a class="inline-link" href={`${base}lore/`}>Read lore hub →</a>
     </article>
     <article class="feature-card">
-      <span class="kicker">Researchers</span>
-      <h3>Help keep the truth file sharp</h3>
-      <p>Archive builders, source hunters and long-memory community members can help separate verified facts, internal canon and source-needed claims.</p>
-      <a class="inline-link" href={`${base}research/`}>Open the research vault →</a>
-    </article>
-  </section>
-
-  <section class="section split-grid">
-    <article class="panel-card">
-      <span class="kicker">Community engine</span>
-      <h2>Give people something to do.</h2>
-      <p>
-        A good community page does not just say "follow us." It creates actions: collect, submit, vote, play, share, decode, join, win, collaborate and come back.
-      </p>
-      <p>
-        NO BALL GAMES is building toward a community layer with real mechanics — not just a link to a platform.
-      </p>
-    </article>
-    <article class="panel-card">
-      <span class="kicker">Future actions</span>
-      <ul class="list-clean">
-        <li>Join the mailing list for early drop access.</li>
-        <li>Submit wall photos, sign photos or street-culture references.</li>
-        <li>Take part in community art challenges.</li>
-        <li>Help verify XRP KIDs and archive claims before they are presented as fact.</li>
-        <li>Follow drops, giveaways, lore reveals and collector announcements.</li>
-      </ul>
+      <span class="kicker">Archive submissions</span>
+      <h3>Bring receipts</h3>
+      <p>Share source links, screenshots or records that strengthen proof handling across public pages.</p>
+      <a class="inline-link" href={`${base}research/`}>Open research index →</a>
     </article>
   </section>
 
   <section class="section cta-block">
     <div class="cta-block-inner">
-      <span class="eyebrow">Stay connected</span>
-      <h2>Don't miss the next drop.</h2>
-      <p>Community updates, drop announcements, lore reveals, truth-file updates and collector opportunities — reach out to get on the list before things go public.</p>
+      <span class="eyebrow">Join with purpose</span>
+      <h2>Collect, create, document, contribute.</h2>
+      <p>Whether you are in for art, lore or source verification, there is a clear lane for your role.</p>
       <div class="cta-row">
-        <a class="button primary" href={`${base}contact/`}>Get in touch</a>
-        <a class="button secondary" href={`${base}research/`}>Read the archive</a>
+        <a class="button primary" href={`${base}contact/`}>Contact community desk</a>
+        <a class="button secondary" href={`${base}research/`}>Read truth files</a>
       </div>
     </div>
   </section>
