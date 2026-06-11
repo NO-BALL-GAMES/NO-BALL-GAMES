@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 <BaseLayout
   title="About NO BALL GAMES | From Restricted Spaces to Street Culture Brand"
@@ -24,6 +25,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p>
         NO BALL GAMES stands for people who grew up around hard concrete, rules, warnings, locked courts, blank walls and public spaces that felt controlled by everyone except the people living there.
       </p>
+      <a class="inline-link" href={`${base}lore/`}>Read the lore archive →</a>
     </article>
 
     <article class="panel-card">
@@ -36,6 +38,43 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <li>A brand system that can expand into art, games, clothing and lore.</li>
       </ul>
     </article>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Origin timeline</h2>
+      <p>How the sign became a brand system.</p>
+    </div>
+    <div class="timeline">
+      <article class="timeline-item">
+        <strong>Start</strong>
+        <div>
+          <h3>The sign exists everywhere</h3>
+          <p>Yellow enamel plates, painted concrete warnings, stencilled fences. The phrase is part of British urban landscape — instantly recognisable, rarely questioned.</p>
+        </div>
+      </article>
+      <article class="timeline-item">
+        <strong>Flip</strong>
+        <div>
+          <h3>Restriction becomes identity</h3>
+          <p>The decision: take the warning, own the phrase, build a brand around the feeling of being told where not to be. The ban is the badge.</p>
+        </div>
+      </article>
+      <article class="timeline-item">
+        <strong>Build</strong>
+        <div>
+          <h3>Art, clothing and characters emerge</h3>
+          <p>Original paintings, hand-finished jackets, character designs, street typography and visual experiments start developing the brand vocabulary.</p>
+        </div>
+      </article>
+      <article class="timeline-item">
+        <strong>Expand</strong>
+        <div>
+          <h3>Lore, collectibles and community</h3>
+          <p>The brand extends into digital collectibles, a story universe, collector drops, gaming concepts and a community layer built around shared cultural values. <a class="inline-link" href={`${base}lore/`}>See the lore →</a></p>
+        </div>
+      </article>
+    </div>
   </section>
 
   <section class="section">
@@ -60,5 +99,26 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <p>Every page should add something: story, proof, context, product value, community value or collector value.</p>
       </article>
     </div>
+  </section>
+
+  <section class="section split-grid">
+    <article class="panel-card">
+      <span class="kicker">Explore further</span>
+      <h2>Go deeper into the world.</h2>
+      <p>The brand has multiple layers. Start with the projects, dig into the lore, browse the collections or connect with the community.</p>
+      <div class="cta-row">
+        <a class="button primary" href={`${base}projects/`}>View projects</a>
+        <a class="button secondary" href={`${base}community/`}>Join community</a>
+      </div>
+    </article>
+    <article class="panel-card">
+      <span class="kicker">Quick links</span>
+      <ul class="list-clean">
+        <li><a class="inline-link" href={`${base}lore/`}>Lore archive — characters, signs and restricted zones</a></li>
+        <li><a class="inline-link" href={`${base}collections/`}>Collections — physical art, clothing and digital drops</a></li>
+        <li><a class="inline-link" href={`${base}research/`}>Research vault — brand notes and source material</a></li>
+        <li><a class="inline-link" href={`${base}contact/`}>Contact — collaborations and enquiries</a></li>
+      </ul>
+    </article>
   </section>
 </BaseLayout>

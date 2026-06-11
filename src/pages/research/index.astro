@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 <BaseLayout
   title="NO BALL GAMES Research Vault | Brand Notes, Rights & Source Archive"
@@ -10,26 +11,73 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <span class="eyebrow">Research vault</span>
     <h1>Archive the proof before building the myth.</h1>
     <p>
-      This section is for research notes, content rights, source references, brand planning and the material that supports future pages.
+      This section is for research notes, content rights, source references, brand planning and the material that supports future pages. Documented before published.
     </p>
   </section>
 
   <section class="section split-grid">
     <article class="panel-card">
       <span class="kicker">Current file</span>
-      <h2>Content rights</h2>
+      <h2>Content rights and source material</h2>
       <p>
-        Keep this area for documented source material and rights notes. It helps stop the website from turning into unsupported claims or copied content.
+        This area holds documented source material and rights notes. It prevents the website from publishing unsupported claims or borrowed content without proper attribution.
+      </p>
+      <p>
+        All brand copy, lore and visual references should be traceable back to original material or clearly marked as speculative/fictional.
       </p>
     </article>
     <article class="panel-card">
-      <span class="kicker">Recommended research buckets</span>
+      <span class="kicker">Research buckets</span>
       <ul class="list-clean">
-        <li>Brand origin notes.</li>
-        <li>Image ownership and usage rights.</li>
-        <li>Press links and public references.</li>
+        <li>Brand origin notes and founding decisions.</li>
+        <li>Image ownership, usage rights and attribution.</li>
+        <li>Press links and public references to the brand.</li>
         <li>Collection metadata and drop notes.</li>
-        <li>Future article outlines and SEO targets.</li>
+        <li>SEO keyword targets and content outlines.</li>
+        <li>Competitor and cultural reference analysis.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Key references</h2>
+      <p>Cultural and historical context behind the NO BALL GAMES identity.</p>
+    </div>
+    <div class="card-grid">
+      <article class="feature-card">
+        <span class="kicker">Cultural context</span>
+        <h3>UK estate signage</h3>
+        <p>The phrase appears across British housing estates, parks, car parks and community spaces as a standard public notice. Part of the visual fabric of UK urban life since the mid-20th century.</p>
+      </article>
+      <article class="feature-card">
+        <span class="kicker">Visual reference</span>
+        <h3>Graffiti and street art tradition</h3>
+        <p>UK graffiti culture — from early writers to contemporary artists — provides the visual backbone for the brand's aesthetic approach and DIY energy.</p>
+      </article>
+      <article class="feature-card">
+        <span class="kicker">Sound and culture</span>
+        <h3>Grime music and art</h3>
+        <p>The brand sits adjacent to grime culture — raw production, estate roots, underground energy, visual identity and the specific texture of early-2000s UK creative rebellion.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section split-grid">
+    <article class="panel-card">
+      <span class="kicker">For the record</span>
+      <h2>The brand is built on original work.</h2>
+      <p>
+        Everything published under the NO BALL GAMES name should be original, licensed or clearly attributed. The research vault exists to keep that standard in place as the brand expands.
+      </p>
+    </article>
+    <article class="panel-card">
+      <span class="kicker">Related pages</span>
+      <ul class="list-clean">
+        <li><a class="inline-link" href={`${base}about/`}>About — the brand story and values</a></li>
+        <li><a class="inline-link" href={`${base}lore/`}>Lore — where fiction and culture meet</a></li>
+        <li><a class="inline-link" href={`${base}projects/`}>Projects — live and planned work</a></li>
+        <li><a class="inline-link" href={`${base}contact/`}>Contact — for press and enquiries</a></li>
       </ul>
     </article>
   </section>

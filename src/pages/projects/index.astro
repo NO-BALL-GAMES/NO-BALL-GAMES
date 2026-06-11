@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 <BaseLayout
   title="NO BALL GAMES Projects | Art, Games, Lore, Collectibles & Street Culture"
@@ -19,31 +20,90 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <span class="kicker">01 • Art</span>
       <h3>Street art and grime art archive</h3>
       <p>Paintings, walls, sketches, jackets, characters, signs and raw visual work connected to the NO BALL GAMES identity.</p>
+      <a class="inline-link" href={`${base}collections/`}>See collections →</a>
     </article>
     <article class="feature-card">
       <span class="kicker">02 • Collectibles</span>
       <h3>NFT and digital collectible structure</h3>
       <p>A future-ready area for character drops, collector passes, burn mechanics, rarity pages and on-chain culture without overloading the homepage.</p>
+      <a class="inline-link" href={`${base}collections/`}>View drops →</a>
     </article>
     <article class="feature-card">
       <span class="kicker">03 • Gaming</span>
       <h3>Play against the rules</h3>
       <p>Mini-games, Telegram games, browser games, scoreboards, quests and community competitions can all sit under the same rebel-play concept.</p>
+      <div class="coming-soon-tag">Coming soon</div>
     </article>
     <article class="feature-card">
       <span class="kicker">04 • Clothing</span>
       <h3>Wearable street culture</h3>
-      <p>Hand-painted jackets, denim, patches, prints, stencil pieces and future apparel drops can be presented as premium limited releases.</p>
+      <p>Hand-painted jackets, denim, patches, prints, stencil pieces and future apparel drops presented as premium limited releases.</p>
+      <a class="inline-link" href={`${base}collections/`}>Browse wearables →</a>
     </article>
     <article class="feature-card">
       <span class="kicker">05 • Lore</span>
       <h3>Characters and world-building</h3>
-      <p>The sign can become a mythology: characters, gangs, estates, courts, blocked zones, secret games and coded messages.</p>
+      <p>The sign becomes a mythology: characters, gangs, estates, courts, blocked zones, secret games and coded messages.</p>
+      <a class="inline-link" href={`${base}lore/`}>Enter the lore →</a>
     </article>
     <article class="feature-card">
       <span class="kicker">06 • Community</span>
       <h3>Fans, collectors and creators</h3>
-      <p>Community challenges, artist callouts, collector spotlights, collabs and local culture can keep the brand active between major drops.</p>
+      <p>Community challenges, artist callouts, collector spotlights, collabs and local culture keep the brand active between major drops.</p>
+      <a class="inline-link" href={`${base}community/`}>Join in →</a>
+    </article>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>What is live now</h2>
+      <p>Current status across all project lanes.</p>
+    </div>
+    <div class="status-grid">
+      <div class="status-row">
+        <span class="status-label">Brand hub website</span>
+        <span class="status-badge status-live">Live</span>
+      </div>
+      <div class="status-row">
+        <span class="status-label">Lore archive</span>
+        <span class="status-badge status-live">Active</span>
+      </div>
+      <div class="status-row">
+        <span class="status-label">Collections page</span>
+        <span class="status-badge status-building">Building</span>
+      </div>
+      <div class="status-row">
+        <span class="status-label">Character drops</span>
+        <span class="status-badge status-soon">Coming soon</span>
+      </div>
+      <div class="status-row">
+        <span class="status-label">Gaming layer</span>
+        <span class="status-badge status-soon">Coming soon</span>
+      </div>
+      <div class="status-row">
+        <span class="status-label">Community platform</span>
+        <span class="status-badge status-soon">Coming soon</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section split-grid">
+    <article class="panel-card">
+      <span class="kicker">Collaborate</span>
+      <h2>Want to build something with us?</h2>
+      <p>Artists, developers, collectors, writers and brand partners are welcome. The right collaborations get the best projects off the ground faster.</p>
+      <div class="cta-row">
+        <a class="button primary" href={`${base}contact/`}>Get in touch</a>
+      </div>
+    </article>
+    <article class="panel-card">
+      <span class="kicker">Brand notes</span>
+      <ul class="list-clean">
+        <li>Every project connects back to the core NO BALL GAMES identity.</li>
+        <li>No random collabs — only things that belong to the world.</li>
+        <li>Quality over volume: fewer, stronger drops and releases.</li>
+        <li>Community and collector value comes before hype.</li>
+      </ul>
     </article>
   </section>
 </BaseLayout>
