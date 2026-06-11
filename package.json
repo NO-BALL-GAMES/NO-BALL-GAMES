@@ -12,8 +12,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "astro": "^4.0.0",
-    "@astrojs/markdown-remark": "^4.0.0"
+    "@astrojs/markdown-remark": "^4.0.0",
+    "astro": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
