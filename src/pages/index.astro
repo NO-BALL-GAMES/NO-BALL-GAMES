@@ -19,9 +19,9 @@ const base = import.meta.env.BASE_URL;
         <a class="button secondary" href={`${base}about/`}>Read the story</a>
       </div>
       <div class="stat-grid" aria-label="Brand pillars">
-        <div class="stat"><strong>01</strong><span>Street-rooted identity</span></div>
-        <div class="stat"><strong>02</strong><span>Art, lore and culture</span></div>
-        <div class="stat"><strong>03</strong><span>Collectibles and community</span></div>
+        <div class="stat"><strong>Art</strong><span>Grime-rooted identity</span></div>
+        <div class="stat"><strong>Lore</strong><span>Characters and world</span></div>
+        <div class="stat"><strong>Drops</strong><span>Collectibles and culture</span></div>
       </div>
     </div>
 
@@ -36,6 +36,16 @@ const base = import.meta.env.BASE_URL;
       </p>
     </aside>
   </section>
+
+  <div class="disciplines-strip" aria-label="Brand disciplines">
+    <span class="discipline-pill discipline-pill--acid">✊ Street art</span>
+    <span class="discipline-pill discipline-pill--pink">🎨 Grime culture</span>
+    <span class="discipline-pill discipline-pill--cyan">⚡ Digital collectibles</span>
+    <span class="discipline-pill">📖 Lore and characters</span>
+    <span class="discipline-pill">👕 Painted clothing</span>
+    <span class="discipline-pill">🎮 Gaming</span>
+    <span class="discipline-pill">🤝 Community</span>
+  </div>
 
   <section class="section meaning-section">
     <div class="section-header">
@@ -92,7 +102,7 @@ const base = import.meta.env.BASE_URL;
       <span class="kicker">Brand position</span>
       <h2>Underground, but organised.</h2>
       <p>
-        The site needs to work like a serious brand hub without losing the rawness. That means clear pages, fast navigation, better SEO, better mobile layout and stronger reasons for people to stay.
+        The site works like a serious brand hub without losing the rawness. Clear pages, fast navigation, strong SEO, tight mobile layout and real reasons for people to stay.
       </p>
       <div class="cta-row">
         <a class="button primary" href={`${base}collections/`}>View collections</a>
@@ -121,6 +131,39 @@ const base = import.meta.env.BASE_URL;
       <div class="cta-row">
         <a class="button primary" href={`${base}lore/`}>Explore the lore</a>
         <a class="button secondary" href={`${base}about/`}>About the brand</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Build status</h2>
+      <p>What is active, what is building and what is coming next.</p>
+    </div>
+    <div class="status-grid">
+      <div class="status-row">
+        <span class="status-label">Brand hub website</span>
+        <span class="status-badge status-live">Live</span>
+      </div>
+      <div class="status-row">
+        <span class="status-label">Lore archive</span>
+        <span class="status-badge status-live">Active</span>
+      </div>
+      <div class="status-row">
+        <span class="status-label">Collections page</span>
+        <span class="status-badge status-building">Building</span>
+      </div>
+      <div class="status-row">
+        <span class="status-label">Character drops</span>
+        <span class="status-badge status-soon">Coming soon</span>
+      </div>
+      <div class="status-row">
+        <span class="status-label">Gaming layer</span>
+        <span class="status-badge status-soon">Coming soon</span>
+      </div>
+      <div class="status-row">
+        <span class="status-label">Community platform</span>
+        <span class="status-badge status-soon">Coming soon</span>
       </div>
     </div>
   </section>
