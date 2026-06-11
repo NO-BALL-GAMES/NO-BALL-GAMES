@@ -1,64 +1,106 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL;
+const repoBase = 'https://github.com/NO-BALL-GAMES/NO-BALL-GAMES/blob/main/research';
+const truthFiles = [
+  {
+    title: 'NO BALL GAMES truth baseline',
+    label: 'Brand truth',
+    href: `${repoBase}/truth.md`,
+    summary: 'Defines the safe public position for the sign-flip brand, plus where NFT, WAX and founder claims still need proof.',
+    status: 'VERIFIED site position + source-needed token claims',
+  },
+  {
+    title: 'Charlie Buster / Grime Art truth baseline',
+    label: 'Artist truth',
+    href: `${repoBase}/grimeartist-truth.md`,
+    summary: 'Frames Charlie Buster and Grime Art as the visual backbone while flagging founder-history and portfolio claims that still need archive support.',
+    status: 'Internal canon + careful public wording',
+  },
+  {
+    title: 'XRP NO BALL GAMES truth baseline',
+    label: 'XRPL truth',
+    href: `${repoBase}/xrp-noballgames-truth.md`,
+    summary: 'Locks the XRP KIDs, Alpha Aaron, FRET, $PMSL and Block Buster OG canon while insisting that issuer, token and marketplace details must be verified.',
+    status: 'Internal canon + verify all on-chain specifics',
+  },
+];
 ---
 <BaseLayout
-  title="NO BALL GAMES Research Vault | Brand Notes, Rights & Source Archive"
-  description="Research vault for NO BALL GAMES brand notes, content rights, source material, archive planning and website development references."
+  title="NO BALL GAMES Research Vault | Truth Archive, Source Rules & Canon Files"
+  description="Research vault for NO BALL GAMES truth baselines, Charlie Buster / Grime Art notes, XRP KIDs canon, rights guidance and source-control references."
   current="research"
 >
   <section class="page-hero">
     <span class="eyebrow">Research vault</span>
     <h1>Archive the proof before building the myth.</h1>
     <p>
-      This section is for research notes, content rights, source references, brand planning and the material that supports future pages. Documented before published.
+      This section is the visible index for the truth archive: the NO BALL GAMES baseline, the Charlie Buster / Grime Art baseline and the XRP NO BALL GAMES baseline. Public pages stay concise because the long-form research lives here first.
     </p>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Truth archive files</h2>
+      <p>Read the source markdown before writing public-facing claims. Each file lives in <code>research/</code> and is versioned with the repo.</p>
+    </div>
+    <div class="card-grid">
+      {truthFiles.map((file) => (
+        <article class="feature-card">
+          <span class="kicker">{file.label}</span>
+          <h3>{file.title}</h3>
+          <p>{file.summary}</p>
+          <div class="coming-soon-tag">{file.status}</div>
+          <a class="inline-link" href={file.href}>Open markdown source →</a>
+        </article>
+      ))}
+    </div>
   </section>
 
   <section class="section split-grid">
     <article class="panel-card">
-      <span class="kicker">Current file</span>
-      <h2>Content rights and source material</h2>
+      <span class="kicker">How to read the archive</span>
+      <h2>Verified, internal canon, source needed.</h2>
       <p>
-        This area holds documented source material and rights notes. It prevents the website from publishing unsupported claims or borrowed content without proper attribution.
+        The research files separate live public facts from founder-supplied canon and open proof gaps. That keeps the site from turning lore into hard history or chain speculation into technical certainty.
       </p>
-      <p>
-        All brand copy, lore and visual references should be traceable back to original material or clearly marked as speculative/fictional.
-      </p>
+      <ul class="list-clean">
+        <li><strong>Verified:</strong> safe public facts backed by the repo, site source or other accessible evidence.</li>
+        <li><strong>Internal canon:</strong> accepted story or brand truth inside the NO BALL GAMES universe.</li>
+        <li><strong>Source needed:</strong> usable directionally, but not ready to publish as hard fact without proof.</li>
+      </ul>
     </article>
     <article class="panel-card">
-      <span class="kicker">Research buckets</span>
+      <span class="kicker">Related pages</span>
       <ul class="list-clean">
-        <li>Brand origin notes and founding decisions.</li>
-        <li>Image ownership, usage rights and attribution.</li>
-        <li>Press links and public references to the brand.</li>
-        <li>Collection metadata and drop notes.</li>
-        <li>SEO keyword targets and content outlines.</li>
-        <li>Competitor and cultural reference analysis.</li>
+        <li><a class="inline-link" href={`${base}about/`}>About — the sign-flip brand story</a></li>
+        <li><a class="inline-link" href={`${base}projects/`}>Projects — where art, lore and XRPL concepts live</a></li>
+        <li><a class="inline-link" href={`${base}xrp/`}>XRP page — the concise public summary of the XRPL branch</a></li>
+        <li><a class="inline-link" href={`${base}contact/`}>Contact — collector, research and collaboration enquiries</a></li>
       </ul>
     </article>
   </section>
 
   <section class="section">
     <div class="section-header">
-      <h2>Key references</h2>
+      <h2>Why the archive matters</h2>
       <p>Cultural and historical context behind the NO BALL GAMES identity.</p>
     </div>
     <div class="card-grid">
       <article class="feature-card">
-        <span class="kicker">Cultural context</span>
-        <h3>UK estate signage</h3>
-        <p>The phrase appears across British housing estates, parks, car parks and community spaces as a standard public notice. Part of the visual fabric of UK urban life since the mid-20th century.</p>
+        <span class="kicker">Brand context</span>
+        <h3>The sign-flip stays grounded</h3>
+        <p>The NO BALL GAMES baseline keeps the public story focused on restricted-space rebellion, street culture and collector-ready brand structure without overclaiming token history.</p>
       </article>
       <article class="feature-card">
-        <span class="kicker">Visual reference</span>
-        <h3>Graffiti and street art tradition</h3>
-        <p>UK graffiti culture — from early writers to contemporary artists — provides the visual backbone for the brand's aesthetic approach and DIY energy.</p>
+        <span class="kicker">Artist context</span>
+        <h3>Grime Art needs careful wording</h3>
+        <p>The Charlie Buster file gives strong public phrasing for the artist layer while warning where portfolio, role and origin-story claims still need proof.</p>
       </article>
       <article class="feature-card">
-        <span class="kicker">Sound and culture</span>
-        <h3>Grime music and art</h3>
-        <p>The brand sits adjacent to grime culture — raw production, estate roots, underground energy, visual identity and the specific texture of early-2000s UK creative rebellion.</p>
+        <span class="kicker">XRPL context</span>
+        <h3>Lore is not ledger proof</h3>
+        <p>The XRP truth file makes the distinction explicit: the 100 / 89 / 11 canon can appear on the site as lore, but issuer and marketplace details must be verified separately.</p>
       </article>
     </div>
   </section>
@@ -66,18 +108,17 @@ const base = import.meta.env.BASE_URL;
   <section class="section split-grid">
     <article class="panel-card">
       <span class="kicker">For the record</span>
-      <h2>The brand is built on original work.</h2>
+      <h2>The public site should stay readable.</h2>
       <p>
-        Everything published under the NO BALL GAMES name should be original, licensed or clearly attributed. The research vault exists to keep that standard in place as the brand expands.
+        These markdown files are the long-form source material. Public pages should use them for direction, not dump them whole. The result is a cleaner site with clearer proof handling.
       </p>
     </article>
     <article class="panel-card">
-      <span class="kicker">Related pages</span>
+      <span class="kicker">Also in research</span>
       <ul class="list-clean">
-        <li><a class="inline-link" href={`${base}about/`}>About — the brand story and values</a></li>
-        <li><a class="inline-link" href={`${base}lore/`}>Lore — where fiction and culture meet</a></li>
-        <li><a class="inline-link" href={`${base}projects/`}>Projects — live and planned work</a></li>
-        <li><a class="inline-link" href={`${base}contact/`}>Contact — for press and enquiries</a></li>
+        <li><a class="inline-link" href={`${repoBase}/content-rights.md`}>Content rights note →</a></li>
+        <li>Future archive folders can hold imported Substack posts, screenshots and proof logs.</li>
+        <li>Use the truth files before adding new lore, token or founder claims.</li>
       </ul>
     </article>
   </section>

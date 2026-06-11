@@ -3,51 +3,57 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL;
 ---
 <BaseLayout
-  title="NO BALL GAMES Projects | Art, Games, Lore, Collectibles & Street Culture"
-  description="Explore NO BALL GAMES projects across graffiti art, grime culture, digital collectibles, character lore, gaming concepts, clothing and community campaigns."
+  title="NO BALL GAMES Projects | Art, Lore, XRP Concepts & Street Culture"
+  description="Explore NO BALL GAMES projects across Grime Art, digital collectibles, character lore, gaming concepts, clothing, community campaigns and XRP-side story work."
   current="projects"
 >
   <section class="page-hero">
     <span class="eyebrow">Projects</span>
     <h1>A brand system with more than one lane.</h1>
     <p>
-      NO BALL GAMES can expand across art, digital collectibles, gaming, clothing, events, community drops and story worlds. This page gives each lane a clear home.
+      NO BALL GAMES can expand across art, digital collectibles, gaming, clothing, events, community drops and story worlds. This page gives each lane a clear home while marking which claims are still concept-only.
     </p>
   </section>
 
   <section class="section project-grid">
     <article class="feature-card">
       <span class="kicker">01 • Art</span>
-      <h3>Street art and grime art archive</h3>
-      <p>Paintings, walls, sketches, jackets, characters, signs and raw visual work connected to the NO BALL GAMES identity.</p>
+      <h3>Street art and Grime Art archive</h3>
+      <p>Paintings, walls, sketches, jackets, characters, signs and raw visual work connected to the NO BALL GAMES identity and Charlie Buster's Grime Art layer.</p>
       <a class="inline-link" href={`${base}collections/`}>See collections →</a>
     </article>
     <article class="feature-card">
       <span class="kicker">02 • Collectibles</span>
-      <h3>NFT and digital collectible structure</h3>
-      <p>A future-ready area for character drops, collector passes, burn mechanics, rarity pages and on-chain culture without overloading the homepage.</p>
+      <h3>Digital collectible structure</h3>
+      <p>A future-ready area for character drops, collector passes, burn mechanics, rarity pages and community rewards without overloading the homepage with unsupported token claims.</p>
       <a class="inline-link" href={`${base}collections/`}>View drops →</a>
     </article>
     <article class="feature-card">
-      <span class="kicker">03 • Gaming</span>
+      <span class="kicker">03 • XRP / XRPL</span>
+      <h3>XRP KIDs lore concept</h3>
+      <p>The XRPL branch covers XRP KIDs, Alpha Aaron, FRET, $PMSL and Block Buster OG as a lore and digital-collectible concept. Verify issuer, collection and ledger data before treating any asset details as live fact.</p>
+      <a class="inline-link" href={`${base}xrp/`}>Open the XRP page →</a>
+    </article>
+    <article class="feature-card">
+      <span class="kicker">04 • Gaming</span>
       <h3>Play against the rules</h3>
       <p>Mini-games, Telegram games, browser games, scoreboards, quests and community competitions can all sit under the same rebel-play concept.</p>
       <div class="coming-soon-tag">Coming soon</div>
     </article>
     <article class="feature-card">
-      <span class="kicker">04 • Clothing</span>
+      <span class="kicker">05 • Clothing</span>
       <h3>Wearable street culture</h3>
       <p>Hand-painted jackets, denim, patches, prints, stencil pieces and future apparel drops presented as premium limited releases.</p>
       <a class="inline-link" href={`${base}collections/`}>Browse wearables →</a>
     </article>
     <article class="feature-card">
-      <span class="kicker">05 • Lore</span>
+      <span class="kicker">06 • Lore</span>
       <h3>Characters and world-building</h3>
       <p>The sign becomes a mythology: characters, gangs, estates, courts, blocked zones, secret games and coded messages.</p>
       <a class="inline-link" href={`${base}lore/`}>Enter the lore →</a>
     </article>
     <article class="feature-card">
-      <span class="kicker">06 • Community</span>
+      <span class="kicker">07 • Community</span>
       <h3>Fans, collectors and creators</h3>
       <p>Community challenges, artist callouts, collector spotlights, collabs and local culture keep the brand active between major drops.</p>
       <a class="inline-link" href={`${base}community/`}>Join in →</a>
@@ -69,8 +75,12 @@ const base = import.meta.env.BASE_URL;
         <span class="status-badge status-live">Active</span>
       </div>
       <div class="status-row">
-        <span class="status-label">Collections page</span>
-        <span class="status-badge status-building">Building</span>
+        <span class="status-label">Research truth files</span>
+        <span class="status-badge status-live">Active</span>
+      </div>
+      <div class="status-row">
+        <span class="status-label">XRP lore page</span>
+        <span class="status-badge status-live">Live</span>
       </div>
       <div class="status-row">
         <span class="status-label">Character drops</span>
@@ -78,10 +88,6 @@ const base = import.meta.env.BASE_URL;
       </div>
       <div class="status-row">
         <span class="status-label">Gaming layer</span>
-        <span class="status-badge status-soon">Coming soon</span>
-      </div>
-      <div class="status-row">
-        <span class="status-label">Community platform</span>
         <span class="status-badge status-soon">Coming soon</span>
       </div>
     </div>
@@ -100,8 +106,8 @@ const base = import.meta.env.BASE_URL;
       <span class="kicker">Brand notes</span>
       <ul class="list-clean">
         <li>Every project connects back to the core NO BALL GAMES identity.</li>
-        <li>No random collabs — only things that belong to the world.</li>
-        <li>Quality over volume: fewer, stronger drops and releases.</li>
+        <li>Grime Art is the visual language; NO BALL GAMES is one of the worlds it can build.</li>
+        <li>XRPL lore pages should stay transparent about what is canon versus what is verified on-chain.</li>
         <li>Community and collector value comes before hype.</li>
       </ul>
     </article>
