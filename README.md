@@ -31,7 +31,7 @@ All internal links and asset URLs use `import.meta.env.BASE_URL` so they resolve
 ## Build
 
 ```bash
-# Type-check the project
+# Validate Astro content and TypeScript usage
 npm run check
 
 # Production build → outputs to dist/

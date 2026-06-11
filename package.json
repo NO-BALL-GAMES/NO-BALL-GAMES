@@ -1,21 +1,21 @@
 {
   "name": "no-ball-games-website",
   "version": "1.0.0",
-  "description": "Charlie Buster - Grime Art Artist Archive and Portfolio",
+  "description": "NO BALL GAMES street-culture brand website built with Astro.",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "astro": "astro",
-    "typecheck": "tsc --noEmit"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^4.0.0",
     "astro": "^4.0.0"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.9",
     "@types/node": "^20.0.0",
     "typescript": "^5.0.0"
   }
