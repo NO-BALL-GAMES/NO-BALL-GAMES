@@ -15,8 +15,9 @@ const {
 
 const base = import.meta.env.BASE_URL;
 const canonicalPath = Astro.url.pathname;
+const siteOrigin = Astro.site ? Astro.site.origin : 'https://no-ball-games.github.io';
 const canonical = new URL(canonicalPath, Astro.site ?? 'https://no-ball-games.github.io').toString();
-const ogImage = `${base}og/default-og.svg`;
+const ogImage = `${siteOrigin}${base}og/default-og.svg`;
 
 const navItems = [
   { href: `${base}`, label: 'Home', key: 'home' },
@@ -25,6 +26,7 @@ const navItems = [
   { href: `${base}collections/`, label: 'Collections', key: 'collections' },
   { href: `${base}lore/`, label: 'Lore', key: 'lore' },
   { href: `${base}community/`, label: 'Community', key: 'community' },
+  { href: `${base}research/`, label: 'Research', key: 'research' },
   { href: `${base}contact/`, label: 'Contact', key: 'contact' },
 ];
 
@@ -61,6 +63,7 @@ const schema = {
     <meta name="twitter:image" content={ogImage} />
     <meta name="theme-color" content="#050505" />
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <style set:html={`:root { --noise-bg: url('${base}textures/noise.svg'); }`} />
   </head>
   <body>
     <div class="site-shell">

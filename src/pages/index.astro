@@ -37,6 +37,29 @@ const base = import.meta.env.BASE_URL;
     </aside>
   </section>
 
+  <section class="section meaning-section">
+    <div class="section-header">
+      <h2>What does it mean?</h2>
+    </div>
+    <div class="meaning-grid">
+      <article class="meaning-card">
+        <div class="meaning-icon" aria-hidden="true">🚫</div>
+        <h3>The sign</h3>
+        <p>A public notice designed to stop play in restricted spaces — concrete yards, estate car parks, blocked courts. The phrase tells people where they do not belong.</p>
+      </article>
+      <article class="meaning-card meaning-card--accent">
+        <div class="meaning-icon" aria-hidden="true">✊</div>
+        <h3>The flip</h3>
+        <p>NO BALL GAMES takes that restriction and wears it as a badge. The ban becomes the brand. The warning becomes the identity. Denied space becomes owned space.</p>
+      </article>
+      <article class="meaning-card">
+        <div class="meaning-icon" aria-hidden="true">🎨</div>
+        <h3>The movement</h3>
+        <p>Art, clothing, lore, characters, digital collectibles and community culture — all built from the same refusal to stay quiet in spaces that were never designed for you.</p>
+      </article>
+    </div>
+  </section>
+
   <section class="section">
     <div class="section-header">
       <h2>Built from the ban</h2>
@@ -47,16 +70,19 @@ const base = import.meta.env.BASE_URL;
         <span class="kicker">Identity</span>
         <h3>From restriction to symbol</h3>
         <p>The phrase carries the feeling of being told where not to play, where not to create and where not to belong. The brand flips that message into ownership.</p>
+        <a class="inline-link" href={`${base}about/`}>Learn the story →</a>
       </article>
       <article class="feature-card">
         <span class="kicker">Art</span>
         <h3>Graffiti and grime energy</h3>
         <p>Raw mark-making, street typography, worn textures, pop-culture attitude and hand-painted edge form the visual backbone of the project.</p>
+        <a class="inline-link" href={`${base}projects/`}>See the work →</a>
       </article>
       <article class="feature-card">
         <span class="kicker">Digital</span>
         <h3>Collectible-ready universe</h3>
         <p>The site is structured to support character drops, lore pages, digital collectibles, game tie-ins, community quests and future product launches.</p>
+        <a class="inline-link" href={`${base}collections/`}>View collections →</a>
       </article>
     </div>
   </section>
@@ -70,6 +96,7 @@ const base = import.meta.env.BASE_URL;
       </p>
       <div class="cta-row">
         <a class="button primary" href={`${base}collections/`}>View collections</a>
+        <a class="button secondary" href={`${base}lore/`}>Read the lore</a>
       </div>
     </div>
     <div class="panel-card">
@@ -84,10 +111,24 @@ const base = import.meta.env.BASE_URL;
     </div>
   </section>
 
+  <section class="section origin-strip">
+    <div class="origin-inner">
+      <span class="eyebrow">Origin</span>
+      <h2>Where it started</h2>
+      <p class="lead">
+        A yellow enamel sign screwed to a fence on a UK estate. Simple. Official. Ignored. The sign was never going to stop play — but it gave this brand its name, its energy and its entire reason to exist.
+      </p>
+      <div class="cta-row">
+        <a class="button primary" href={`${base}lore/`}>Explore the lore</a>
+        <a class="button secondary" href={`${base}about/`}>About the brand</a>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="section-header">
       <h2>Core areas</h2>
-      <p>Each area can grow into a deeper page as the project expands.</p>
+      <p>Each area grows into a deeper page as the project expands.</p>
     </div>
     <div class="project-grid">
       <article class="feature-card">
@@ -114,6 +155,18 @@ const base = import.meta.env.BASE_URL;
         <p>The movement needs a home for fans, collectors, artists, players, collaborators and supporters.</p>
         <a class="button secondary" href={`${base}community/`}>Join community</a>
       </article>
+    </div>
+  </section>
+
+  <section class="section cta-block">
+    <div class="cta-block-inner">
+      <span class="eyebrow">Get involved</span>
+      <h2>Ready to play anyway?</h2>
+      <p>Whether you collect, create, follow or collaborate — there is a place for you inside the NO BALL GAMES universe.</p>
+      <div class="cta-row">
+        <a class="button primary" href={`${base}community/`}>Join the community</a>
+        <a class="button secondary" href={`${base}contact/`}>Work with us</a>
+      </div>
     </div>
   </section>
 </BaseLayout>

@@ -1,16 +1,17 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 <BaseLayout
   title="NO BALL GAMES Collections | Physical Art, Clothing & Digital Collectibles"
-  description="NO BALL GAMES collections page for future drops, physical art, hand-painted clothing, prints, digital collectibles and collector-focused releases."
+  description="NO BALL GAMES collections: physical art, hand-painted clothing, prints, digital collectibles and future limited drops from the street-culture brand."
   current="collections"
 >
   <section class="page-hero">
     <span class="eyebrow">Collections</span>
     <h1>Collect the culture before it gets cleaned up.</h1>
     <p>
-      This is the section for physical pieces, digital releases, limited clothing, prints, collectibles, character drops and future archive work.
+      Physical pieces, digital releases, limited clothing, prints, collectibles, character drops and future archive work — all sitting under the NO BALL GAMES name.
     </p>
   </section>
 
@@ -18,17 +19,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <article class="feature-card">
       <span class="kicker">Physical</span>
       <h3>Original art</h3>
-      <p>One-of-one canvases, hand-finished works, sign-inspired pieces, character artwork and raw studio output.</p>
+      <p>One-of-one canvases, hand-finished works, sign-inspired pieces, character artwork and raw studio output. Each piece connects back to the street-culture roots of the brand.</p>
+      <div class="coming-soon-tag">Enquire via contact</div>
     </article>
     <article class="feature-card">
       <span class="kicker">Wearable</span>
       <h3>Painted clothing</h3>
-      <p>Military jackets, denim, stencil garments and streetwear pieces that carry the NO BALL GAMES attitude into the real world.</p>
+      <p>Military jackets, denim, stencil garments and streetwear pieces that carry the NO BALL GAMES attitude into the real world. Limited runs, hand-finished, no mass production.</p>
+      <div class="coming-soon-tag">Future drops</div>
     </article>
     <article class="feature-card">
       <span class="kicker">Digital</span>
       <h3>Digital collectibles</h3>
-      <p>Future-ready structure for NFTs, collector passes, character cards, rarity tiers and community rewards.</p>
+      <p>Future-ready structure for character cards, collector passes, rarity tiers and community rewards. The lore universe drives the collectible layer.</p>
+      <div class="coming-soon-tag">Coming soon</div>
     </article>
   </section>
 
@@ -39,6 +43,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p>
         The strongest version of this brand does not dump random products. It releases controlled drops with story, scarcity, proof, archive value and a clear reason to collect.
       </p>
+      <p>
+        Each drop connects to the lore, the characters or a specific chapter of the brand story.
+      </p>
+      <a class="inline-link" href={`${base}lore/`}>Explore the lore behind the drops →</a>
     </article>
     <article class="panel-card">
       <span class="kicker">Suggested categories</span>
@@ -50,5 +58,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <li>Community reward items and access passes.</li>
       </ul>
     </article>
+  </section>
+
+  <section class="section cta-block">
+    <div class="cta-block-inner">
+      <span class="eyebrow">Want something specific?</span>
+      <h2>Commission or enquire directly.</h2>
+      <p>For original art, painted clothing or collaboration enquiries — reach out. Clear messages, real projects, honest replies.</p>
+      <div class="cta-row">
+        <a class="button primary" href={`${base}contact/`}>Send an enquiry</a>
+        <a class="button secondary" href={`${base}projects/`}>View all projects</a>
+      </div>
+    </div>
   </section>
 </BaseLayout>
