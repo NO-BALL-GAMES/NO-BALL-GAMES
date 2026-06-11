@@ -7,42 +7,49 @@ const truthFiles = [
     title: 'NO BALL GAMES truth baseline',
     label: 'Brand truth',
     href: `${repoBase}/truth.md`,
-    summary: 'Defines the safe public position for the sign-flip brand, plus where NFT, WAX and founder claims still need proof.',
-    status: 'VERIFIED site position + source-needed token claims',
+    summary: 'Canonical baseline for sign-flip identity, public-safe claims and source-needed guardrails around founder/token narratives.',
+    use: 'Homepage, about, projects and collections positioning.',
   },
   {
     title: 'Charlie Buster / Grime Art truth baseline',
     label: 'Artist truth',
     href: `${repoBase}/grimeartist-truth.md`,
-    summary: 'Frames Charlie Buster and Grime Art as the visual backbone while flagging founder-history and portfolio claims that still need archive support.',
-    status: 'Internal canon + careful public wording',
+    summary: 'Defines Grime Art as the raw UK visual layer and sets careful language for Charlie Buster history and collaboration claims.',
+    use: 'About page artist framing, project lanes and enquiry wording.',
   },
   {
     title: 'XRP NO BALL GAMES truth baseline',
     label: 'XRPL truth',
     href: `${repoBase}/xrp-noballgames-truth.md`,
-    summary: 'Locks the XRP KIDs, Alpha Aaron, FRET, $PMSL and Block Buster OG canon while insisting that issuer, token and marketplace details must be verified.',
-    status: 'Internal canon + verify all on-chain specifics',
+    summary: 'Locks the XRP KIDs canon (100/89/11), Alpha Aaron, FRET, $PMSL and Block Buster OG while requiring verification for chain-specific claims.',
+    use: 'Lore, XRP, community and collector-proof sections.',
+  },
+  {
+    title: 'Content rights and licensing policy',
+    label: 'Rights policy',
+    href: `${repoBase}/content-rights.md`,
+    summary: 'Sets paraphrase, attribution, quoting and image-rights standards for public publishing.',
+    use: 'Public copy discipline and source attribution standards.',
   },
 ];
 ---
 <BaseLayout
-  title="NO BALL GAMES Research Vault | Truth Archive, Source Rules & Canon Files"
-  description="Research vault for NO BALL GAMES truth baselines, Charlie Buster / Grime Art notes, XRP KIDs canon, rights guidance and source-control references."
+  title="NO BALL GAMES Research Vault | Truth Files, Rights Policy and Source Index"
+  description="Index of NO BALL GAMES truth markdown files and rights policy used to shape public pages with clear lore-versus-proof discipline."
   current="research"
 >
   <section class="page-hero">
     <span class="eyebrow">Research vault</span>
-    <h1>Archive the proof before building the myth.</h1>
+    <h1>Source files first. Public pages second.</h1>
     <p>
-      This section is the visible index for the truth archive: the NO BALL GAMES baseline, the Charlie Buster / Grime Art baseline and the XRP NO BALL GAMES baseline. Public pages stay concise because the long-form research lives here first.
+      This page remains the index for the markdown truth files. The public site now rewrites key material into polished pages, while this vault stays the canonical source register.
     </p>
   </section>
 
   <section class="section">
     <div class="section-header">
-      <h2>Truth archive files</h2>
-      <p>Read the source markdown before writing public-facing claims. Each file lives in <code>research/</code> and is versioned with the repo.</p>
+      <h2>Markdown source index</h2>
+      <p>Use these files before adding copy to public pages.</p>
     </div>
     <div class="card-grid">
       {truthFiles.map((file) => (
@@ -50,7 +57,7 @@ const truthFiles = [
           <span class="kicker">{file.label}</span>
           <h3>{file.title}</h3>
           <p>{file.summary}</p>
-          <div class="coming-soon-tag">{file.status}</div>
+          <p><strong>Used for:</strong> {file.use}</p>
           <a class="inline-link" href={file.href}>Open markdown source →</a>
         </article>
       ))}
@@ -59,66 +66,27 @@ const truthFiles = [
 
   <section class="section split-grid">
     <article class="panel-card">
-      <span class="kicker">How to read the archive</span>
-      <h2>Verified, internal canon, source needed.</h2>
-      <p>
-        The research files separate live public facts from founder-supplied canon and open proof gaps. That keeps the site from turning lore into hard history or chain speculation into technical certainty.
-      </p>
+      <span class="kicker">How this vault works</span>
+      <h2>Verified vs internal canon vs source needed.</h2>
       <ul class="list-clean">
-        <li><strong>Verified:</strong> safe public facts backed by the repo, site source or other accessible evidence.</li>
-        <li><strong>Internal canon:</strong> accepted story or brand truth inside the NO BALL GAMES universe.</li>
-        <li><strong>Source needed:</strong> usable directionally, but not ready to publish as hard fact without proof.</li>
+        <li><strong>Verified:</strong> claims with accessible support.</li>
+        <li><strong>Internal canon:</strong> accepted story truth inside the brand universe.</li>
+        <li><strong>Source needed:</strong> not yet ready as hard public fact.</li>
       </ul>
-    </article>
-    <article class="panel-card">
-      <span class="kicker">Related pages</span>
-      <ul class="list-clean">
-        <li><a class="inline-link" href={`${base}about/`}>About — the sign-flip brand story</a></li>
-        <li><a class="inline-link" href={`${base}projects/`}>Projects — where art, lore and XRPL concepts live</a></li>
-        <li><a class="inline-link" href={`${base}xrp/`}>XRP page — the concise public summary of the XRPL branch</a></li>
-        <li><a class="inline-link" href={`${base}contact/`}>Contact — collector, research and collaboration enquiries</a></li>
-      </ul>
-    </article>
-  </section>
-
-  <section class="section">
-    <div class="section-header">
-      <h2>Why the archive matters</h2>
-      <p>Cultural and historical context behind the NO BALL GAMES identity.</p>
-    </div>
-    <div class="card-grid">
-      <article class="feature-card">
-        <span class="kicker">Brand context</span>
-        <h3>The sign-flip stays grounded</h3>
-        <p>The NO BALL GAMES baseline keeps the public story focused on restricted-space rebellion, street culture and collector-ready brand structure without overclaiming token history.</p>
-      </article>
-      <article class="feature-card">
-        <span class="kicker">Artist context</span>
-        <h3>Grime Art needs careful wording</h3>
-        <p>The Charlie Buster file gives strong public phrasing for the artist layer while warning where portfolio, role and origin-story claims still need proof.</p>
-      </article>
-      <article class="feature-card">
-        <span class="kicker">XRPL context</span>
-        <h3>Lore is not ledger proof</h3>
-        <p>The XRP truth file makes the distinction explicit: the 100 / 89 / 11 canon can appear on the site as lore, but issuer and marketplace details must be verified separately.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section split-grid">
-    <article class="panel-card">
-      <span class="kicker">For the record</span>
-      <h2>The public site should stay readable.</h2>
       <p>
-        These markdown files are the long-form source material. Public pages should use them for direction, not dump them whole. The result is a cleaner site with clearer proof handling.
+        This separation keeps lore vivid while avoiding fake certainty in public-facing copy.
       </p>
     </article>
+
     <article class="panel-card">
-      <span class="kicker">Also in research</span>
+      <span class="kicker">Public pages now using this source material</span>
       <ul class="list-clean">
-        <li><a class="inline-link" href={`${repoBase}/content-rights.md`}>Content rights note →</a></li>
-        <li>Future archive folders can hold imported Substack posts, screenshots and proof logs.</li>
-        <li>Use the truth files before adding new lore, token or founder claims.</li>
+        <li><a class="inline-link" href={`${base}`}>Homepage pillar integration</a></li>
+        <li><a class="inline-link" href={`${base}about/`}>About Grime Art depth section</a></li>
+        <li><a class="inline-link" href={`${base}projects/`}>Project lane map</a></li>
+        <li><a class="inline-link" href={`${base}collections/`}>Collector pathways and warnings</a></li>
+        <li><a class="inline-link" href={`${base}lore/`}>Internal XRP canon framing</a></li>
+        <li><a class="inline-link" href={`${base}xrp/`}>Expanded XRP timeline and disclaimers</a></li>
       </ul>
     </article>
   </section>

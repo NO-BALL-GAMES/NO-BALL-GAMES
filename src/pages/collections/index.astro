@@ -3,77 +3,81 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL;
 ---
 <BaseLayout
-  title="NO BALL GAMES Collections | Physical Art, Clothing & Digital Collectibles"
-  description="NO BALL GAMES collections cover physical art, hand-painted clothing, digital collectible concepts and the XRP KIDs lore branch with clear verification guardrails."
+  title="NO BALL GAMES Collections | Originals, Wearables, Digital Collectibles & XRP KIDs"
+  description="Collector-facing overview of NO BALL GAMES originals, painted clothing, digital collectibles and XRP KIDs canon with strict verify-before-interaction warnings."
   current="collections"
 >
   <section class="page-hero">
     <span class="eyebrow">Collections</span>
-    <h1>Collect the culture before it gets cleaned up.</h1>
+    <h1>Collect the story in physical and digital form.</h1>
     <p>
-      Physical pieces, digital releases, limited clothing, prints, collectibles, character drops and future archive work — all sitting under the NO BALL GAMES name.
+      This page separates physical collecting from digital collecting so buyers, fans and researchers know what is available now, what is canon concept, and what still needs source verification.
     </p>
   </section>
 
-  <section class="section card-grid">
-    <article class="feature-card">
-      <span class="kicker">Physical</span>
-      <h3>Original art</h3>
-      <p>One-of-one canvases, hand-finished works, sign-inspired pieces, character artwork and raw studio output. Each piece connects back to the street-culture roots of the brand.</p>
-      <div class="coming-soon-tag">Enquire via contact</div>
-    </article>
-    <article class="feature-card">
-      <span class="kicker">Wearable</span>
-      <h3>Painted clothing</h3>
-      <p>Military jackets, denim, stencil garments and streetwear pieces that carry the NO BALL GAMES attitude into the real world. Limited runs, hand-finished, no mass production.</p>
-      <div class="coming-soon-tag">Future drops</div>
-    </article>
-    <article class="feature-card">
-      <span class="kicker">Digital</span>
-      <h3>Lore-led collectibles</h3>
-      <p>Character cards, collector passes, rarity tiers and reward mechanics should all be driven by the lore archive rather than empty token promises.</p>
-      <div class="coming-soon-tag">Concept structure</div>
-    </article>
-    <article class="feature-card">
-      <span class="kicker">XRPL branch</span>
-      <h3>XRP KIDs and the 100 / 89 / 11 canon</h3>
-      <p>The XRP KIDs side of the archive treats 100 genesis KIDs, 89 captured and 11 free as internal canon. Verify issuer, marketplace and token records before publishing chain specifics.</p>
-      <a class="inline-link" href={`${base}xrp/`}>Read the XRP summary →</a>
-    </article>
+  <section class="section">
+    <div class="section-header">
+      <h2>Collector categories</h2>
+      <p>Original art, painted clothing, digital collectibles and XRP KIDs concept lanes.</p>
+    </div>
+    <div class="card-grid">
+      <article class="feature-card">
+        <span class="kicker">Original art</span>
+        <h3>One-of-one painted works</h3>
+        <p>Sign-flip canvases, portrait-led pieces, mixed-media experiments and raw studio output grounded in NO BALL GAMES and Grime Art identity.</p>
+      </article>
+      <article class="feature-card">
+        <span class="kicker">Painted clothing</span>
+        <h3>Wearable art pieces</h3>
+        <p>Hand-painted jackets, denim and custom garments produced as collectible wearables rather than mass production merch.</p>
+      </article>
+      <article class="feature-card">
+        <span class="kicker">Digital collectibles</span>
+        <h3>Lore-led digital objects</h3>
+        <p>Character drops, collector passes and story-linked releases that should stay tied to canon and clear source labels.</p>
+      </article>
+      <article class="feature-card">
+        <span class="kicker">XRP KIDs concept</span>
+        <h3>100 / 89 / 11 internal canon</h3>
+        <p>XRP KIDs appears here as an internal lore branch featuring Alpha Aaron, FRET, $PMSL and Block Buster OG until on-chain records are verified.</p>
+        <a class="inline-link" href={`${base}xrp/`}>Open XRP collector context →</a>
+      </article>
+    </div>
   </section>
 
   <section class="section split-grid">
     <article class="panel-card">
-      <span class="kicker">Drop structure</span>
-      <h2>Make every release feel limited.</h2>
-      <p>
-        The strongest version of this brand does not dump random products. It releases controlled drops with story, scarcity, archive value and a clear reason to collect.
-      </p>
-      <p>
-        Each drop connects to the lore, the characters or a specific chapter of the brand story. If the drop points at an on-chain branch, the issuer and collection data should be visible before collectors are asked to act.
-      </p>
-      <a class="inline-link" href={`${base}lore/`}>Explore the lore behind the drops →</a>
-    </article>
-    <article class="panel-card">
-      <span class="kicker">Suggested categories</span>
+      <span class="kicker">Physical collector lane</span>
+      <h2>What physical collectors should expect.</h2>
       <ul class="list-clean">
-        <li>Original one-of-one artworks.</li>
-        <li>Limited prints and signed editions.</li>
-        <li>Hand-painted jackets and custom garments.</li>
-        <li>Character collectible drops.</li>
-        <li>XRP KIDs lore releases once ledger details are verified.</li>
+        <li>Original artworks with medium, size and provenance notes.</li>
+        <li>Painted clothing with garment base and finish details.</li>
+        <li>Limited editions and commissions via direct enquiry.</li>
       </ul>
+      <a class="inline-link" href={`${base}contact/`}>Enquire about physical pieces →</a>
+    </article>
+
+    <article class="panel-card">
+      <span class="kicker">Digital collector lane</span>
+      <h2>What digital collectors should verify first.</h2>
+      <ul class="list-clean">
+        <li>Verify issuer before interacting with any token or collectible.</li>
+        <li>Verify collection records and marketplace listings.</li>
+        <li>Treat lore text as canon narrative, not automatic chain proof.</li>
+        <li>Avoid acting on unverified supply, price or holder claims.</li>
+      </ul>
+      <div class="coming-soon-tag">Verify issuer • Verify collection • Verify marketplace</div>
     </article>
   </section>
 
   <section class="section cta-block">
     <div class="cta-block-inner">
-      <span class="eyebrow">Want something specific?</span>
-      <h2>Commission or enquire directly.</h2>
-      <p>For original art, painted clothing, collector questions or XRP KIDs lore enquiries — reach out. Clear messages, real projects, honest replies.</p>
+      <span class="eyebrow">Collector support</span>
+      <h2>Need clarity before you collect?</h2>
+      <p>Use contact for originals, wearables, digital collectible context, lore questions and source/proof checks.</p>
       <div class="cta-row">
-        <a class="button primary" href={`${base}contact/`}>Send an enquiry</a>
-        <a class="button secondary" href={`${base}projects/`}>View all projects</a>
+        <a class="button primary" href={`${base}contact/`}>Contact collector desk</a>
+        <a class="button secondary" href={`${base}research/`}>Read source archive</a>
       </div>
     </div>
   </section>
