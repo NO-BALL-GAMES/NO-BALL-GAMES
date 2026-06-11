@@ -1,0 +1,98 @@
+---
+import '../styles/site.css';
+
+interface Props {
+  title: string;
+  description: string;
+  current?: string;
+}
+
+const {
+  title,
+  description,
+  current = '',
+} = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+const canonicalPath = Astro.url.pathname;
+const canonical = new URL(canonicalPath, Astro.site ?? 'https://no-ball-games.github.io').toString();
+const ogImage = `${base}og/default-og.svg`;
+
+const navItems = [
+  { href: `${base}`, label: 'Home', key: 'home' },
+  { href: `${base}about/`, label: 'About', key: 'about' },
+  { href: `${base}projects/`, label: 'Projects', key: 'projects' },
+  { href: `${base}collections/`, label: 'Collections', key: 'collections' },
+  { href: `${base}lore/`, label: 'Lore', key: 'lore' },
+  { href: `${base}community/`, label: 'Community', key: 'community' },
+  { href: `${base}contact/`, label: 'Contact', key: 'contact' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'NO BALL GAMES',
+  url: canonical,
+  description,
+  brand: {
+    '@type': 'Brand',
+    name: 'NO BALL GAMES',
+  },
+};
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+    <link rel="manifest" href={`${base}site.webmanifest`} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="theme-color" content="#050505" />
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand-mark" href={base} aria-label="NO BALL GAMES home">
+          <span class="brand-sign">NO BALL</span>
+          <span class="brand-games">GAMES</span>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+          {navItems.map((item) => (
+            <a href={item.href} class:list={[{ active: current === item.key }]}>{item.label}</a>
+          ))}
+        </nav>
+      </header>
+
+      <main>
+        <slot />
+      </main>
+
+      <footer class="site-footer">
+        <div>
+          <strong>NO BALL GAMES</strong>
+          <p>A street-culture brand built from restricted spaces, graffiti energy, digital collectibles, and the refusal to stay boxed in.</p>
+        </div>
+        <div class="footer-links">
+          <a href={`${base}about/`}>About</a>
+          <a href={`${base}projects/`}>Projects</a>
+          <a href={`${base}community/`}>Community</a>
+          <a href={`${base}contact/`}>Contact</a>
+        </div>
+        <p class="copyright">© {new Date().getFullYear()} NO BALL GAMES. Built for the people who were told where not to play.</p>
+      </footer>
+    </div>
+  </body>
+</html>

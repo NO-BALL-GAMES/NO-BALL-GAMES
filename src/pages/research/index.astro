@@ -1,16 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research Vault • Charlie Buster</title>
-  <style>
-    body { font-family: 'Exo 2', system-ui, sans-serif; background: #0a0a0a; color: white; padding: 40px; }
-  </style>
-</head>
-<body>
-  <h1 style="font-size: 3.5rem;">RESEARCH VAULT</h1>
-  <p style="font-size: 1.4rem; margin-top: 20px;">Content from the research folder will go here.</p>
-  <a href="/" style="color: #a855f7; margin-top: 40px; display: inline-block;">← Back Home</a>
-</body>
-</html>
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="NO BALL GAMES Research Vault | Brand Notes, Rights & Source Archive"
+  description="Research vault for NO BALL GAMES brand notes, content rights, source material, archive planning and website development references."
+  current="research"
+>
+  <section class="page-hero">
+    <span class="eyebrow">Research vault</span>
+    <h1>Archive the proof before building the myth.</h1>
+    <p>
+      This section is for research notes, content rights, source references, brand planning and the material that supports future pages.
+    </p>
+  </section>
+
+  <section class="section split-grid">
+    <article class="panel-card">
+      <span class="kicker">Current file</span>
+      <h2>Content rights</h2>
+      <p>
+        Keep this area for documented source material and rights notes. It helps stop the website from turning into unsupported claims or copied content.
+      </p>
+    </article>
+    <article class="panel-card">
+      <span class="kicker">Recommended research buckets</span>
+      <ul class="list-clean">
+        <li>Brand origin notes.</li>
+        <li>Image ownership and usage rights.</li>
+        <li>Press links and public references.</li>
+        <li>Collection metadata and drop notes.</li>
+        <li>Future article outlines and SEO targets.</li>
+      </ul>
+    </article>
+  </section>
+</BaseLayout>

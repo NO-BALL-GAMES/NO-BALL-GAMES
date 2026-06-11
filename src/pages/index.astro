@@ -1,63 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charlie Buster | NO BALL GAMES</title>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Exo 2', system-ui, sans-serif;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      color: white;
-    }
-    .hero-bg {
-      animation: rainbowShift 12s linear infinite;
-      background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
-      background-size: 700% 700%;
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-    @keyframes rainbowShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .title {
-      font-size: clamp(5rem, 14vw, 12rem);
-      font-weight: 900;
-      letter-spacing: -0.06em;
-      text-align: center;
-      animation: textRainbow 8s linear infinite;
-    }
-    @keyframes textRainbow {
-      0% { filter: hue-rotate(0deg); }
-      100% { filter: hue-rotate(360deg); }
-    }
-  </style>
-</head>
-<body>
-  <div class="hero-bg">
-    <div class="text-center px-6 max-w-5xl z-10">
-      <h1 class="title">CHARLIE BUSTER</h1>
-      <p class="mt-4 text-3xl md:text-4xl font-medium tracking-[0.2em]">NO BALL GAMES • GRIME ART ARCHIVE</p>
-
-      <div class="mt-20 max-w-xl mx-auto">
-        <h2 class="text-4xl font-medium">WELCOME TO THE ARCHIVE</h2>
-        <p class="mt-6 text-xl text-white/90">Grime art, street culture, and raw energy from Charlie Buster.</p>
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout
+  title="NO BALL GAMES | Street Culture, Grime Art & Digital Collectibles"
+  description="NO BALL GAMES is a street-culture brand built from graffiti energy, restricted spaces, underground creativity, digital collectibles, and community rebellion."
+  current="home"
+>
+  <section class="hero">
+    <div class="hero-card hero-copy">
+      <span class="eyebrow">Street culture • Grime art • Digital rebellion</span>
+      <h1>NO BALL <span class="hero-title-accent">GAMES</span></h1>
+      <p class="lead">
+        Not just a sign. A symbol of restricted spaces, broken rules, estate culture, street creativity, and turning limitation into identity.
+      </p>
+      <div class="cta-row">
+        <a class="button primary" href={`${base}projects/`}>Enter the movement</a>
+        <a class="button secondary" href={`${base}about/`}>Read the story</a>
       </div>
-
-      <div class="mt-16 flex flex-wrap justify-center gap-6">
-        <a href="/research" class="px-10 py-5 bg-white text-black rounded-3xl font-medium text-xl hover:scale-105 transition">ENTER THE VAULT →</a>
-        <a href="/about" class="px-10 py-5 border-2 border-white rounded-3xl font-medium text-xl hover:bg-white hover:text-black transition">ABOUT THE ARTIST</a>
+      <div class="stat-grid" aria-label="Brand pillars">
+        <div class="stat"><strong>01</strong><span>Street-rooted identity</span></div>
+        <div class="stat"><strong>02</strong><span>Art, lore and culture</span></div>
+        <div class="stat"><strong>03</strong><span>Collectibles and community</span></div>
       </div>
     </div>
-  </div>
-</body>
-</html>
+
+    <aside class="hero-card hero-sign" aria-label="NO BALL GAMES sign graphic">
+      <div class="restricted-board">
+        <strong>NO BALL</strong>
+        <strong>GAMES</strong>
+        <span>Play anyway</span>
+      </div>
+      <p>
+        Built from the places where creativity was told to keep quiet. Walls, estates, signs, tags, characters, collectibles and stories — all pushed into one brand system.
+      </p>
+    </aside>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Built from the ban</h2>
+      <p>NO BALL GAMES takes a dead public warning and turns it into a creative operating system: art, clothing, lore, collectibles, gaming ideas and community culture.</p>
+    </div>
+    <div class="card-grid">
+      <article class="feature-card">
+        <span class="kicker">Identity</span>
+        <h3>From restriction to symbol</h3>
+        <p>The phrase carries the feeling of being told where not to play, where not to create and where not to belong. The brand flips that message into ownership.</p>
+      </article>
+      <article class="feature-card">
+        <span class="kicker">Art</span>
+        <h3>Graffiti and grime energy</h3>
+        <p>Raw mark-making, street typography, worn textures, pop-culture attitude and hand-painted edge form the visual backbone of the project.</p>
+      </article>
+      <article class="feature-card">
+        <span class="kicker">Digital</span>
+        <h3>Collectible-ready universe</h3>
+        <p>The site is structured to support character drops, lore pages, digital collectibles, game tie-ins, community quests and future product launches.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section split-grid">
+    <div class="panel-card">
+      <span class="kicker">Brand position</span>
+      <h2>Underground, but organised.</h2>
+      <p>
+        The site needs to work like a serious brand hub without losing the rawness. That means clear pages, fast navigation, better SEO, better mobile layout and stronger reasons for people to stay.
+      </p>
+      <div class="cta-row">
+        <a class="button primary" href={`${base}collections/`}>View collections</a>
+      </div>
+    </div>
+    <div class="panel-card">
+      <span class="kicker">What lives here</span>
+      <ul class="list-clean">
+        <li>Brand story and origin of the NO BALL GAMES identity.</li>
+        <li>Project pages for art, collectibles, gaming, lore and community.</li>
+        <li>Collector-facing sections for future drops, merch and one-of-one work.</li>
+        <li>Search-friendly pages that give Google something real to index.</li>
+        <li>A cleaner structure ready for images, case studies and launch updates.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Core areas</h2>
+      <p>Each area can grow into a deeper page as the project expands.</p>
+    </div>
+    <div class="project-grid">
+      <article class="feature-card">
+        <span class="kicker">Projects</span>
+        <h3>Creative brand hub</h3>
+        <p>Campaigns, experiments, drops, art projects, game ideas and Web3-ready extensions under the NO BALL GAMES name.</p>
+        <a class="button secondary" href={`${base}projects/`}>Open projects</a>
+      </article>
+      <article class="feature-card">
+        <span class="kicker">Lore</span>
+        <h3>The sign becomes a world</h3>
+        <p>A living archive for characters, factions, stories, symbols and the mythology behind the brand.</p>
+        <a class="button secondary" href={`${base}lore/`}>Read lore</a>
+      </article>
+      <article class="feature-card">
+        <span class="kicker">Collections</span>
+        <h3>Collectible culture</h3>
+        <p>A clean area for NFTs, physical pieces, prints, clothing, digital drops and future collector releases.</p>
+        <a class="button secondary" href={`${base}collections/`}>View collections</a>
+      </article>
+      <article class="feature-card">
+        <span class="kicker">Community</span>
+        <h3>People over platforms</h3>
+        <p>The movement needs a home for fans, collectors, artists, players, collaborators and supporters.</p>
+        <a class="button secondary" href={`${base}community/`}>Join community</a>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
