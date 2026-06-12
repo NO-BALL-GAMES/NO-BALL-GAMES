@@ -75,7 +75,7 @@ public/
 The site deploys automatically via the GitHub Actions workflow in `.github/workflows/`.
 
 - **Live URL:** `https://nbg1618.com/`
-- The `site` and `base` values in `astro.config.mjs` must match the repository name exactly.
+- The `site` and `base` values in `astro.config.mjs` are set for the custom domain (`https://nbg1618.com`, base `/`).
 - Do **not** commit `node_modules/`, `dist/`, or `.astro/` — they are in `.gitignore`.
 - To trigger a manual redeploy, push any commit to the default branch.
 
