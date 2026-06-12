@@ -2,15 +2,15 @@
   "name": "NO BALL GAMES",
   "short_name": "NO BALL GAMES",
   "description": "Street-culture brand built from restricted spaces, graffiti energy, digital collectibles and community rebellion.",
-  "start_url": "/NO-BALL-GAMES/",
-  "scope": "/NO-BALL-GAMES/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#050505",
   "theme_color": "#050505",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/NO-BALL-GAMES/favicon.svg",
+      "src": "/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }

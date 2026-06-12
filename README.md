@@ -74,7 +74,7 @@ public/
 
 The site deploys automatically via the GitHub Actions workflow in `.github/workflows/`.
 
-- **Live URL:** `https://no-ball-games.github.io/NO-BALL-GAMES/`
+- **Live URL:** `https://nbg1618.com/`
 - The `site` and `base` values in `astro.config.mjs` must match the repository name exactly.
 - Do **not** commit `node_modules/`, `dist/`, or `.astro/` — they are in `.gitignore`.
 - To trigger a manual redeploy, push any commit to the default branch.
