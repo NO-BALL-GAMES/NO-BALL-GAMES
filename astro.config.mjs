@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://no-ball-games.github.io',
-  base: '/NO-BALL-GAMES/',
+  site: 'https://nbg1618.com',
+  base: '/',
 
   integrations: [],
 
