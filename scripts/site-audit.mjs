@@ -91,6 +91,34 @@ for (const file of htmlFiles) {
     errors.push(`${pagePath}: missing canonical URL`);
   }
 
+  // Visual section highlighting must never create false current-page announcements.
+  // Check the exact destination within the main navigation, including More.
+  const navMarkup = html.match(/<nav\b[^>]*aria-label="Main navigation"[^>]*>([\s\S]*?)<\/nav>/i)?.[1];
+  if (!navMarkup) {
+    errors.push(`${pagePath}: missing main navigation landmark`);
+  } else {
+    const normalize = (href) => {
+      const pathname = new URL(href, pageURL).pathname;
+      return pathname.replace(/\/+$/, '') || '/';
+    };
+    const pageKey = normalize(pagePath);
+    const anchors = [...navMarkup.matchAll(/<a\b[^>]*>/gi)].map((match) => match[0]);
+    let exactMatches = 0;
+    let currentCount = 0;
+    for (const anchor of anchors) {
+      const href = anchor.match(/\bhref="([^"]+)"/i)?.[1];
+      if (!href) continue;
+      const exact = normalize(href) === pageKey;
+      if (exact) exactMatches++;
+      if (/\baria-current="page"/i.test(anchor)) {
+        currentCount++;
+        if (!exact) errors.push(`${pagePath}: main navigation marks ${href} current, but it is not the current page`);
+      }
+    }
+    if (currentCount > 1) errors.push(`${pagePath}: ${currentCount} main navigation links claim aria-current=page`);
+    if (exactMatches && currentCount !== 1) errors.push(`${pagePath}: current navigation page is missing aria-current=page`);
+  }
+
   for (const [, , value] of html.matchAll(urlPatterns)) {
     const href = value.trim();
     if (!href || skippedSchemes.test(href)) continue;
