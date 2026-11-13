@@ -86,6 +86,15 @@ const pressSlugs = [
   'charlie-buster-gallery-application',
   'charlie-buster-grant-application',
 ];
+// A highlighted section is not necessarily the current document. Only the
+// exact destination gets aria-current; this prevents duplicate announcements
+// when a child article is grouped under Stories or Press.
+const normalizePath = (path: string) => {
+  const urlPath = new URL(path, Astro.url).pathname;
+  return urlPath === '/' ? '/' : `${urlPath.replace(/\/+$/, '')}/`;
+};
+const isCurrentPage = (href: string) => normalizePath(href) === normalizePath(Astro.url.pathname);
+
 const activeKey =
   slug === 'charlie-buster-biography' ? 'artist'
   : slug === 'what-is-grime-art' ? 'grime'
@@ -154,17 +163,17 @@ const schema = {
         </a>
         <nav class="site-nav" aria-label="Main navigation">
           {navItems.slice(0, 7).map((item) => (
-            <a href={item.href} class:list={[{ active: activeKey === item.key }]} aria-current={activeKey === item.key ? 'page' : undefined}>{item.label}</a>
+            <a href={item.href} class:list={[{ active: activeKey === item.key }]} aria-current={isCurrentPage(item.href) ? 'page' : undefined}>{item.label}</a>
           ))}
           <details class:list={['nav-more', { active: activeKey === 'more' }]}>
             <summary>More <span aria-hidden="true">⌄</span></summary>
             <div class="nav-more-panel">
               {moreItems.map((item) => (
-                <a href={item.href} aria-current={Astro.url.pathname === item.href ? 'page' : undefined}>{item.label}</a>
+                <a href={item.href} aria-current={isCurrentPage(item.href) ? 'page' : undefined}>{item.label}</a>
               ))}
             </div>
           </details>
-          <a href={navItems[7].href} class:list={[{ active: activeKey === 'contact' }]} aria-current={activeKey === 'contact' ? 'page' : undefined}>Contact</a>
+          <a href={navItems[7].href} class:list={[{ active: activeKey === 'contact' }]} aria-current={isCurrentPage(navItems[7].href) ? 'page' : undefined}>Contact</a>
         </nav>
       </header>
 
