@@ -1,152 +1,164 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL;
+
+const stories = [
+  { label: 'Origins', title: 'Founder biography', summary: 'From South London and Kent to the development of Grime Art.', href: 'charlie-buster-biography/' },
+  { label: 'The movement', title: 'What Is Grime Art?', summary: 'The materials, influences and principles behind the visual language.', href: 'what-is-grime-art/' },
+  { label: 'Street history', title: 'Leake Street Tunnel', summary: 'The BUSTER roof piece and the connection to London graffiti culture.', href: 'leake-street-tunnel/' },
+  { label: 'Music & art', title: 'Central Cee — “Ungrateful”', summary: 'The canvas and its connection to the UK rap visual world.', href: 'central-cee-ungrateful-grime-art/' },
+  { label: 'Music & art', title: 'Big Zuu — Ditto Music', summary: 'The portrait and its journey into a professional music setting.', href: 'big-zuu-grime-art-canvas/' },
+  { label: 'Art & hospitality', title: 'Gordon Ramsay — Lucky Cat', summary: 'A hand-painted object commission and its unusual aftermath.', href: 'gordon-ramsay-lucky-cat-charlie-buster/' },
+];
+
+const professionalResources = [
+  { label: 'Career history', title: 'Professional artist timeline', href: 'charlie-buster-artist-timeline/' },
+  { label: 'Press', title: 'Media biography', href: 'charlie-buster-media-bio/' },
+  { label: 'Press', title: 'Official press kit', href: 'charlie-buster-press-kit/' },
+  { label: 'Exhibitions', title: 'Gallery application pack', href: 'charlie-buster-gallery-application/' },
+  { label: 'Public programmes', title: 'Grant application statement', href: 'charlie-buster-grant-application/' },
+];
 ---
 <BaseLayout
-  title="About NO BALL GAMES | Sign-Flip Street Culture and Charlie Buster's Grime Art"
-  description="NO BALL GAMES is a street-culture brand powered by Charlie Buster's Grime Art visual language — graffiti energy, grime culture, painted clothing, original art and XRP KIDs lore."
+  title="About Charlie Buster | Grime Art Founder & NO BALL GAMES"
+  description="Meet Charlie Buster, founder of Grime Art and creative force behind NO BALL GAMES. Explore his graffiti roots, Graffiti Kings career, public art, commissions and British street-culture vision."
   current="about"
 >
   <section class="page-hero">
-    <span class="eyebrow">About</span>
-    <h1>From warning sign to cultural movement.</h1>
-    <p>
-      NO BALL GAMES turns a British restriction sign into a brand built on art, rebellion, identity and play. The sign told people where not to go. The brand built a culture in that exact space.
-    </p>
+    <span class="eyebrow">Charlie Buster / Grime Art / NO BALL GAMES</span>
+    <h1>Art with the street still in it.</h1>
+    <p>Charlie Buster is a British contemporary artist, muralist and creative consultant whose work moves between graffiti culture, painted clothing, music, public art and original collector pieces. He founded Grime Art and brings that visual language into the wider NO BALL GAMES universe.</p>
+    <div class="cta-row">
+      <a class="button primary" href={`${base}charlie-buster-biography/`}>Read the full biography</a>
+      <a class="button secondary" href={`${base}charlie-buster-press-kit/`}>Press kit</a>
+    </div>
   </section>
 
   <section class="section split-grid">
     <article class="panel-card">
-      <span class="kicker">The sign flip</span>
-      <h2>Restriction became identity.</h2>
-      <p>
-        The phrase "No Ball Games" was placed on estates, courts and shared urban spaces to control play, block access and mark out who did not belong. NO BALL GAMES flips that instruction into a cultural symbol: create anyway, paint anyway, play anyway, build something anyway.
-      </p>
-      <p>
-        That defiance is the foundation for every piece of art, every painted jacket, every lore beat and every collectible in the NO BALL GAMES universe.
-      </p>
+      <span class="kicker">The artist</span>
+      <h2>From early marks to a professional practice.</h2>
+      <p>South London and Kent shaped Charlie's early relationship with lettering, graffiti, music and everyday street surfaces. Drawing and customising objects began young; the ambition was always bigger than a single wall or medium.</p>
+      <p>In 2008 he joined Graffiti Kings London. Over the following decade, his work developed through murals, public art, workshops, brand activations and creative partnerships, progressing into senior marketing and collaborations responsibilities.</p>
+      <p>That experience taught him how to work between two worlds: the instinctive, imperfect energy of graffiti and the demands of clients, institutions and collectors.</p>
+      <a class="inline-link" href={`${base}charlie-buster-artist-timeline/`}>Explore the career timeline →</a>
     </article>
-
     <article class="panel-card">
-      <span class="kicker">The brand pillars</span>
-      <h2>What NO BALL GAMES is built on.</h2>
-      <ul class="list-clean">
-        <li><strong>Restriction:</strong> the original sign, blocked spaces, denied access.</li>
-        <li><strong>Rebellion:</strong> refusing to let the ban define the person.</li>
-        <li><strong>Grime Art:</strong> Charlie Buster's raw UK visual language.</li>
-        <li><strong>Collector culture:</strong> physical and digital objects with story and scarcity.</li>
-        <li><strong>Lore:</strong> the XRP KIDs universe, characters and coded signs.</li>
-        <li><strong>Community:</strong> fans, artists, players, collectors and collaborators.</li>
-      </ul>
+      <span class="kicker">The idea</span>
+      <h2>What makes it Grime Art?</h2>
+      <p>Grime Art is Charlie's name for a contemporary British visual approach that carries the layers of tags, posters, paint, music, fashion and street texture onto new surfaces. Around 2011, experiments through the Graffiti Kings studio helped bring that identity into focus.</p>
+      <p>It is not simply a picture of a grime musician, or graffiti made tidy for a gallery. It is a way of building imagery through tension: rough and controlled, familiar and disruptive, street-rooted and collectible.</p>
+      <p>That language can live on a canvas, a mural, a hand-painted military jacket, a sculpture or a public installation without losing its character.</p>
+      <a class="inline-link" href={`${base}what-is-grime-art/`}>Read the complete Grime Art guide →</a>
     </article>
   </section>
 
   <section class="section">
     <div class="section-header">
-      <h2>Charlie Buster and Grime Art</h2>
-      <p>The creative force and visual language at the heart of NO BALL GAMES.</p>
+      <h2>From the wall into the wider world</h2>
+      <p>Work across music, hospitality, brands, galleries and private commissions — connected by a recognisable hand-painted identity.</p>
     </div>
     <div class="card-grid">
       <article class="feature-card">
-        <span class="kicker">Who is Charlie Buster</span>
-        <h3>The creative force behind the brand</h3>
-        <p>
-          Charlie Buster is the British street artist and creative director behind NO BALL GAMES. Shaped by UK estate culture, graffiti, grime music energy and years building through the world of UK street art, Charlie developed a visual language that sits between the wall and the gallery: gritty enough to feel lived-in, refined enough to be collected.
-        </p>
+        <span class="kicker">Music &amp; portraiture</span>
+        <h3>Painting culture, not just faces.</h3>
+        <p>Portrait and music-related projects in Charlie's portfolio include Central Cee, Big Zuu, Giggs, Knucks and Aston Merrygold. Rather than treating the portrait as a flat likeness, the work uses marks, colour and movement to reflect the subject's cultural world.</p>
+        <a class="inline-link" href={`${base}central-cee-ungrateful-grime-art/`}>Explore a music-art story →</a>
       </article>
       <article class="feature-card">
-        <span class="kicker">What is Grime Art</span>
-        <h3>A raw British visual movement</h3>
-        <p>
-          Grime Art is the visual language Charlie Buster created: a fusion of graffiti marks, street-art attitude, UK grime music energy, pop-culture portraiture, hand-painted clothing and one-of-one collectible work. It is not just art about grime music — it is a complete visual system born from the same estates, walls and culture that shaped the sound.
-        </p>
-        <p>
-          The origin reaches back to a late-2011 Graffiti Kings London commission at the Portland Road studio for a UK grime rapper from London. The brief was direct: <strong>"Raw and Street."</strong> The work that came back carried grime energy, Croydon grit, graffiti movement and British street texture. When asked to name the style, Charlie called it grimey — like something pulled from an alleyway wall. That moment became the seed of Grime Art.
-        </p>
+        <span class="kicker">Brands &amp; unusual surfaces</span>
+        <h3>Art beyond the canvas.</h3>
+        <p>His supplied project record spans custom clothing, luxury products, commercial murals and hospitality objects, including hand-painted Lucky Cats for Gordon Ramsay's restaurant concept, as well as projects connected with Furla, Adidas and Nike.</p>
+        <a class="inline-link" href={`${base}gordon-ramsay-lucky-cat-charlie-buster/`}>Explore the Lucky Cat commission →</a>
       </article>
       <article class="feature-card">
-        <span class="kicker">What Grime Art makes</span>
-        <h3>Painted jackets, portraits, canvases, signs</h3>
-        <p>
-          Grime Art powers hand-painted military jackets, denim, wearable one-of-one pieces, raw pop-culture portraits, sign-flip canvases, portrait commissions and brand activation work. Each piece carries the mark, the texture, the attitude and the evidence that a human hand made it.
-        </p>
+        <span class="kicker">Public art &amp; exhibitions</span>
+        <h3>Work people encounter in real life.</h3>
+        <p>Leake Street, the M20 Graffiti Bridge, FLUX exhibitions and a range of commissioned walls sit within a practice that remains grounded in public space — not only private collections.</p>
+        <a class="inline-link" href={`${base}leake-street-tunnel/`}>Explore the Leake Street story →</a>
       </article>
     </div>
   </section>
 
+  <section class="section split-grid">
+    <article class="panel-card">
+      <span class="kicker">Public engagement</span>
+      <h2>More than finished artwork.</h2>
+      <p>Alongside commissions, Charlie's practice includes murals, creative workshops, educational sessions, youth engagement, charity projects and work in community and rehabilitation settings.</p>
+      <p>The point is participation as well as presentation: people making marks, learning practical skills, changing how a place feels and recognising that they can create something of their own.</p>
+      <a class="inline-link" href={`${base}charlie-buster-grant-application/`}>Explore the public-art funding statement →</a>
+    </article>
+    <article class="panel-card">
+      <span class="kicker">Why it matters</span>
+      <h2>British street culture deserves its own visual record.</h2>
+      <p>Britain has produced influential music, fashion and grassroots visual culture for decades. Grime Art is Charlie's attempt to give those lived textures a durable place in contemporary art without sanding away their origin.</p>
+      <p>The ambition is to build a body of original work that moves between street, gallery, community and collector — while keeping the voice, humour and restless energy of its source.</p>
+      <a class="inline-link" href={`${base}charlie-buster-gallery-application/`}>Explore the gallery statement →</a>
+    </article>
+  </section>
+
   <section class="section">
     <div class="section-header">
-      <h2>Grime Art and NO BALL GAMES</h2>
-      <p>Two connected but distinct worlds.</p>
+      <h2>How it connects to NO BALL GAMES</h2>
+      <p>Grime Art is the artist's visual language. NO BALL GAMES is a wider street-culture brand and creative universe.</p>
     </div>
     <div class="split-grid">
       <article class="panel-card">
-        <span class="kicker">Grime Art</span>
-        <h2>The visual language.</h2>
-        <p>
-          Charlie Buster's personal art movement and creative system. Graffiti energy, grime culture, portraiture, painted clothing and the raw British street sensibility that links every piece.
-        </p>
-        <p>
-          Grime Art is the mark-making, the style, the hand, the texture.
-        </p>
+        <span class="kicker">The sign flip</span>
+        <h3>Restriction turned into identity.</h3>
+        <p>The familiar British “NO BALL GAMES” sign becomes a challenge rather than a ban: create anyway, play anyway, build anyway. It carries the memory of estates, courts, shared spaces and the people expected to stay inside the lines.</p>
       </article>
       <article class="panel-card">
-        <span class="kicker">NO BALL GAMES</span>
-        <h2>The world it builds.</h2>
-        <p>
-          The wider street-culture brand and creative universe. Sign-flip identity, estate rebellion, original art, painted clothing, XRP KIDs lore, collector drops and community.
-        </p>
-        <p>
-          NO BALL GAMES is one of the worlds where Grime Art energy lives, expands and becomes collectible.
-        </p>
+        <span class="kicker">The wider universe</span>
+        <h3>Physical art, digital stories, community.</h3>
+        <p>NO BALL GAMES extends that idea through original artwork, painted wearables, community activity and XRP KIDs storytelling. Its digital lore is a fictional creative world, distinct from Charlie's documented art career.</p>
+        <a class="inline-link" href={`${base}lore/`}>Enter the lore universe →</a>
       </article>
     </div>
   </section>
 
   <section class="section">
     <div class="section-header">
-      <h2>How the brand grows</h2>
+      <h2>Explore the work and stories</h2>
+      <p>Detailed features on the movement, artist history and selected projects.</p>
     </div>
-    <div class="timeline">
-      <article class="timeline-item">
-        <strong>Origin</strong>
-        <div>
-          <h3>Street sign as symbol</h3>
-          <p>The phrase is lifted from real-world restriction signage and reframed as cultural identity. Croydon estate walls, blocked courts, UK public spaces become the brand's visual homeland.</p>
-        </div>
-      </article>
-      <article class="timeline-item">
-        <strong>Visual layer</strong>
-        <div>
-          <h3>Grime Art powers the brand</h3>
-          <p>Charlie Buster's Grime Art visual language feeds the painted jackets, portrait canvases, sign-flip artworks and the raw texture that makes NO BALL GAMES look like nothing else.</p>
-        </div>
-      </article>
-      <article class="timeline-item">
-        <strong>Collector layer</strong>
-        <div>
-          <h3>Physical and digital collectibles</h3>
-          <p>Original artworks, hand-painted wearables and limited physical drops carry Grime Art energy into collector hands. The XRP KIDs universe extends the brand into digital lore and collectible storytelling.</p>
-        </div>
-      </article>
-      <article class="timeline-item">
-        <strong>Universe</strong>
-        <div>
-          <h3>Lore, community and expansion</h3>
-          <p>The world extends into the XRP KIDs arc, the FRET resistance network, community participation, gaming concepts, future drops and the New Dawn sign-as-door mythology.</p>
-        </div>
-      </article>
+    <div class="card-grid">
+      {stories.map((story) => (
+        <article class="feature-card">
+          <span class="kicker">{story.label}</span>
+          <h3>{story.title}</h3>
+          <p>{story.summary}</p>
+          <a class="inline-link" href={`${base}${story.href}`}>Read the feature →</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Press, gallery &amp; funding resources</h2>
+      <p>Reference material for journalists, curators, partners and project commissioners.</p>
+    </div>
+    <div class="card-grid">
+      {professionalResources.map((resource) => (
+        <article class="feature-card">
+          <span class="kicker">{resource.label}</span>
+          <h3>{resource.title}</h3>
+          <a class="inline-link" href={`${base}${resource.href}`}>View resource →</a>
+        </article>
+      ))}
     </div>
   </section>
 
   <section class="section cta-block">
     <div class="cta-block-inner">
-      <span class="eyebrow">Get involved</span>
-      <h2>Commission original work or explore the universe.</h2>
-      <p>Original canvases, painted jackets, Grime Art commissions and XRP KIDs collector enquiries — all routes go through contact.</p>
+      <span class="eyebrow">Work with Charlie Buster</span>
+      <h2>Commission art that has something to say.</h2>
+      <p>Original artworks, painted jackets, murals, public art, brand collaborations, live painting, creative consultancy, gallery projects and speaking engagements.</p>
       <div class="cta-row">
-        <a class="button primary" href={`${base}contact/`}>Commission original work</a>
-        <a class="button secondary" href={`${base}projects/`}>Explore project lanes</a>
+        <a class="button primary" href="mailto:charlie@graffitikings.co.uk">Email Charlie</a>
+        <a class="button secondary" href="https://grimeartist.com/" rel="noopener noreferrer">Visit Grime Artist</a>
+        <a class="button secondary" href={`${base}contact/`}>Contact NO BALL GAMES</a>
       </div>
     </div>
   </section>

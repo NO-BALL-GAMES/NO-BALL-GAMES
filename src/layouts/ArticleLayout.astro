@@ -1,0 +1,42 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { frontmatter } = Astro.props;
+---
+<BaseLayout title={frontmatter.title} description={frontmatter.description} current="about">
+  <article class="feature-article">
+    <header class="page-hero feature-article-hero">
+      <span class="eyebrow">Grime Art / Street history / London</span>
+      <p class="article-meta">Charlie Buster · Leake Street Tunnel · London</p>
+      <h1>{frontmatter.heading}</h1>
+      <p>{frontmatter.description}</p>
+    </header>
+    <div class="feature-article-body">
+      <slot />
+    </div>
+    <aside class="section cta-block">
+      <div class="cta-block-inner">
+        <span class="eyebrow">Original Grime Art</span>
+        <h2>Commission Charlie Buster</h2>
+        <p>Original canvases, hand-painted jackets, portraits, murals and one-of-one collector pieces.</p>
+        <div class="cta-row">
+          <a class="button primary" href="https://grimeartist.com/" rel="noopener noreferrer">Visit Grime Artist</a>
+          <a class="button secondary" href="/contact/">Contact NO BALL GAMES</a>
+        </div>
+      </div>
+    </aside>
+  </article>
+  <style>
+    .feature-article-hero h1 { font-size: clamp(2.5rem, 5.5vw, 5.5rem); line-height: 1.04; overflow-wrap: break-word; }
+    .article-meta { font-size: .88rem; letter-spacing: .08em; text-transform: uppercase; }
+    .feature-article-body { width: min(100%, 860px); margin: 0 auto 50px; padding: 0 clamp(2px, 2vw, 20px); font-size: 1.075rem; line-height: 1.85; }
+    .feature-article-body :global(h2) { font-size: clamp(1.7rem, 3.5vw, 2.9rem); line-height: 1.12; margin: 2.8rem 0 1rem; text-transform: uppercase; color: var(--text); }
+    .feature-article-body :global(h3) { font-size: clamp(1.22rem, 2.3vw, 1.65rem); line-height: 1.25; margin: 2rem 0 .65rem; }
+    .feature-article-body :global(p) { margin: 0 0 1.35rem; color: var(--muted); }
+    .feature-article-body :global(strong) { color: var(--text); }
+    .feature-article-body :global(a) { color: var(--acid); text-decoration: underline; text-underline-offset: 3px; }
+    .feature-article-body :global(hr) { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
+    .feature-article-body :global(ul) { padding-left: 1.4rem; color: var(--muted); }
+    .feature-article-body :global(li) { margin: .5rem 0; }
+    @media (max-width: 600px) { .feature-article-body { font-size: 1rem; } }
+  </style>
+</BaseLayout>
