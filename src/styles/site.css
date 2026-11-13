@@ -600,6 +600,8 @@ h3 { font-size: clamp(1.45rem, 3vw, 2.1rem); }
 @media (max-width: 920px) {
   .site-header { align-items: flex-start; border-radius: 28px; flex-direction: column; }
   .site-nav { width: 100%; justify-content: flex-start; }
+  .nav-more { position: static; }
+  .nav-more-panel { top: calc(100% + 8px); left: 12px; right: 12px; width: auto; }
   .footer-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero,
   .split-grid,
@@ -620,7 +622,7 @@ h3 { font-size: clamp(1.45rem, 3vw, 2.1rem); }
   .site-shell { width: min(1180px, calc(100% - 22px)); }
   .site-nav { overflow: visible; flex-wrap: wrap; width: 100%; max-width: 100%; }
   .site-nav > a, .nav-more > summary { font-size: 0.8rem; padding: 9px 10px; }
-  .nav-more-panel { right: auto; left: 0; max-height: 55vh; }
+  .nav-more-panel { max-height: 55vh; }
   .footer-links { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 12px; }
   .hero-copy, .page-hero { padding: 26px; }
   .stat-grid { grid-template-columns: 1fr; }
