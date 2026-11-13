@@ -10,7 +10,21 @@ const isPress = [
   'charlie-buster-gallery-application',
   'charlie-buster-grant-application',
 ].some((slug) => path.includes(`/${slug}/`));
-const category = frontmatter.category || (isPress ? 'Professional resource' : 'Artist stories');
+const slug = path.split('/').filter(Boolean).at(-1);
+const categories = {
+  'charlie-buster-biography': 'Artist origins',
+  'what-is-grime-art': 'The Grime Art movement',
+  'leake-street-tunnel': 'London graffiti history',
+  'central-cee-ungrateful-grime-art': 'UK rap and visual art',
+  'big-zuu-grime-art-canvas': 'Music portraiture',
+  'gordon-ramsay-lucky-cat-charlie-buster': 'Art and hospitality',
+  'charlie-buster-artist-timeline': 'Career timeline',
+  'charlie-buster-media-bio': 'Media biography',
+  'charlie-buster-press-kit': 'Official press resources',
+  'charlie-buster-gallery-application': 'Gallery and curatorial',
+  'charlie-buster-grant-application': 'Funding and public art',
+};
+const category = frontmatter.category || categories[slug] || (isPress ? 'Professional resource' : 'Artist stories');
 const sectionLabel = isPress ? 'Press & resources' : 'Artist stories';
 const sectionHref = isPress ? `${base}press/` : `${base}stories/`;
 ---
@@ -28,11 +42,16 @@ const sectionHref = isPress ? `${base}press/` : `${base}stories/`;
       <h1>{frontmatter.heading}</h1>
       <p>{frontmatter.description}</p>
     </header>
+    <details class="article-toc" id="article-toc" hidden>
+      <summary>On this page <span aria-hidden="true">+</span></summary>
+      <ol id="article-toc-list"></ol>
+    </details>
     <div class="feature-article-body" id="article-content">
       <slot />
     </div>
     <nav class="article-next" aria-label="More to explore">
       <a class="inline-link" href={sectionHref}>← More {sectionLabel.toLowerCase()}</a>
+      <button type="button" id="article-copy-link" class="article-copy-link" aria-live="polite">Copy article link</button>
       <a class="inline-link" href={`${base}about/`}>About Charlie Buster →</a>
     </nav>
     <aside class="section cta-block">
@@ -58,6 +77,36 @@ const sectionHref = isPress ? `${base}press/` : `${base}stories/`;
     document.addEventListener('scroll', updateProgress, { passive: true });
     window.addEventListener('resize', updateProgress);
     updateProgress();
+
+    const article = document.querySelector<HTMLElement>('#article-content');
+    const toc = document.querySelector<HTMLDetailsElement>('#article-toc');
+    const list = document.querySelector<HTMLOListElement>('#article-toc-list');
+    const headings = Array.from(article?.querySelectorAll<HTMLHeadingElement>('h2') || []);
+    if (toc && list && headings.length >= 3) {
+      for (const heading of headings) {
+        if (!heading.id) {
+          const slug = (heading.textContent || 'section').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+          heading.id = `section-${slug}-${list.children.length + 1}`;
+        }
+        const item = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = `#${heading.id}`;
+        link.textContent = heading.textContent || 'Section';
+        item.append(link);
+        list.append(item);
+      }
+      toc.hidden = false;
+    }
+
+    const shareButton = document.querySelector<HTMLButtonElement>('#article-copy-link');
+    shareButton?.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        shareButton.textContent = 'Link copied';
+      } catch {
+        shareButton.textContent = 'Copy unavailable';
+      }
+    });
   </script>
   <style>
     .article-breadcrumb { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; padding: 0 0 22px; font-size: .85rem; color: var(--muted); }
@@ -76,7 +125,17 @@ const sectionHref = isPress ? `${base}press/` : `${base}stories/`;
     .feature-article-body :global(hr) { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
     .feature-article-body :global(ul) { padding-left: 1.4rem; color: var(--muted); }
     .feature-article-body :global(li) { margin: .5rem 0; }
-    .article-next { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin: 0 0 30px; }
+    .article-toc { width: min(100%, 860px); margin: 0 auto 36px; padding: 16px 20px; border: 1px solid var(--line); border-radius: 20px; background: rgba(255,255,255,.045); }
+    .article-toc summary { cursor: pointer; color: var(--acid); font-weight: 900; }
+    .article-toc summary span { margin-left: .5rem; }
+    .article-toc ol { max-height: 260px; overflow-y: auto; margin-bottom: 0; padding-left: 1.3rem; }
+    .article-toc li { padding: .3rem 0; }
+    .article-toc a { color: var(--text); text-decoration: none; }
+    .article-toc a:hover { color: var(--acid); }
+    .feature-article-body :global(h2) { scroll-margin-top: 120px; }
+    .article-next { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin: 0 0 30px; }
+    .article-copy-link { border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px; background: rgba(255,255,255,.05); color: var(--acid); font: inherit; font-weight: 800; cursor: pointer; }
+    .article-copy-link:hover { border-color: var(--acid); }
     @media (max-width: 600px) { .feature-article-body { font-size: 1rem; } }
   </style>
 </BaseLayout>
