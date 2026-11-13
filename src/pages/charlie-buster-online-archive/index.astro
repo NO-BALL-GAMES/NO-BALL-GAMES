@@ -4,7 +4,23 @@ const base = import.meta.env.BASE_URL;
 
 // Source status distinguishes catalogue records, reporting, creator publications,
 // speculative fiction, and historical Web3 promotional proposals.
-const collections = [
+interface ArchiveSource {
+  title: string;
+  date: string;
+  type: string;
+  summary: string;
+  url: string;
+  internal?: string;
+  link?: string;
+}
+interface ArchiveGroup {
+  id: string;
+  kicker: string;
+  heading: string;
+  introduction: string;
+  sources: ArchiveSource[];
+}
+const collections: ArchiveGroup[] = [
   {
     id: 'art',
     kicker: 'Catalogue / Original work',
