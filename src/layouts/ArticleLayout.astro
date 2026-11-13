@@ -11,7 +11,7 @@ const isPress = [
   'charlie-buster-grant-application',
 ].some((slug) => path.includes(`/${slug}/`));
 const slug = path.split('/').filter(Boolean).at(-1);
-const categories = {
+const categories: Record<string, string> = {
   'charlie-buster-biography': 'Artist origins',
   'what-is-grime-art': 'The Grime Art movement',
   'leake-street-tunnel': 'London graffiti history',
@@ -24,7 +24,7 @@ const categories = {
   'charlie-buster-gallery-application': 'Gallery and curatorial',
   'charlie-buster-grant-application': 'Funding and public art',
 };
-const category = frontmatter.category || categories[slug] || (isPress ? 'Professional resource' : 'Artist stories');
+const category = frontmatter.category || categories[slug ?? ''] || (isPress ? 'Professional resource' : 'Artist stories');
 const sectionLabel = isPress ? 'Press & resources' : 'Artist stories';
 const sectionHref = isPress ? `${base}press/` : `${base}stories/`;
 ---
