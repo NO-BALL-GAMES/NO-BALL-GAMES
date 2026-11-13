@@ -245,3 +245,11 @@ Busterisms are recurring marks, symbols and visual details used in Charlie Buste
 ### Can I commission Charlie Buster?
 
 Yes. Charlie Buster creates custom Grime Art commissions including canvases, portraits, murals, denim jackets and hand-painted military jackets. Enquiries can be made through [grimeartist.com](https://grimeartist.com/) or direct message.
+
+---
+
+## Further Reading: Artist-Group Source
+
+GKniftyHEADS, writing from a Graffiti Kings-associated Medium account, published [“Street Artist BUSTER aka Charlie Buster” on 5 November 2025](https://medium.com/@GKniftyHEADS/street-artist-buster-aka-charlie-buster-5b72b55be5b3). It discusses the Leake Street Tunnel, the artist's style and public accounts. This is an artist-network perspective, not independent confirmation of every precise installation date.
+
+See the [Charlie Buster online archive](/charlie-buster-online-archive/) for more references and the [early canvas catalogue](/charlie-buster-early-works/) for documented works from 2018–2019.

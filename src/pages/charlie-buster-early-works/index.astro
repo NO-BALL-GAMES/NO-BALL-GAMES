@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const paintings = [
+  {
+    year: '2018',
+    title: 'ABC TWO HEADS',
+    format: '40 × 40 in · Acrylic on canvas',
+    practice: 'Acrylic, marker, spray paint and stencil',
+    account: 'In the accompanying Saatchi Art text, Buster names Andy Warhol and Jean-Michel Basquiat as major influences. He draws attention to the contrast between branded popular imagery and freer, childlike marks. It is a useful early example of the cultural layering he would later discuss through Grime Art.',
+    url: 'https://www.saatchiart.com/art/Painting-ABC-TWO-HEADS/1001532/4838895/view',
+    status: 'Listed as not for sale',
+  },
+  {
+    year: '2018',
+    title: 'MY RADIANT CHILD',
+    format: '30 × 40 in · Acrylic on canvas',
+    practice: 'Acrylic, marker, spray paint and stencil',
+    account: 'The listing’s artist statement identifies Warhol, Basquiat, Keith Haring and Salvador Dalí as reference points. These influences help explain the playful collision of pop art, bold figures and street-art devices in Buster’s early canvas work.',
+    url: 'https://www.saatchiart.com/art/Painting-MY-RADIANT-CHILD/1001532/4838925/view',
+    status: 'Original listed as not for sale; separate print listing exists',
+  },
+  {
+    year: '2019',
+    title: 'INNER THOUGHTS',
+    format: '40 × 40 in · Acrylic on canvas',
+    practice: 'Acrylic, spray paint, marker and stencil',
+    account: 'The artist describes beginning with the expressive possibilities of a woman’s eyes and developing a more abstract street-art treatment. His published notes cite Basquiat and Remi Rough among the influences.',
+    url: 'https://www.saatchiart.com/en-lt/art/Painting-Inner-Thoughts/1001532/4839050/view',
+    status: 'Listed as not for sale',
+  },
+  {
+    year: '2019',
+    title: 'DROP THE BOMB',
+    format: '40 × 40 in · Acrylic on canvas',
+    practice: 'Acrylic, spray paint, marker and stencil',
+    account: 'The Saatchi description positions the painting against conflict and hunger while arguing for a more humane response. It also credits a collaboration with an artist identified as LU LU; that credit comes from the artist’s listing, not a separately verified collaborator interview.',
+    url: 'https://www.saatchiart.com/art/Painting-DROP-THE-BOMB/1001532/4839258/view',
+    status: 'Listed as sold; price and transaction details are not verified here',
+  },
+  {
+    year: '2019',
+    title: 'LET IT FLOW...',
+    format: '130 × 70 in · Acrylic on canvas',
+    practice: 'Acrylic and spray paint',
+    account: 'A notably large-scale work. The artist’s listing says it was commissioned by a collector in the United States and identifies Jackson Pollock’s approach to structured movement as an influence. The commission claim is attributed to the artist’s own description.',
+    url: 'https://www.saatchiart.com/en-pr/art/Painting-Let-It-Flow/1001532/4839275/view',
+    status: 'Listed as sold; historic listing, not live inventory confirmation',
+  },
+];
+---
+<BaseLayout
+  title="Charlie Buster Early Works 2018–2019 | Saatchi Art Catalogue"
+  description="A sourced guide to five Charlie Buster paintings recorded on Saatchi Art in 2018–2019, with media, sizes, influences and links to their original catalogue entries."
+  current="stories"
+>
+  <section class="page-hero">
+    <span class="eyebrow">Artist archive / Original canvas works / 2018–2019</span>
+    <h1>BEFORE THE LABEL. THE PAINT.</h1>
+    <p>Five documented paintings. Two years. Early clues to a visual language built from pop culture, spray marks, contrast and movement. This page links directly to the artist’s Saatchi Art listings rather than presenting copied artwork photographs as an in-house gallery.</p>
+    <div class="cta-row">
+      <a class="button primary" href="https://www.saatchiart.com/charliebuster" target="_blank" rel="noopener noreferrer">See Charlie on Saatchi Art ↗</a>
+      <a class="button secondary" href={`${base}charlie-buster-online-archive/`}>Explore the full source archive</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>THE FIVE PAINTINGS.</h2>
+      <p>Years, dimensions and materials are taken from the individual public Saatchi Art catalogue entries, checked in November 2026. Artist commentary is credited to the listing; interpretation here is editorial.</p>
+    </div>
+    <div class="timeline">
+      {paintings.map((painting) => (
+        <article class="timeline-item" id={painting.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}>
+          <strong class="work-year">{painting.year}</strong>
+          <div class="work-detail">
+            <span class="kicker">Original canvas / Catalogue record</span>
+            <h3>{painting.title}</h3>
+            <p class="work-format">{painting.format}</p>
+            <p><strong>Recorded materials:</strong> {painting.practice}</p>
+            <p>{painting.account}</p>
+            <p class="work-status"><strong>Listing snapshot:</strong> {painting.status}</p>
+            <a class="inline-link" href={painting.url} target="_blank" rel="noopener noreferrer">View the original Saatchi record ↗</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section split-grid">
+    <article class="panel-card">
+      <span class="kicker">The through-line</span>
+      <h2>FIVE WORKS. ONE EVOLVING LANGUAGE.</h2>
+      <p>Across these listings, recurring materials include acrylic, spray paint, marker and stencil. The artist’s stated influences move between Warhol, Basquiat, Haring, Dalí, Remi Rough and Pollock. They are not all the same kind of artist; the mix is precisely what makes the early record useful.</p>
+      <p>The larger point is continuity rather than retrospective rebranding. These listings document the material experiments and reference points; they do not independently establish when the later term <a class="inline-link" href={`${base}what-is-grime-art/`}>Grime Art</a> first came into use.</p>
+    </article>
+    <article class="panel-card">
+      <span class="kicker">Print vs original</span>
+      <h2>ONE IMAGE. DIFFERENT OBJECTS.</h2>
+      <p>Saatchi also lists a fine-art print for <em>MY RADIANT CHILD</em>. A print edition and a one-of-one original are different products, with separate formats and collecting terms. A live listing is not a certificate of the current ownership of an original.</p>
+      <a class="inline-link" href="https://www.saatchiart.com/print/Painting-MY-RADIANT-CHILD/1001532/4838925/view" target="_blank" rel="noopener noreferrer">Inspect the separate Saatchi print listing ↗</a>
+      <a class="inline-link work-more" href={`${base}collections/`}>Explore NO BALL GAMES collecting →</a>
+    </article>
+  </section>
+
+  <section class="section">
+    <div class="archive-notice">
+      <span class="kicker">Source &amp; rights note</span>
+      <p>These are historical public listings from a marketplace profile joined in 2017, not an independent catalogue raisonné. Dates, media, dimensions, sale labels and artist statements can change on the source site. No third-party images are embedded, no live availability is promised, and artist-supplied accounts of commissions or collaborations are attributed rather than independently confirmed.</p>
+    </div>
+  </section>
+
+  <section class="section cta-block">
+    <div class="cta-block-inner">
+      <span class="eyebrow">Trace the work</span>
+      <h2>FROM THE CANVAS TO THE WALL.</h2>
+      <p>Follow the earlier artwork record into the later artist history, street commissions and source material.</p>
+      <div class="cta-row">
+        <a class="button primary" href={`${base}charlie-buster-artist-timeline/`}>Artist timeline</a>
+        <a class="button secondary" href={`${base}leake-street-tunnel/`}>Leake Street</a>
+        <a class="button secondary" href={`${base}charlie-buster-online-archive/`}>Full web archive</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .work-year { font-size: 1.9rem; letter-spacing: -.05em; line-height: 1.05; }
+    .work-detail h3 { font-size: clamp(1.65rem, 3.2vw, 2.5rem); }
+    .work-detail p { max-width: 790px; }
+    .work-format { color: var(--acid); font-weight: 900; }
+    .work-status { font-size: .86rem; }
+    .work-more { display: block; }
+    .archive-notice { padding: clamp(24px, 4vw, 40px); border: 1px solid rgba(47,255,227,.28); background: rgba(47,255,227,.045); border-radius: var(--radius); }
+    .archive-notice p { margin-bottom: 0; }
+  </style>
+</BaseLayout>

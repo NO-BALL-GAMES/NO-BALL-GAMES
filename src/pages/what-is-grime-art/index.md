@@ -335,3 +335,13 @@ Grime Art can be painted on canvas, walls, denim jackets, military jackets, furn
 ### Why collect Grime Art?
 
 Collectors are drawn to Grime Art because it combines original hand-painted work, British street culture, music influence, graffiti roots, pop culture relevance and one-of-one scarcity.
+
+---
+
+## Published Artwork Records and Busterisms
+
+The 2018–2019 [Saatchi Art painting records](/charlie-buster-early-works/) show Charlie Buster working with acrylic, spray paint, markers and stencils, with artist-described influences from Warhol, Basquiat, Haring, Dalí, Remi Rough and Pollock. They document early approaches to colour and layering without claiming that the later Grime Art label was already fixed.
+
+A [January 2023 article by *Your Daily Dose of Art*](https://medium.com/@YourDailyDoseOfArt/uk-street-artist-charlie-buster-is-quickly-becoming-one-of-the-worlds-most-sought-after-visual-9d41c8c6dd9f) describes “Busterisms” as the artist's use of graphic contrasts, humour, zigzags and double arrows. It is external commentary, not a conclusive history of the movement.
+
+For more publicly accessible descriptions, artist-published material and profiles, use the [Charlie Buster web archive](/charlie-buster-online-archive/).

@@ -36,5 +36,7 @@ As the founder of Grime Art, Charlie continues to build a body of work that chal
 - [What Is Grime Art?](/what-is-grime-art/)
 - [Charlie Buster at Leake Street Tunnel](/leake-street-tunnel/)
 - [Gordon Ramsay Lucky Cat Commission](/gordon-ramsay-lucky-cat-charlie-buster/)
+- [Early original paintings documented on Saatchi Art](/charlie-buster-early-works/)
+- [External coverage and source links](/charlie-buster-online-archive/)
 
 For artwork commissions or press enquiries, visit [grimeartist.com](https://grimeartist.com/) or [contact NO BALL GAMES](/contact/).

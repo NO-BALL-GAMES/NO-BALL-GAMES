@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL;
 const stories = [
+  { type: 'Early canvases / Saatchi archive', title: 'Charlie Buster: Five early works (2018–19)', description: 'Documented paintings, dimensions, influences and direct catalogue links before the later Grime Art terminology.', slug: 'charlie-buster-early-works/' },
   { type: 'Artist origins', title: 'Charlie Buster: Founder biography', description: 'From South London and Kent to Graffiti Kings, Grime Art and collector-led work.', slug: 'charlie-buster-biography/' },
   { type: 'London graffiti', title: 'BUSTER at Leake Street Tunnel', description: 'The roof piece, the Banksy Tunnel and the street roots of a British visual language.', slug: 'leake-street-tunnel/' },
   { type: 'UK rap & art', title: 'Central Cee — “Ungrateful”', description: 'The Grime Art canvas, the 23 era and contemporary British music visuals.', slug: 'central-cee-ungrateful-grime-art/' },
@@ -54,6 +55,7 @@ const stories = [
       <p>Discover the wider brand, the artist's press materials and the XRP KIDs fictional universe.</p>
       <div class="cta-row">
         <a class="button primary" href={`${base}press/`}>Press &amp; gallery resources</a>
+        <a class="button secondary" href={`${base}charlie-buster-online-archive/`}>External articles &amp; sources</a>
         <a class="button secondary" href={`${base}xrp/`}>XRP KIDs</a>
       </div>
     </div>
