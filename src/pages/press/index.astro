@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+const resources = [
+  { type: 'Press', title: 'Official press kit', description: 'Press introduction, selected clients, exhibitions, public art, media credits and contact details.', slug: 'charlie-buster-press-kit/' },
+  { type: 'Biography', title: 'Media biography', description: 'An editorial biography for press, features, artist profiles and publications.', slug: 'charlie-buster-media-bio/' },
+  { type: 'Career', title: 'Professional artist timeline', description: 'A chronological record of Charlie Buster’s career, projects and exhibitions.', slug: 'charlie-buster-artist-timeline/' },
+  { type: 'Curatorial', title: 'Gallery application pack', description: 'Artist statement, selected exhibitions and availability for curators, art fairs and residencies.', slug: 'charlie-buster-gallery-application/' },
+  { type: 'Community', title: 'Grant application statement', description: 'The case for public art, youth workshops, community engagement and cultural projects.', slug: 'charlie-buster-grant-application/' },
+];
+---
+<BaseLayout
+  title="Charlie Buster Press & Gallery Resources | NO BALL GAMES"
+  description="Charlie Buster's official press kit, media bio, artist timeline, gallery application and Grime Art grant funding statement in one place."
+  current="press"
+>
+  <section class="page-hero">
+    <span class="eyebrow">Press / Galleries / Partnerships</span>
+    <h1>Artist resources.</h1>
+    <p>Everything in one place for journalists, curators, commissioners, cultural partners and collaborators working with Charlie Buster and Grime Art.</p>
+    <div class="cta-row">
+      <a class="button primary" href={`${base}charlie-buster-press-kit/`}>Open official press kit</a>
+      <a class="button secondary" href="mailto:charlie@graffitikings.co.uk">Press enquiries</a>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Press &amp; professional documents</h2>
+      <p>Five separate resources. Choose the one you need.</p>
+    </div>
+    <div class="card-grid">
+      {resources.map((resource) => (
+        <article class="feature-card">
+          <span class="kicker">{resource.type}</span>
+          <h3>{resource.title}</h3>
+          <p>{resource.description}</p>
+          <a class="inline-link" href={`${base}${resource.slug}`}>Open resource →</a>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="section cta-block">
+    <div class="cta-block-inner">
+      <span class="eyebrow">Artist enquiries</span>
+      <h2>Work with Charlie Buster.</h2>
+      <p>For original artworks, gallery programmes, murals, brand collaborations, education and public art.</p>
+      <div class="cta-row">
+        <a class="button primary" href="mailto:charlie@graffitikings.co.uk">Email Charlie</a>
+        <a class="button secondary" href={`${base}stories/`}>Explore project stories</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
