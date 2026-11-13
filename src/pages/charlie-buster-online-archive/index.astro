@@ -1,0 +1,198 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+// Source status distinguishes catalogue records, reporting, creator publications,
+// speculative fiction, and historical Web3 promotional proposals.
+const collections = [
+  {
+    id: 'art',
+    kicker: 'Catalogue / Original work',
+    heading: 'THE ARTWORK RECORD.',
+    introduction: 'Public art listings can establish that a title, medium and date were published. An artist-authored profile or sales label is not an independently audited résumé or real-time inventory report.',
+    sources: [
+      { title: 'Charlie Buster — Saatchi Art profile', date: 'Profile joined 2017', type: 'Artist-managed marketplace profile', summary: 'The artist’s Saatchi profile, catalogue and public statement. A starting point for documented original paintings.', url: 'https://www.saatchiart.com/charliebuster', internal: 'charlie-buster-early-works/', link: 'Early works catalogue' },
+      { title: 'ABC TWO HEADS', date: '2018', type: 'Artwork listing', summary: 'A 40 × 40-inch original with named influences from Warhol and Basquiat.', url: 'https://www.saatchiart.com/art/Painting-ABC-TWO-HEADS/1001532/4838895/view' },
+      { title: 'MY RADIANT CHILD', date: '2018', type: 'Artwork listing', summary: 'An original canvas referencing Warhol, Basquiat, Haring and Dalí; the original and print listings are different editions.', url: 'https://www.saatchiart.com/art/Painting-MY-RADIANT-CHILD/1001532/4838925/view' },
+      { title: 'INNER THOUGHTS', date: '2019', type: 'Artwork listing', summary: 'Abstract treatment of eyes and portraiture with an artist statement mentioning Basquiat and Remi Rough.', url: 'https://www.saatchiart.com/en-lt/art/Painting-Inner-Thoughts/1001532/4839050/view' },
+      { title: 'DROP THE BOMB', date: '2019', type: 'Artwork listing', summary: 'A work on conflict and peace; the artist listing credits a collaboration with LU LU.', url: 'https://www.saatchiart.com/art/Painting-DROP-THE-BOMB/1001532/4839258/view' },
+      { title: 'LET IT FLOW...', date: '2019', type: 'Artwork listing', summary: 'Large-format painting, with the artist describing a US commission and influence from Pollock.', url: 'https://www.saatchiart.com/en-pr/art/Painting-Let-It-Flow/1001532/4839275/view' },
+    ],
+  },
+  {
+    id: 'articles',
+    kicker: 'Blog features / Interviews / Context',
+    heading: 'WHEN THE WEB WROTE ABOUT BUSTER.',
+    introduction: 'These published articles provide identifiable commentary or an artist-group account. Their promotional phrases, exhibition claims or anecdotes are not treated as independently proven without separate primary records.',
+    sources: [
+      { title: 'UK street artist Charlie Buster — Your Daily Dose of Art', date: '7 January 2023', type: 'Third-party blog feature', summary: 'Discusses his Graffiti Kings relationship, colourful character work, zigzags, double arrows and the label “Busterisms.” Specific location and global-recognition claims are the writer’s, not independently confirmed here.', url: 'https://medium.com/@YourDailyDoseOfArt/uk-street-artist-charlie-buster-is-quickly-becoming-one-of-the-worlds-most-sought-after-visual-9d41c8c6dd9f' },
+      { title: 'Street Artist BUSTER aka Charlie Buster — GKniftyHEADS', date: '5 November 2025', type: 'Artist-network feature', summary: 'Graffiti Kings-associated retrospective on the Leake Street Tunnel artwork, materials, motifs and artist social profiles.', url: 'https://medium.com/@GKniftyHEADS/street-artist-buster-aka-charlie-buster-5b72b55be5b3', internal: 'leake-street-tunnel/', link: 'Our Leake Street feature' },
+    ],
+  },
+  {
+    id: 'published',
+    kicker: 'Written material / Original voices',
+    heading: 'CHARLIE’S OWN WRITING.',
+    introduction: 'Artist-authored creative writing and old project papers are relevant to his practice, but they serve different purposes. Fictional stories are not biographies. Project whitepapers are dated proposals, not proof of live token utility or guaranteed returns.',
+    sources: [
+      { title: '@IAmCharlieBuster — Medium', date: 'Artist writing account', type: 'Creator publication', summary: 'A profile linking Charlie Buster’s public fiction, project writing and Web3 essays.', url: 'https://medium.com/@iamcharliebuster' },
+      { title: 'The Stencil Must Break…', date: '14 June 2025', type: 'Speculative-fiction novel', summary: 'A graffiti mythpunk story involving memory, identity, a stencil and a fictionalised version of its artist. Not a real-world event record.', url: 'https://medium.com/@iamcharliebuster/the-stencil-must-break-df405e5b6db5' },
+      { title: 'The Face in the Stencil — Chapter 1', date: '13 June 2025', type: 'Fiction / Extended lore', summary: 'A fictional account of an OG stencil, a signal and a changing digital mythology.', url: 'https://medium.com/@iamcharliebuster/the-og-extended-full-lore-by-charlie-buster-2a675cf4b093' },
+      { title: 'Daddy’s Little Princess', date: '13 June 2025', type: 'Fiction / Story', summary: 'A surreal story about the image of a princess, stencil culture and memory. Narrative content, not a factual artwork inventory.', url: 'https://medium.com/@iamcharliebuster/book-title-daddys-little-princess-15dae3711f8a' },
+      { title: 'NoBallGames ($NBG) Token Whitepaper', date: '4 October 2025', type: 'Historical project proposal', summary: 'An artist-published tokenomics and utility proposal. Do not infer that projections, pools, token supply rules or rewards were deployed or remain current.', url: 'https://medium.com/@iamcharliebuster/noballgames-nbg-token-whitepaper-5999e0512e8e' },
+      { title: 'XRP KIDs Whitepaper V1.0 — No Ball Games Official', date: '16 September 2025', type: 'Historical project paper', summary: 'An original Substack document on the 100-Genesis art project and proposed utility. Its claims about rewards and associated tokens require current contract and project verification.', url: 'https://noballgames.substack.com/p/the-nbg-xrp-kids-whitepaper', internal: 'xrp/', link: 'XRP KIDs fiction and context' },
+    ],
+  },
+  {
+    id: 'profiles',
+    kicker: 'Social / Professional discovery',
+    heading: 'ACCOUNTS AND IDENTITIES.',
+    introduction: 'These are discoverable artist and professional profiles. Instagram and TikTok URLs are linked from the GKniftyHEADS artist feature, but profile access and present account control were not independently verified during this audit.',
+    sources: [
+      { title: 'Charlie Buster — LinkedIn', date: 'Professional profile', type: 'Profile listing', summary: 'Public professional page identifying Graffiti Kings, creative work and Web3 interests.', url: 'https://uk.linkedin.com/in/charlie-buster-746872125' },
+      { title: '@iamcharliebuster — Instagram', date: 'Referenced by GKniftyHEADS', type: 'Social account link', summary: 'Instagram account linked by the 2025 GKniftyHEADS artist article. Live profile content was not independently reviewed.', url: 'https://www.instagram.com/iamcharliebuster/' },
+      { title: '@iamcharliebuster — TikTok', date: 'Referenced by GKniftyHEADS', type: 'Social account link', summary: 'TikTok account linked by the GKniftyHEADS feature. Current ownership and content should be verified on-platform.', url: 'https://www.tiktok.com/@iamcharliebuster' },
+      { title: 'Grime Artist', date: 'Artist website', type: 'Artist-directed site', summary: 'The dedicated artist website and commission destination supplied in the NO BALL GAMES project record.', url: 'https://grimeartist.com/' },
+    ],
+  },
+  {
+    id: 'chains',
+    kicker: 'Digital collections / Project documentation',
+    heading: 'THE DIGITAL TRAIL.',
+    introduction: 'Public collection pages and wiki entries help locate the projects associated with Charlie. Marketplace descriptions, past token proposals and fictional lore are not substitutes for contract verification or current license terms.',
+    sources: [
+      { title: 'NO BALL GAMES — WAX AtomicHub collection', date: 'Public collection record', type: 'NFT marketplace reference', summary: 'Collection identifier “noballgamess” and asset catalogue history on WAX. Collection descriptions may be self-supplied and do not prove every utility claim.', url: 'https://wax.atomichub.io/explorer/collection/noballgamess' },
+      { title: 'NO BALL GAMES — NFTHive collection', date: 'Public collection record', type: 'NFT marketplace reference', summary: 'Another public listing of the WAX “noballgamess” collection, useful for comparing records and source metadata.', url: 'https://nfthive.io/collection/noballgamess' },
+      { title: 'Charlie Buster — Crypto Moonboys Wiki', date: 'Official project wiki', type: 'Creator-group reference', summary: 'Separates Buster’s Graffiti Kings and NO BALL GAMES practice from the fictional Charlie characters in the Year 3008 universe.', url: 'https://cryptomoonboys.com/wiki/charlie-buster.html', internal: 'crypto-moonboys/', link: 'Crypto Moonboys on this site' },
+      { title: 'Crypto Moonboys — Project Wiki', date: 'Official project wiki', type: 'Creator-group reference', summary: 'Context for Graffiti Kings, GKniftyHEADS, WAX art, identity routes and connected creative worlds.', url: 'https://cryptomoonboys.com/wiki/crypto-moonboys.html' },
+    ],
+  },
+];
+const sourceCount = collections.reduce((count, group) => count + group.sources.length, 0);
+---
+<BaseLayout
+  title="Charlie Buster Online Archive | Art Listings, Blogs & Social Links"
+  description="A researched directory of Charlie Buster art profiles, Saatchi paintings, Graffiti Kings coverage, Medium writing, social links, WAX collection references and source notes."
+  current="more"
+>
+  <section class="page-hero archive-hero">
+    <span class="eyebrow">Artist search / Primary sources / Web references</span>
+    <h1>FOLLOW THE MARKS.</h1>
+    <p>Charlie Buster’s online trail spans galleries, graffiti blogs, creator-run publications, fiction, digital collections and public profiles. This is a maintained <strong>source map</strong>—not a copied press roundup or a claim that every online statement is independently verified.</p>
+    <div class="archive-counts">
+      <div><strong>{sourceCount}</strong><span>Linked source entries</span></div>
+      <div><strong>{collections.length}</strong><span>Source categories</span></div>
+      <div><strong>2017–26</strong><span>Catalogue to present</span></div>
+    </div>
+    <div class="cta-row">
+      <a class="button primary" href={`${base}charlie-buster-early-works/`}>Explore 2018–19 art catalogue</a>
+      <a class="button secondary" href={`${base}press/`}>Artist press resources</a>
+    </div>
+  </section>
+
+  <nav class="archive-jump" aria-label="Browse artist online sources">
+    {collections.map((group) => <a href={`#${group.id}`}>{group.kicker}</a>)}
+  </nav>
+
+  {collections.map((group) => (
+    <section class="section" id={group.id}>
+      <div class="section-header">
+        <div>
+          <span class="kicker">{group.kicker}</span>
+          <h2>{group.heading}</h2>
+        </div>
+        <p>{group.introduction}</p>
+      </div>
+      <div class="card-grid">
+        {group.sources.map((source) => (
+          <article class="feature-card archive-source">
+            <span class="kicker">{source.type}</span>
+            <h3>{source.title}</h3>
+            <p class="archive-date">{source.date}</p>
+            <p>{source.summary}</p>
+            <a class="inline-link" href={source.url} target="_blank" rel="noopener noreferrer">Visit the source ↗</a>
+            {source.internal && <a class="inline-link archive-internal" href={`${base}${source.internal}`}>{source.link} →</a>}
+          </article>
+        ))}
+      </div>
+    </section>
+  ))}
+
+  <section class="section">
+    <article class="panel-card">
+      <span class="kicker">The difference matters</span>
+      <h2>DOCUMENTATION IS NOT AUTOMATIC PROOF.</h2>
+      <ul class="list-clean">
+        <li><strong>Catalogue record:</strong> useful for an artwork title, size, listed year and described medium. An artist’s listing can still contain self-reported history.</li>
+        <li><strong>Third-party article:</strong> proves an article was published, but does not independently prove every exhibition, location or superlative mentioned.</li>
+        <li><strong>Social or creator-written post:</strong> offers the creator’s public perspective; the page may change, disappear or become inaccessible.</li>
+        <li><strong>Fiction:</strong> characters and events belong to the story, even when a real artist’s name is used.</li>
+        <li><strong>Token whitepaper or marketplace description:</strong> a dated claim or proposal, not proof that rewards, licences, supply arrangements or resale values exist today.</li>
+      </ul>
+      <p><strong>Audit date:</strong> 13 November 2026. Sources are linked at their original URLs. This directory does not hotlink third-party artwork images or reproduce copyrighted articles.</p>
+    </article>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>THE CONNECTED SITE.</h2>
+      <p>Follow the internal trail from source to subject and back again.</p>
+    </div>
+    <div class="project-grid">
+      <article class="feature-card">
+        <span class="kicker">Verified artwork descriptions</span>
+        <h3>Five original canvas records.</h3>
+        <p>Detailed notes on ABC TWO HEADS, MY RADIANT CHILD, INNER THOUGHTS, DROP THE BOMB and LET IT FLOW.</p>
+        <a class="inline-link" href={`${base}charlie-buster-early-works/`}>Read the early-works catalogue →</a>
+      </article>
+      <article class="feature-card">
+        <span class="kicker">The working artist</span>
+        <h3>Biography and street history.</h3>
+        <p>Artist background, Graffiti Kings, Leake Street and the emergence of Grime Art.</p>
+        <a class="inline-link" href={`${base}charlie-buster-biography/`}>Charlie Buster biography →</a>
+        <a class="inline-link archive-internal" href={`${base}leake-street-tunnel/`}>Leake Street feature →</a>
+      </article>
+      <article class="feature-card">
+        <span class="kicker">The broader creator network</span>
+        <h3>Graffiti Kings to Crypto Moonboys.</h3>
+        <p>WAX, GKniftyHEADS, community culture and the distinction between the projects.</p>
+        <a class="inline-link" href={`${base}crypto-moonboys/`}>Explore Crypto Moonboys →</a>
+      </article>
+      <article class="feature-card">
+        <span class="kicker">Project and fiction</span>
+        <h3>NO BALL GAMES and XRP KIDs.</h3>
+        <p>Current site narratives and project background, kept distinct from older token roadmaps and speculative fiction.</p>
+        <a class="inline-link" href={`${base}xrp/`}>Explore XRP KIDs →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section cta-block">
+    <div class="cta-block-inner">
+      <span class="eyebrow">Missing a source?</span>
+      <h2>HELP KEEP THE RECORD STRAIGHT.</h2>
+      <p>For corrections, an original exhibition catalogue, a credited project photograph or a link to another article, contact NO BALL GAMES. New source additions should carry dates and distinguish documentation from promotion.</p>
+      <div class="cta-row">
+        <a class="button primary" href={`${base}contact/`}>Submit a source or correction</a>
+        <a class="button secondary" href={`${base}stories/`}>Explore all stories</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .archive-hero { background: radial-gradient(circle at 85% 12%, rgba(215,255,47,.17), transparent 35%), linear-gradient(150deg, rgba(255,47,143,.1), rgba(47,255,227,.08)); }
+    .archive-hero h1 { font-size: clamp(3rem, 8vw, 7rem); overflow-wrap: break-word; }
+    .archive-counts { display: flex; flex-wrap: wrap; gap: 16px; margin: 27px 0; }
+    .archive-counts div { display: grid; gap: 3px; min-width: 125px; border-left: 3px solid var(--acid); padding-left: 13px; }
+    .archive-counts strong { color: var(--acid); font-size: clamp(1.65rem, 3vw, 2.4rem); }
+    .archive-counts span { color: var(--muted); font-size: .8rem; font-weight: 800; text-transform: uppercase; }
+    .archive-jump { display: flex; gap: 10px; flex-wrap: wrap; padding: 10px 0 20px; }
+    .archive-jump a { padding: 10px 13px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.04); color: var(--acid); font-size: .78rem; font-weight: 850; }
+    .archive-jump a:hover { border-color: var(--acid); }
+    .archive-source { display: flex; flex-direction: column; }
+    .archive-source h3 { line-height: 1.12; }
+    .archive-source .inline-link { margin-top: auto; padding-top: 12px; }
+    .archive-source .archive-internal { display: block; margin-top: 6px; padding-top: 0; color: var(--cyan); }
+    .archive-date { font-size: .78rem; font-weight: 800; letter-spacing: .05em; color: var(--acid); }
+  </style>
+</BaseLayout>
