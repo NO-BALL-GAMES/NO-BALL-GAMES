@@ -34,6 +34,7 @@ const navItems = [
 
 const moreItems = [
   { href: `${base}projects/`, label: 'Projects' },
+  { href: `${base}crypto-moonboys/`, label: 'Crypto Moonboys' },
   { href: `${base}community/`, label: 'Community' },
   { href: `${base}lore/`, label: 'XRP KIDs lore' },
   { href: `${base}research/`, label: 'Research vault' },
@@ -63,6 +64,7 @@ const footerGroups = [
     { label: 'XRP KIDs', href: `${base}xrp/` },
     { label: 'Lore', href: `${base}lore/` },
     { label: 'Projects', href: `${base}projects/` },
+    { label: 'Crypto Moonboys', href: `${base}crypto-moonboys/` },
   ] },
   { title: 'Connect', links: [
     { label: 'Community', href: `${base}community/` },
@@ -100,7 +102,7 @@ const activeKey =
   : slug === 'what-is-grime-art' ? 'grime'
   : storySlugs.includes(slug) ? 'stories'
   : pressSlugs.includes(slug) ? 'press'
-  : ['projects', 'community', 'lore', 'research'].includes(slug) ? 'more'
+  : ['projects', 'crypto-moonboys', 'community', 'lore', 'research'].includes(slug) ? 'more'
   : current;
 
 const organizationId = `${siteOrigin}/#organization`;
