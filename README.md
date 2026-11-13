@@ -4,7 +4,7 @@
 
 **STREET CULTURE. GRIME ART. COLLECTIBLES. REBELLION.**
 
-[**ENTER THE WEBSITE — NBG1618.COM**](https://nbg1618.com/) · [Explore Grime Art](https://nbg1618.com/what-is-grime-art/) · [Discover XRP KIDs](https://nbg1618.com/xrp/)
+[**ENTER THE WEBSITE — NBG1618.COM**](https://nbg1618.com/) · [Meet Charlie](https://nbg1618.com/charlie-buster-biography/) · [Explore Grime Art](https://nbg1618.com/what-is-grime-art/) · [Artist Stories](https://nbg1618.com/stories/) · [Discover XRP KIDs](https://nbg1618.com/xrp/)
 
 ---
 
@@ -36,7 +36,7 @@ Graffiti marks. Music culture. Layered paint. Typography. Pop icons. Fashion. Co
 
 Not street art made polite for a gallery. The rawness stays.
 
-Explore the [Grime Art guide](https://nbg1618.com/what-is-grime-art/), [Charlie's story](https://nbg1618.com/charlie-buster-biography/) and [professional artist timeline](https://nbg1618.com/charlie-buster-artist-timeline/).
+Explore the [Grime Art guide](https://nbg1618.com/what-is-grime-art/), [Charlie's story](https://nbg1618.com/charlie-buster-biography/) and [professional artist timeline](https://nbg1618.com/charlie-buster-artist-timeline/). Dive into [Leake Street](https://nbg1618.com/leake-street-tunnel/), [Central Cee](https://nbg1618.com/central-cee-ungrateful-grime-art/), [Big Zuu](https://nbg1618.com/big-zuu-grime-art-canvas/) and the [Gordon Ramsay Lucky Cat project](https://nbg1618.com/gordon-ramsay-lucky-cat-charlie-buster/).
 
 ### 02 / NO BALL GAMES — THE SIGN FLIP
 
@@ -69,6 +69,8 @@ Artist. Muralist. Creative consultant. Street-culture storyteller.
 Charlie's practice connects graffiti roots with professional murals, public art, music portraits, painted clothing, exhibitions and commissioned work. NO BALL GAMES extends that artistic language into a wider brand and creative universe.
 
 - [About Charlie Buster & NO BALL GAMES](https://nbg1618.com/about/)
+- [Artist stories hub](https://nbg1618.com/stories/)
+- [Press & gallery resources hub](https://nbg1618.com/press/)
 - [Official press kit](https://nbg1618.com/charlie-buster-press-kit/)
 - [Media biography](https://nbg1618.com/charlie-buster-media-bio/)
 - [Gallery application pack](https://nbg1618.com/charlie-buster-gallery-application/)
@@ -78,17 +80,31 @@ Charlie's practice connects graffiti roots with professional murals, public art,
 
 ## EXPLORE THE WEBSITE
 
-| Destination | What's inside |
+The header is organised around the things people actually come here for. **NO BALL GAMES** is the home link; the primary navigation puts the artist, the art, the stories and the collector universe up front.
+
+| Header link | Where it takes you |
 | --- | --- |
-| [Home](https://nbg1618.com/) | The brand, the sign and the whole idea |
-| [About](https://nbg1618.com/about/) | Charlie Buster, Grime Art and the NO BALL GAMES identity |
-| [Projects](https://nbg1618.com/projects/) | Creative projects and future directions |
-| [Collections](https://nbg1618.com/collections/) | Original artwork, painted wearables and digital collectibles |
-| [XRP](https://nbg1618.com/xrp/) | The XRP KIDs branch |
-| [Lore](https://nbg1618.com/lore/) | Characters, resistance and the fictional timeline |
-| [Community](https://nbg1618.com/community/) | Connect with the movement |
-| [Research](https://nbg1618.com/research/) | Source material and brand truth files |
+| [About](https://nbg1618.com/about/) | The NO BALL GAMES identity and how Charlie Buster's work connects to it |
+| [Charlie](https://nbg1618.com/charlie-buster-biography/) | The founder's story |
+| [Grime Art](https://nbg1618.com/what-is-grime-art/) | A dedicated guide to the art movement |
+| [Stories](https://nbg1618.com/stories/) | Leake Street, Central Cee, Big Zuu, Lucky Cat and more |
+| [Press](https://nbg1618.com/press/) | Media biography, press kit, timeline, gallery and grant resources |
+| [Collections](https://nbg1618.com/collections/) | Original artworks, painted clothing and digital collectibles |
+| [XRP KIDs](https://nbg1618.com/xrp/) | The fictional digital collectible universe |
 | [Contact](https://nbg1618.com/contact/) | Commissions and collaborations |
+
+The **More** menu leads to [Projects](https://nbg1618.com/projects/), [Community](https://nbg1618.com/community/), [Lore](https://nbg1618.com/lore/), [Research](https://nbg1618.com/research/) and additional artist resources. The footer groups destinations into **Discover**, **Press & Art**, **The Universe** and **Connect**.
+
+### READ THE REAL STORIES
+
+- **[BUSTER at Leake Street Tunnel](https://nbg1618.com/leake-street-tunnel/)** — Graffiti history and the roof piece.
+- **[Central Cee — “Ungrateful”](https://nbg1618.com/central-cee-ungrateful-grime-art/)** — Grime Art and UK rap visuals.
+- **[Big Zuu — Ditto Music](https://nbg1618.com/big-zuu-grime-art-canvas/)** — A commissioned music portrait.
+- **[Gordon Ramsay — Lucky Cat](https://nbg1618.com/gordon-ramsay-lucky-cat-charlie-buster/)** — Hand-painted objects and the unusual story around them.
+
+### PRESS, GALLERIES & PUBLIC ART
+
+The [Press hub](https://nbg1618.com/press/) provides the [official press kit](https://nbg1618.com/charlie-buster-press-kit/), [media biography](https://nbg1618.com/charlie-buster-media-bio/), [artist timeline](https://nbg1618.com/charlie-buster-artist-timeline/), [gallery application](https://nbg1618.com/charlie-buster-gallery-application/) and [grant funding statement](https://nbg1618.com/charlie-buster-grant-application/). These are distinct resources for different audiences, not duplicate About pages.
 
 ---
 
@@ -122,7 +138,7 @@ The production build is generated in `dist/`. Astro's site URL is `https://nbg16
 ```text
 src/
   layouts/               # Shared layout and long-form article template
-  pages/                 # Home, About, projects, lore, artist features and resources
+  pages/                 # Home, About, Stories, Press, artist features and resource routes
   styles/site.css        # Global visual design
 public/
   favicon.svg
@@ -134,7 +150,7 @@ research/                # Source notes and rights/truth baselines
 .github/workflows/       # Automation and deployment
 ```
 
-Internal links use `import.meta.env.BASE_URL` where needed. No secret environment variables are required for the basic static build. Do not commit `node_modules/`, `dist/` or `.astro/`.
+Internal links use `import.meta.env.BASE_URL` where needed. Shared header and footer navigation live in `src/layouts/BaseLayout.astro`; navigation styling lives in `src/styles/site.css`. No secret environment variables are required for the basic static build. Do not commit `node_modules/`, `dist/` or `.astro/`.
 
 ---
 
