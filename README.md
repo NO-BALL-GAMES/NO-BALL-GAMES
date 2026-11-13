@@ -79,6 +79,8 @@ Charlie's practice connects graffiti roots with professional murals, public art,
 - [About Charlie Buster & NO BALL GAMES](https://nbg1618.com/about/)
 - [Artist stories hub](https://nbg1618.com/stories/)
 - [Press & gallery resources hub](https://nbg1618.com/press/)
+- [Charlie Buster online source archive](https://nbg1618.com/charlie-buster-online-archive/)
+- [Early paintings: Saatchi Art catalogue records, 2018–2019](https://nbg1618.com/charlie-buster-early-works/)
 - [Official press kit](https://nbg1618.com/charlie-buster-press-kit/)
 - [Media biography](https://nbg1618.com/charlie-buster-media-bio/)
 - [Gallery application pack](https://nbg1618.com/charlie-buster-gallery-application/)
@@ -93,7 +95,7 @@ The header is organised around the things people actually come here for. **NO BA
 | Header link | Where it takes you |
 | --- | --- |
 | [About](https://nbg1618.com/about/) | The NO BALL GAMES identity and how Charlie Buster's work connects to it |
-| [Charlie](https://nbg1618.com/charlie-buster-biography/) | The founder's story |
+| [Charlie](https://nbg1618.com/charlie-buster-biography/) | The founder's story, with external evidence links |
 | [Grime Art](https://nbg1618.com/what-is-grime-art/) | A dedicated guide to the art movement |
 | [Stories](https://nbg1618.com/stories/) | Leake Street, Central Cee, Big Zuu, Lucky Cat and more |
 | [Press](https://nbg1618.com/press/) | Media biography, press kit, timeline, gallery and grant resources |
@@ -101,7 +103,7 @@ The header is organised around the things people actually come here for. **NO BA
 | [XRP KIDs](https://nbg1618.com/xrp/) | The fictional digital collectible universe |
 | [Contact](https://nbg1618.com/contact/) | Commissions and collaborations |
 
-The **More** menu leads to [Projects](https://nbg1618.com/projects/), [Crypto Moonboys](https://nbg1618.com/crypto-moonboys/), [Community](https://nbg1618.com/community/), [Lore](https://nbg1618.com/lore/), [Research](https://nbg1618.com/research/) and additional artist resources. The footer groups destinations into **Discover**, **Press & Art**, **The Universe** and **Connect**.
+The **More** menu includes the [artist online source archive](https://nbg1618.com/charlie-buster-online-archive/), [early paintings catalogue](https://nbg1618.com/charlie-buster-early-works/), [Projects](https://nbg1618.com/projects/), [Crypto Moonboys](https://nbg1618.com/crypto-moonboys/), [Community](https://nbg1618.com/community/), [Lore](https://nbg1618.com/lore/), [Research](https://nbg1618.com/research/) and additional artist resources. The footer groups destinations into **Discover**, **Press & Art**, **The Universe** and **Connect**.
 
 ### READ THE REAL STORIES
 
@@ -109,6 +111,14 @@ The **More** menu leads to [Projects](https://nbg1618.com/projects/), [Crypto Mo
 - **[Central Cee — “Ungrateful”](https://nbg1618.com/central-cee-ungrateful-grime-art/)** — Grime Art and UK rap visuals.
 - **[Big Zuu — Ditto Music](https://nbg1618.com/big-zuu-grime-art-canvas/)** — A commissioned music portrait.
 - **[Gordon Ramsay — Lucky Cat](https://nbg1618.com/gordon-ramsay-lucky-cat-charlie-buster/)** — Hand-painted objects and the unusual story around them.
+
+### WEB SOURCE NETWORK / ART CATALOGUE
+
+The [Charlie Buster online archive](https://nbg1618.com/charlie-buster-online-archive/) indexes original artwork records, third-party artist articles, Graffiti Kings features, creator-authored fiction and historical project publications, public social/professional links and collection records. It marks the evidence category for each link rather than repeating promotional assertions as facts.
+
+The [early works catalogue](https://nbg1618.com/charlie-buster-early-works/) documents five Saatchi Art paintings from 2018–2019, with the artist's publicly listed materials, sizes and influences. The source links point outward; third-party artwork photographs are not copied.
+
+The web archive ties back to the [Biography](https://nbg1618.com/charlie-buster-biography/), [Artist Timeline](https://nbg1618.com/charlie-buster-artist-timeline/), [Grime Art guide](https://nbg1618.com/what-is-grime-art/), [Leake Street](https://nbg1618.com/leake-street-tunnel/), [Collections](https://nbg1618.com/collections/), [Crypto Moonboys](https://nbg1618.com/crypto-moonboys/) and [XRP KIDs](https://nbg1618.com/xrp/). Sources were reviewed on **13 November 2026**; ownership, catalogue availability and historical financial plans can change.
 
 ### PRESS, GALLERIES & PUBLIC ART
 
