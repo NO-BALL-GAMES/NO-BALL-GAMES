@@ -1,0 +1,222 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const layers = [
+  {
+    number: '01',
+    title: 'Graffiti Kings → GKniftyHEADS',
+    text: 'The street-culture foundation and a major character and WAX collection architecture. The tag becomes an identity; the crew becomes a connected creative community.',
+    href: 'https://cryptomoonboys.com/wiki/crypto-moonboys.html',
+    label: 'Explore the foundations',
+  },
+  {
+    number: '02',
+    title: 'Moonboys, Flygirls & factions',
+    text: 'Develop characters and a world around them. The fictional Year 3008 setting has forty faction cultures; the live selectable options follow the project’s current directory, not the entire lore roster.',
+    href: 'https://cryptomoonboys.com/gkniftyheads-incubator.html',
+    label: 'Meet the identity incubator',
+  },
+  {
+    number: '03',
+    title: 'Arcade, Telegram & MoonPets',
+    text: 'Games, missions, factions, MoonPet and community participation provide optional ways to engage. Verified Telegram identity, accepted activity and current game rules govern persistent XP and eligibility.',
+    href: 'https://cryptomoonboys.com/my-moonboy.html',
+    label: 'Explore My Moonboy',
+  },
+  {
+    number: '04',
+    title: 'SWARMSY & creator tools',
+    text: 'The public ChatGPT Creator Studio helps people begin a creative project. SWARMSY is a separate, optional PC beta for creator planning and project context—not a chatbot hosted on the public site.',
+    href: 'https://cryptomoonboys.com/gpt-users.html',
+    label: 'Open the Creator Studio',
+  },
+  {
+    number: '05',
+    title: 'WAX artwork & digital ownership',
+    text: 'NFTs can record specific editions, provenance and ownership on WAX. Any commercial licence or royalty arrangement applies only to qualifying assets under their published terms—not automatically to every NFT.',
+    href: 'https://cryptomoonboys.com/wiki/crypto-moonboys.html',
+    label: 'Read the ownership context',
+  },
+  {
+    number: '06',
+    title: 'The living wiki & Year 3008',
+    text: 'The public wiki connects creators, factions, artefacts and stories. Block Topia, the forty-faction civilisation and Year 3008 form a science-fiction setting, not a record of real-world events.',
+    href: 'https://cryptomoonboys.com/wiki/crypto-moonboys.html',
+    label: 'Read the wiki overview',
+  },
+];
+
+const sources = [
+  { label: 'Official Crypto Moonboys website', href: 'https://cryptomoonboys.com/' },
+  { label: 'Crypto Moonboys — official wiki overview', href: 'https://cryptomoonboys.com/wiki/crypto-moonboys.html' },
+  { label: 'Charlie Buster — Crypto Moonboys wiki', href: 'https://cryptomoonboys.com/wiki/charlie-buster.html' },
+  { label: 'Project background and creator routes', href: 'https://cryptomoonboys.com/about/' },
+];
+---
+<BaseLayout
+  title="Crypto Moonboys | Graffiti Kings, WAX & Creator Worlds — NO BALL GAMES"
+  description="Explore Crypto Moonboys, Graffiti Kings’ connected creator universe: GKniftyHEADS, WAX NFTs, Moonboys and Flygirls, SWARMSY, Arcade, Charlie Buster and NO BALL GAMES."
+  current="more"
+>
+  <section class="page-hero moonboys-hero">
+    <div class="moonboys-topline">
+      <span class="eyebrow">Connected project / Graffiti Kings / WAX</span>
+      <span class="moonboys-coordinate">THE WALL → THE WORLD</span>
+    </div>
+    <h1>CRYPTO <span class="moonboys-highlight">MOONBOYS</span></h1>
+    <p class="moonboys-lead">Graffiti culture went digital. The mission stayed the same: <strong>build an identity, make your mark and give your ideas a world of their own.</strong></p>
+    <p>Crypto Moonboys is the wider <strong>Graffiti Kings creator umbrella</strong>—connecting street-art heritage, GKniftyHEADS, character-led worldbuilding, WAX collectibles, a public wiki, optional games and AI-supported creative work. NO BALL GAMES is one of the distinct artist-led projects connected to that culture.</p>
+    <div class="cta-row">
+      <a class="button primary" href="https://cryptomoonboys.com/" target="_blank" rel="noopener noreferrer">Enter Crypto Moonboys ↗</a>
+      <a class="button secondary" href="https://cryptomoonboys.com/wiki/crypto-moonboys.html" target="_blank" rel="noopener noreferrer">Explore the official wiki ↗</a>
+    </div>
+    <div class="moonboys-strip" aria-label="The Crypto Moonboys approach">
+      <span>STREET ART</span><span>IDENTITY</span><span>WAX</span><span>GAMES</span><span>AI</span><span>WORLD-BUILDING</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Not just an NFT collection.</h2>
+      <p>The project describes itself as a creator movement rather than one token, game or marketplace. Each part has a different purpose.</p>
+    </div>
+    <div class="split-grid">
+      <article class="panel-card">
+        <span class="kicker">Before the blockchain</span>
+        <h3>Graffiti Kings built the cultural foundation.</h3>
+        <p>Names, tags, crews, murals, music and public marks shaped the Graffiti Kings approach to identity and recognition. The Crypto Moonboys project describes this as a culture developed over more than four decades, now extended through GKniftyHEADS into digital characters and creator communities.</p>
+        <p>The underlying idea is familiar to graffiti writers: showing up repeatedly makes a mark recognisable. The new tools change the surface, not the need for original work.</p>
+      </article>
+      <article class="panel-card">
+        <span class="kicker">The bigger creative idea</span>
+        <h3>Your IP or ours. One connected universe.</h3>
+        <p>The character, wiki, game and blockchain layers are intended to help creators develop recognisable work in public. You can take a new Moonboy or Flygirl identity, or bring your own artwork, brand, project or characters into the shared universe.</p>
+        <p>Creative work and approved decisions remain with the creator. Shared publication and official lore still follow the community’s review rules; an NFT purchase is not required to use the existing-identity route.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Two ways to build.</h2>
+      <p>The entry route depends on what you want to create—not on whether you already own a token.</p>
+    </div>
+    <div class="project-grid">
+      <article class="feature-card moonboys-route">
+        <span class="moonboys-step" aria-hidden="true">01</span>
+        <span class="kicker">Start with a GK character</span>
+        <h3>Build a Moonboy or Flygirl world.</h3>
+        <p>Give a character a name, visual identity, personality and story. Where supported, join a faction, link your Telegram identity, explore the Arcade and develop the character’s place in the wider world.</p>
+        <p>Ownership, progression and qualifying 1/1 licensing are governed by current published eligibility and terms—not by an automatic promise attached to every character.</p>
+        <a class="inline-link" href="https://cryptomoonboys.com/gkniftyheads-incubator.html" target="_blank" rel="noopener noreferrer">Explore the Moonboy route ↗</a>
+      </article>
+      <article class="feature-card moonboys-route">
+        <span class="moonboys-step" aria-hidden="true">02</span>
+        <span class="kicker">Keep the identity you already have</span>
+        <h3>Bring your own IP.</h3>
+        <p>Artist, musician, filmmaker, designer, business, character or creative project: keep your identity and develop its own world and lore inside the Crypto Moonboys universe.</p>
+        <p>Start with the public Creator Studio. The separate SWARMSY PC beta can assist with planning and continuity if you choose to install it. Human approval and rights boundaries still determine what gets published.</p>
+        <a class="inline-link" href="https://cryptomoonboys.com/gpt-users.html" target="_blank" rel="noopener noreferrer">Open the public Creator Studio ↗</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Inside the multiverse.</h2>
+      <p>Six connected layers, each with its own rules and purpose.</p>
+    </div>
+    <div class="card-grid">
+      {layers.map((layer) => (
+        <article class="feature-card moonboys-layer">
+          <span class="moonboys-index">{layer.number} / GK UNIVERSE</span>
+          <h3>{layer.title}</h3>
+          <p>{layer.text}</p>
+          <a class="inline-link" href={layer.href} target="_blank" rel="noopener noreferrer">{layer.label} ↗</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section split-grid">
+    <article class="panel-card">
+      <span class="kicker">Charlie Buster / Real-world artist</span>
+      <h2>The artist connection.</h2>
+      <p>Charlie Buster, also known as BUSTER, is linked through his Graffiti Kings background, street-art commissions, Grime Art practice and the NO BALL GAMES project. The Crypto Moonboys Charlie Buster wiki discusses his Leake Street work and his distinctive <strong>Busterisms</strong>: bold colour, cartoons, humour, zigzags, arrows and graphic contrasts.</p>
+      <p>The same wiki connects him with NO BALL GAMES WAX artwork and the <strong>XRP KIDs</strong> Genesis description on the XRP Ledger, while distinguishing his real artwork from characters bearing his name in fictional Year 3008 stories.</p>
+      <a class="inline-link" href="https://cryptomoonboys.com/wiki/charlie-buster.html" target="_blank" rel="noopener noreferrer">Read Charlie Buster’s Moonboys wiki entry ↗</a>
+      <a class="inline-link moonboys-inline-secondary" href={`${base}charlie-buster-biography/`}>Explore his NO BALL GAMES biography →</a>
+    </article>
+    <article class="panel-card">
+      <span class="kicker">Independent worlds / Shared history</span>
+      <h2>Related. Not identical.</h2>
+      <div class="moonboys-brand-list">
+        <p><strong>Crypto Moonboys:</strong> Graffiti Kings’ broad creator umbrella, WAX-linked collections, community participation, characters and Year 3008 fiction.</p>
+        <p><strong>NO BALL GAMES:</strong> Charlie Buster’s distinct art and street-culture identity, painted work, sign-flip projects and connected digital initiatives.</p>
+        <p><strong>XRP KIDs:</strong> Charlie-associated XRPL Genesis artwork with its own separate fictional character universe and lore. It is not the same as GKniftyHEADS or the Moonboy WAX collections.</p>
+      </div>
+      <a class="inline-link" href={`${base}xrp/`}>Explore the NO BALL GAMES XRP KIDs world →</a>
+    </article>
+  </section>
+
+  <section class="section">
+    <div class="moonboys-disclosure">
+      <span class="kicker">Ownership / Live features / Fiction</span>
+      <h3>Different layers. Different rules.</h3>
+      <p>WAX assets and XRP Ledger assets are separate. NFT ownership does not automatically transfer copyright, brand rights, royalties or access to future features. The project’s special 1/1 character-licence arrangements apply only when an asset qualifies under its published terms. Games, XP, Telegram missions, reward paths and creator tools can have different current availability. The Year 3008 universe is fiction, not an on-chain transaction history or financial forecast.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Follow the source.</h2>
+      <p>Official project material behind this introduction. Product status and terms should be checked at the source before taking part.</p>
+    </div>
+    <div class="project-grid">
+      {sources.map((source) => (
+        <article class="feature-card moonboys-source">
+          <h3>{source.label}</h3>
+          <a class="inline-link" href={source.href} target="_blank" rel="noopener noreferrer">Open source ↗</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section cta-block">
+    <div class="cta-block-inner">
+      <span class="eyebrow">One shared culture. Different ways to create.</span>
+      <h2>Make your mark. Build your world.</h2>
+      <p>Start with the original Crypto Moonboys project, or explore the art and stories of NO BALL GAMES.</p>
+      <div class="cta-row">
+        <a class="button primary" href="https://cryptomoonboys.com/" target="_blank" rel="noopener noreferrer">Visit Crypto Moonboys ↗</a>
+        <a class="button secondary" href={`${base}projects/`}>See NO BALL GAMES projects</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .moonboys-hero { background: radial-gradient(circle at 88% 20%, rgba(215,255,47,.21), transparent 38%), radial-gradient(circle at 15% 82%, rgba(47,255,227,.15), transparent 52%), linear-gradient(140deg, rgba(255,47,143,.13), rgba(255,255,255,.025)); }
+    .moonboys-topline { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+    .moonboys-coordinate { font-size: .79rem; font-weight: 900; color: var(--cyan); letter-spacing: .12em; }
+    .moonboys-hero h1 { font-size: clamp(3.1rem, 9vw, 7.6rem); line-height: .94; overflow-wrap: anywhere; }
+    .moonboys-highlight { display: block; color: var(--acid); }
+    .moonboys-lead { font-size: clamp(1.25rem, 2.6vw, 1.75rem) !important; color: var(--text); }
+    .moonboys-lead strong { color: var(--acid); }
+    .moonboys-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 36px; }
+    .moonboys-strip span { padding: 8px 12px; border: 1px solid rgba(215,255,47,.3); border-radius: 9px; background: rgba(5,5,5,.5); color: var(--acid); font-weight: 900; letter-spacing: .09em; font-size: .74rem; }
+    .moonboys-route { border-top: 3px solid var(--acid); }
+    .moonboys-step { display: block; margin-bottom: 18px; color: var(--acid); font-size: clamp(3.5rem, 8vw, 6rem); font-weight: 900; line-height: .9; letter-spacing: -.08em; }
+    .moonboys-layer { display: flex; flex-direction: column; }
+    .moonboys-layer .inline-link { margin-top: auto; padding-top: 16px; }
+    .moonboys-index { display: block; margin-bottom: 16px; font-size: .8rem; font-weight: 900; letter-spacing: .1em; color: var(--cyan); }
+    .moonboys-brand-list { display: grid; gap: 7px; }
+    .moonboys-brand-list strong { color: var(--acid); }
+    .moonboys-inline-secondary { display: block; }
+    .moonboys-disclosure { padding: clamp(22px, 4vw, 36px); border-radius: var(--radius); border: 1px solid rgba(47,255,227,.3); background: rgba(47,255,227,.045); }
+    .moonboys-disclosure h3 { line-height: 1.1; }
+    .moonboys-disclosure p { margin-bottom: 0; }
+    .moonboys-source h3 { font-size: clamp(1.25rem, 2.5vw, 1.7rem); line-height: 1.15; }
+    @media (max-width: 560px) { .moonboys-hero h1 { font-size: clamp(2.7rem, 13vw, 4.4rem); } .moonboys-strip { gap: 6px; } }
+  </style>
+</BaseLayout>
