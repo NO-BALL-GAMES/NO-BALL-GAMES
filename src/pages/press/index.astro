@@ -2,6 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL;
 const resources = [
+  { type: 'Source register', title: 'Charlie Buster online archive', description: 'Links to art listings, blogs, social profiles, publications and project records with evidence labels.', slug: 'charlie-buster-online-archive/' },
+  { type: 'Art catalogue', title: 'Early works 2018–2019', description: 'Five documented Saatchi Art paintings with dates, media, sizes and external source links.', slug: 'charlie-buster-early-works/' },
   { type: 'Press', title: 'Official press kit', description: 'Press introduction, selected clients, exhibitions, public art, media credits and contact details.', slug: 'charlie-buster-press-kit/' },
   { type: 'Biography', title: 'Media biography', description: 'An editorial biography for press, features, artist profiles and publications.', slug: 'charlie-buster-media-bio/' },
   { type: 'Career', title: 'Professional artist timeline', description: 'A chronological record of Charlie Buster’s career, projects and exhibitions.', slug: 'charlie-buster-artist-timeline/' },
@@ -26,7 +28,7 @@ const resources = [
   <section class="section">
     <div class="section-header">
       <h2>Press &amp; professional documents</h2>
-      <p>Five separate resources. Choose the one you need.</p>
+      <p>Seven complementary resources, including original catalogue sources and the online archive.</p>
     </div>
     <div class="card-grid">
       {resources.map((resource) => (
