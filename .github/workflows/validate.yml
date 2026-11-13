@@ -1,0 +1,41 @@
+name: Validate NO BALL GAMES Site
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-validate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Astro build, link audit and sitemap
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Check Astro and TypeScript
+        run: npm run check
+      - name: Build, audit links and generate sitemap
+        run: npm run build
+      - name: Verify generated site
+        run: |
+          test -f dist/index.html
+          test -f dist/404.html
+          test -f dist/stories/index.html
+          test -f dist/press/index.html
+          test -f dist/sitemap.xml
+          grep -q 'https://nbg1618.com/what-is-grime-art/' dist/sitemap.xml
