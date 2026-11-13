@@ -191,5 +191,7 @@ Charlie Buster is a British contemporary artist, muralist, and founder of the Gr
 - [Charlie Buster Media Bio](/charlie-buster-media-bio/)
 - [Charlie Buster Founder Biography](/charlie-buster-biography/)
 - [What Is Grime Art?](/what-is-grime-art/)
+- [Original Saatchi Art painting records, 2018–2019](/charlie-buster-early-works/)
+- [External artist profiles, articles and social-source archive](/charlie-buster-online-archive/)
 
 **Press and commissions:** [charlie@graffitikings.co.uk](mailto:charlie@graffitikings.co.uk)
