@@ -227,6 +227,14 @@ Operating across original artworks, murals, sculptures, custom apparel, brand co
 
 For commissions, available artwork and private enquiries, visit [grimeartist.com](https://grimeartist.com/) or [contact NO BALL GAMES](/contact/).
 
+## Publicly Documented Canvas Records, 2018–2019
+
+Five individual Saatchi Art listings identify early artworks as **ABC TWO HEADS (2018)**, **MY RADIANT CHILD (2018)**, **INNER THOUGHTS (2019)**, **DROP THE BOMB (2019)** and **LET IT FLOW... (2019)**. Their source listings give formats, dimensions and the artist's own comments on influences.
+
+[Explore all five original catalogue records](/charlie-buster-early-works/). The [Charlie Buster online archive](/charlie-buster-online-archive/) also links to press coverage, artist writing, social accounts and blockchain project records.
+
+*Research note: The sale totals, NFT world-record assertion and some career credits elsewhere in this timeline are supplied claims. The newly linked Saatchi records do not independently validate those separate claims.*
+
 ## Explore Related Stories
 
 - [Charlie Buster: From Kent Street Artist to Grime Art Founder](/charlie-buster-biography/)
