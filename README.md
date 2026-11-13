@@ -60,6 +60,14 @@ Street culture meets digital collectibles, satire, dystopia and world-building.
 
 ---
 
+## CONNECTED WORLD / CRYPTO MOONBOYS
+
+NO BALL GAMES also connects to the wider **Graffiti Kings / GKniftyHEADS / Crypto Moonboys** creator universe. That project combines a public creative academy, Moonboy and Flygirl identity-building, a WAX NFT ecosystem, a living wiki, optional Arcade games and AI creator tools. It is **not the same project as NO BALL GAMES or its XRP KIDs fictional universe**.
+
+[**Explore the dedicated Crypto Moonboys page**](https://nbg1618.com/crypto-moonboys/) · [Official Crypto Moonboys website](https://cryptomoonboys.com/) · [Official project wiki](https://cryptomoonboys.com/wiki/crypto-moonboys.html) · [Charlie Buster wiki profile](https://cryptomoonboys.com/wiki/charlie-buster.html)
+
+---
+
 ## THE ARTIST BEHIND THE MARKS
 
 **CHARLIE BUSTER — FOUNDER OF GRIME ART**
@@ -93,7 +101,7 @@ The header is organised around the things people actually come here for. **NO BA
 | [XRP KIDs](https://nbg1618.com/xrp/) | The fictional digital collectible universe |
 | [Contact](https://nbg1618.com/contact/) | Commissions and collaborations |
 
-The **More** menu leads to [Projects](https://nbg1618.com/projects/), [Community](https://nbg1618.com/community/), [Lore](https://nbg1618.com/lore/), [Research](https://nbg1618.com/research/) and additional artist resources. The footer groups destinations into **Discover**, **Press & Art**, **The Universe** and **Connect**.
+The **More** menu leads to [Projects](https://nbg1618.com/projects/), [Crypto Moonboys](https://nbg1618.com/crypto-moonboys/), [Community](https://nbg1618.com/community/), [Lore](https://nbg1618.com/lore/), [Research](https://nbg1618.com/research/) and additional artist resources. The footer groups destinations into **Discover**, **Press & Art**, **The Universe** and **Connect**.
 
 ### READ THE REAL STORIES
 
