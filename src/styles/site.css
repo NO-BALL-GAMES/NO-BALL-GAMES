@@ -155,7 +155,9 @@ p { color: var(--muted); line-height: 1.7; }
   transition: background 160ms ease, color 160ms ease;
 }
 
-.nav-more { position: relative; }
+/* Anchor the popup to the positioned site header, never to a wrapped
+   More label. That keeps the whole menu inside the header at any width. */
+.nav-more { position: static; }
 .nav-more > summary { list-style: none; }
 .nav-more > summary::-webkit-details-marker { display: none; }
 .nav-more > summary span { font-size: 1rem; }
@@ -173,10 +175,10 @@ p { color: var(--muted); line-height: 1.7; }
   position: absolute;
   z-index: 40;
   top: calc(100% + 12px);
-  right: 0;
+  right: 12px;
   display: grid;
   gap: 4px;
-  width: min(290px, calc(100vw - 42px));
+  width: min(290px, calc(100% - 24px));
   max-height: min(66vh, 510px);
   padding: 12px;
   overflow-y: auto;
@@ -633,7 +635,6 @@ h3 { font-size: clamp(1.45rem, 3vw, 2.1rem); }
 @media (max-width: 920px) {
   .site-header { align-items: flex-start; border-radius: 28px; flex-direction: column; }
   .site-nav { width: 100%; justify-content: flex-start; }
-  .nav-more { position: static; }
   .nav-more-panel { top: calc(100% + 8px); left: 12px; right: 12px; width: auto; }
   .footer-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero,
