@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout
+  title="404 | Wrong Turn — NO BALL GAMES"
+  description="That street ends here. Find your way back to NO BALL GAMES art, artist stories, press and the XRP KIDs universe."
+>
+  <section class="page-hero">
+    <span class="eyebrow">404 / Wrong turn</span>
+    <h1>NO PAGE GAMES.</h1>
+    <p>This wall's blank. The page you followed doesn't exist, or the link has moved. The rest of the world is still here.</p>
+    <div class="cta-row">
+      <a class="button primary" href={base}>Back to the start</a>
+      <a class="button secondary" href={`${base}stories/`}>Read the stories</a>
+      <a class="button secondary" href={`${base}collections/`}>Explore collections</a>
+    </div>
+  </section>
+  <section class="section split-grid">
+    <article class="panel-card">
+      <span class="kicker">The artist</span>
+      <h2>Paint finds a way.</h2>
+      <p>Charlie Buster's Grime Art has stories behind it — from Leake Street to music portraits and painted objects.</p>
+      <a class="inline-link" href={`${base}what-is-grime-art/`}>What Is Grime Art? →</a>
+    </article>
+    <article class="panel-card">
+      <span class="kicker">The universe</span>
+      <h2>100 / 89 / 11.</h2>
+      <p>Enter the fictional XRP KIDs universe, follow the resistance and see where the signs lead.</p>
+      <a class="inline-link" href={`${base}xrp/`}>Enter XRP KIDs →</a>
+    </article>
+  </section>
+</BaseLayout>

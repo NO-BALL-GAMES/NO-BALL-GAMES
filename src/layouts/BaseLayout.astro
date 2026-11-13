@@ -5,12 +5,14 @@ interface Props {
   title: string;
   description: string;
   current?: string;
+  type?: 'website' | 'article';
 }
 
 const {
   title,
   description,
   current = '',
+  type = 'website',
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL;
@@ -20,27 +22,109 @@ const canonical = new URL(canonicalPath, Astro.site ?? 'https://nbg1618.com').to
 const ogImage = `${siteOrigin}${base}og/default-og.svg`;
 
 const navItems = [
-  { href: `${base}`, label: 'Home', key: 'home' },
   { href: `${base}about/`, label: 'About', key: 'about' },
-  { href: `${base}projects/`, label: 'Projects', key: 'projects' },
+  { href: `${base}charlie-buster-biography/`, label: 'Charlie', key: 'artist' },
+  { href: `${base}what-is-grime-art/`, label: 'Grime Art', key: 'grime' },
+  { href: `${base}stories/`, label: 'Stories', key: 'stories' },
+  { href: `${base}press/`, label: 'Press', key: 'press' },
   { href: `${base}collections/`, label: 'Collections', key: 'collections' },
-  { href: `${base}xrp/`, label: 'XRP', key: 'xrp' },
-  { href: `${base}lore/`, label: 'Lore', key: 'lore' },
-  { href: `${base}community/`, label: 'Community', key: 'community' },
-  { href: `${base}research/`, label: 'Research', key: 'research' },
+  { href: `${base}xrp/`, label: 'XRP KIDs', key: 'xrp' },
   { href: `${base}contact/`, label: 'Contact', key: 'contact' },
 ];
 
+const moreItems = [
+  { href: `${base}projects/`, label: 'Projects' },
+  { href: `${base}community/`, label: 'Community' },
+  { href: `${base}lore/`, label: 'XRP KIDs lore' },
+  { href: `${base}research/`, label: 'Research vault' },
+  { href: `${base}charlie-buster-artist-timeline/`, label: 'Artist timeline' },
+  { href: `${base}charlie-buster-media-bio/`, label: 'Media biography' },
+  { href: `${base}charlie-buster-press-kit/`, label: 'Official press kit' },
+  { href: `${base}charlie-buster-gallery-application/`, label: 'Gallery application' },
+  { href: `${base}charlie-buster-grant-application/`, label: 'Grant statement' },
+];
+
+const footerGroups = [
+  { title: 'Discover', links: [
+    { label: 'About', href: `${base}about/` },
+    { label: 'Charlie Buster', href: `${base}charlie-buster-biography/` },
+    { label: 'Grime Art', href: `${base}what-is-grime-art/` },
+    { label: 'Stories', href: `${base}stories/` },
+  ] },
+  { title: 'Press & art', links: [
+    { label: 'Artist timeline', href: `${base}charlie-buster-artist-timeline/` },
+    { label: 'Media bio', href: `${base}charlie-buster-media-bio/` },
+    { label: 'Press kit', href: `${base}charlie-buster-press-kit/` },
+    { label: 'Gallery application', href: `${base}charlie-buster-gallery-application/` },
+    { label: 'Grant statement', href: `${base}charlie-buster-grant-application/` },
+  ] },
+  { title: 'The universe', links: [
+    { label: 'Collections', href: `${base}collections/` },
+    { label: 'XRP KIDs', href: `${base}xrp/` },
+    { label: 'Lore', href: `${base}lore/` },
+    { label: 'Projects', href: `${base}projects/` },
+  ] },
+  { title: 'Connect', links: [
+    { label: 'Community', href: `${base}community/` },
+    { label: 'Research', href: `${base}research/` },
+    { label: 'Contact', href: `${base}contact/` },
+  ] },
+];
+
+// Group related article pages under their logical navigation destination.
+const slug = Astro.url.pathname.replace(/^\/+|\/+$/g, '');
+const storySlugs = [
+  'leake-street-tunnel',
+  'central-cee-ungrateful-grime-art',
+  'big-zuu-grime-art-canvas',
+  'gordon-ramsay-lucky-cat-charlie-buster',
+];
+const pressSlugs = [
+  'charlie-buster-artist-timeline',
+  'charlie-buster-media-bio',
+  'charlie-buster-press-kit',
+  'charlie-buster-gallery-application',
+  'charlie-buster-grant-application',
+];
+// A highlighted section is not necessarily the current document. Only the
+// exact destination gets aria-current; this prevents duplicate announcements
+// when a child article is grouped under Stories or Press.
+const normalizePath = (path: string) => {
+  const urlPath = new URL(path, Astro.url).pathname;
+  return urlPath === '/' ? '/' : `${urlPath.replace(/\/+$/, '')}/`;
+};
+const isCurrentPage = (href: string) => normalizePath(href) === normalizePath(Astro.url.pathname);
+
+const activeKey =
+  slug === 'charlie-buster-biography' ? 'artist'
+  : slug === 'what-is-grime-art' ? 'grime'
+  : storySlugs.includes(slug) ? 'stories'
+  : pressSlugs.includes(slug) ? 'press'
+  : ['projects', 'community', 'lore', 'research'].includes(slug) ? 'more'
+  : current;
+
+const organizationId = `${siteOrigin}/#organization`;
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'NO BALL GAMES',
-  url: canonical,
-  description,
-  brand: {
-    '@type': 'Brand',
-    name: 'NO BALL GAMES',
-  },
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': organizationId,
+      name: 'NO BALL GAMES',
+      url: `${siteOrigin}/`,
+      description: 'British street-culture, Grime Art and collectible storytelling.',
+      brand: { '@type': 'Brand', name: 'NO BALL GAMES' },
+    },
+    {
+      '@type': type === 'article' ? 'Article' : 'WebPage',
+      '@id': canonical,
+      url: canonical,
+      headline: title,
+      description,
+      isPartOf: { '@id': organizationId },
+      ...(type === 'article' ? { author: { '@type': 'Person', name: 'Charlie Buster' } } : {}),
+    },
+  ],
 };
 ---
 <!DOCTYPE html>
@@ -51,9 +135,12 @@ const schema = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
     <link rel="manifest" href={`${base}site.webmanifest`} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content="NO BALL GAMES" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
@@ -67,6 +154,7 @@ const schema = {
     <style set:html={`:root { --noise-bg: url('${base}textures/noise.svg'); }`} />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
       <header class="site-header">
         <a class="brand-mark" href={base} aria-label="NO BALL GAMES home">
@@ -74,13 +162,22 @@ const schema = {
           <span class="brand-games">GAMES</span>
         </a>
         <nav class="site-nav" aria-label="Main navigation">
-          {navItems.map((item) => (
-            <a href={item.href} class:list={[{ active: current === item.key }]}>{item.label}</a>
+          {navItems.slice(0, 7).map((item) => (
+            <a href={item.href} class:list={[{ active: activeKey === item.key }]} aria-current={isCurrentPage(item.href) ? 'page' : undefined}>{item.label}</a>
           ))}
+          <details class:list={['nav-more', { active: activeKey === 'more' }]}>
+            <summary>More <span aria-hidden="true">⌄</span></summary>
+            <div class="nav-more-panel">
+              {moreItems.map((item) => (
+                <a href={item.href} aria-current={isCurrentPage(item.href) ? 'page' : undefined}>{item.label}</a>
+              ))}
+            </div>
+          </details>
+          <a href={navItems[7].href} class:list={[{ active: activeKey === 'contact' }]} aria-current={isCurrentPage(navItems[7].href) ? 'page' : undefined}>Contact</a>
         </nav>
       </header>
 
-      <main>
+      <main id="main-content">
         <slot />
       </main>
 
@@ -89,13 +186,14 @@ const schema = {
           <strong>NO BALL GAMES</strong>
           <p>A street-culture brand built from restricted spaces, graffiti energy, digital collectibles, and the refusal to stay boxed in.</p>
         </div>
-        <div class="footer-links">
-          <a href={`${base}about/`}>About</a>
-          <a href={`${base}projects/`}>Projects</a>
-          <a href={`${base}xrp/`}>XRP</a>
-          <a href={`${base}community/`}>Community</a>
-          <a href={`${base}contact/`}>Contact</a>
-        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          {footerGroups.map((group) => (
+            <div class="footer-links-group">
+              <strong>{group.title}</strong>
+              {group.links.map((link) => <a href={link.href}>{link.label}</a>)}
+            </div>
+          ))}
+        </nav>
         <p class="copyright">© {new Date().getFullYear()} NO BALL GAMES. Built for the people who were told where not to play.</p>
       </footer>
     </div>

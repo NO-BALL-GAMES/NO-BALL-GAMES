@@ -1,18 +1,59 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const path = Astro.url.pathname;
+const isPress = [
+  'charlie-buster-artist-timeline',
+  'charlie-buster-media-bio',
+  'charlie-buster-press-kit',
+  'charlie-buster-gallery-application',
+  'charlie-buster-grant-application',
+].some((slug) => path.includes(`/${slug}/`));
+const slug = path.split('/').filter(Boolean).at(-1);
+const categories: Record<string, string> = {
+  'charlie-buster-biography': 'Artist origins',
+  'what-is-grime-art': 'The Grime Art movement',
+  'leake-street-tunnel': 'London graffiti history',
+  'central-cee-ungrateful-grime-art': 'UK rap and visual art',
+  'big-zuu-grime-art-canvas': 'Music portraiture',
+  'gordon-ramsay-lucky-cat-charlie-buster': 'Art and hospitality',
+  'charlie-buster-artist-timeline': 'Career timeline',
+  'charlie-buster-media-bio': 'Media biography',
+  'charlie-buster-press-kit': 'Official press resources',
+  'charlie-buster-gallery-application': 'Gallery and curatorial',
+  'charlie-buster-grant-application': 'Funding and public art',
+};
+const category = frontmatter.category || categories[slug ?? ''] || (isPress ? 'Professional resource' : 'Artist stories');
+const sectionLabel = isPress ? 'Press & resources' : 'Artist stories';
+const sectionHref = isPress ? `${base}press/` : `${base}stories/`;
 ---
-<BaseLayout title={frontmatter.title} description={frontmatter.description} current="about">
+<BaseLayout title={frontmatter.title} description={frontmatter.description} type="article" current={isPress ? 'press' : 'stories'}>
   <article class="feature-article">
+    <div class="article-progress" aria-hidden="true"><span id="article-progress-fill"></span></div>
+    <nav class="article-breadcrumb" aria-label="Breadcrumb">
+      <a href={base}>Home</a><span aria-hidden="true">/</span>
+      <a href={sectionHref}>{sectionLabel}</a><span aria-hidden="true">/</span>
+      <span aria-current="page">{frontmatter.heading}</span>
+    </nav>
     <header class="page-hero feature-article-hero">
-      <span class="eyebrow">Grime Art / Street history / London</span>
-      <p class="article-meta">Charlie Buster · Leake Street Tunnel · London</p>
+      <span class="eyebrow">{category}</span>
+      <p class="article-meta">Charlie Buster · {sectionLabel}</p>
       <h1>{frontmatter.heading}</h1>
       <p>{frontmatter.description}</p>
     </header>
-    <div class="feature-article-body">
+    <details class="article-toc" id="article-toc" hidden>
+      <summary>On this page <span aria-hidden="true">+</span></summary>
+      <ol id="article-toc-list"></ol>
+    </details>
+    <div class="feature-article-body" id="article-content">
       <slot />
     </div>
+    <nav class="article-next" aria-label="More to explore">
+      <a class="inline-link" href={sectionHref}>← More {sectionLabel.toLowerCase()}</a>
+      <button type="button" id="article-copy-link" class="article-copy-link" aria-live="polite">Copy article link</button>
+      <a class="inline-link" href={`${base}about/`}>About Charlie Buster →</a>
+    </nav>
     <aside class="section cta-block">
       <div class="cta-block-inner">
         <span class="eyebrow">Original Grime Art</span>
@@ -20,12 +61,59 @@ const { frontmatter } = Astro.props;
         <p>Original canvases, hand-painted jackets, portraits, murals and one-of-one collector pieces.</p>
         <div class="cta-row">
           <a class="button primary" href="https://grimeartist.com/" rel="noopener noreferrer">Visit Grime Artist</a>
-          <a class="button secondary" href="/contact/">Contact NO BALL GAMES</a>
+          <a class="button secondary" href={`${base}contact/`}>Contact NO BALL GAMES</a>
         </div>
       </div>
     </aside>
   </article>
+  <script>
+    const fill = document.querySelector<HTMLElement>('#article-progress-fill');
+    const updateProgress = () => {
+      if (!fill) return;
+      const scrollMax = document.documentElement.scrollHeight - window.innerHeight;
+      const value = scrollMax > 0 ? Math.min(100, Math.max(0, (window.scrollY / scrollMax) * 100)) : 100;
+      fill.style.width = `${value}%`;
+    };
+    document.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+
+    const article = document.querySelector<HTMLElement>('#article-content');
+    const toc = document.querySelector<HTMLDetailsElement>('#article-toc');
+    const list = document.querySelector<HTMLOListElement>('#article-toc-list');
+    const headings = Array.from(article?.querySelectorAll<HTMLHeadingElement>('h2') || []);
+    if (toc && list && headings.length >= 3) {
+      for (const heading of headings) {
+        if (!heading.id) {
+          const slug = (heading.textContent || 'section').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+          heading.id = `section-${slug}-${list.children.length + 1}`;
+        }
+        const item = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = `#${heading.id}`;
+        link.textContent = heading.textContent || 'Section';
+        item.append(link);
+        list.append(item);
+      }
+      toc.hidden = false;
+    }
+
+    const shareButton = document.querySelector<HTMLButtonElement>('#article-copy-link');
+    shareButton?.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        shareButton.textContent = 'Link copied';
+      } catch {
+        shareButton.textContent = 'Copy unavailable';
+      }
+    });
+  </script>
   <style>
+    .article-breadcrumb { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; padding: 0 0 22px; font-size: .85rem; color: var(--muted); }
+    .article-breadcrumb a { color: var(--acid); }
+    .article-breadcrumb [aria-current] { overflow-wrap: anywhere; }
+    .article-progress { position: fixed; top: 0; left: 0; right: 0; z-index: 30; height: 3px; pointer-events: none; }
+    .article-progress > span { display: block; height: 100%; width: 0; background: var(--acid); }
     .feature-article-hero h1 { font-size: clamp(2.5rem, 5.5vw, 5.5rem); line-height: 1.04; overflow-wrap: break-word; }
     .article-meta { font-size: .88rem; letter-spacing: .08em; text-transform: uppercase; }
     .feature-article-body { width: min(100%, 860px); margin: 0 auto 50px; padding: 0 clamp(2px, 2vw, 20px); font-size: 1.075rem; line-height: 1.85; }
@@ -37,6 +125,17 @@ const { frontmatter } = Astro.props;
     .feature-article-body :global(hr) { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
     .feature-article-body :global(ul) { padding-left: 1.4rem; color: var(--muted); }
     .feature-article-body :global(li) { margin: .5rem 0; }
+    .article-toc { width: min(100%, 860px); margin: 0 auto 36px; padding: 16px 20px; border: 1px solid var(--line); border-radius: 20px; background: rgba(255,255,255,.045); }
+    .article-toc summary { cursor: pointer; color: var(--acid); font-weight: 900; }
+    .article-toc summary span { margin-left: .5rem; }
+    .article-toc ol { max-height: 260px; overflow-y: auto; margin-bottom: 0; padding-left: 1.3rem; }
+    .article-toc li { padding: .3rem 0; }
+    .article-toc a { color: var(--text); text-decoration: none; }
+    .article-toc a:hover { color: var(--acid); }
+    .feature-article-body :global(h2) { scroll-margin-top: 120px; }
+    .article-next { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin: 0 0 30px; }
+    .article-copy-link { border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px; background: rgba(255,255,255,.05); color: var(--acid); font: inherit; font-weight: 800; cursor: pointer; }
+    .article-copy-link:hover { border-color: var(--acid); }
     @media (max-width: 600px) { .feature-article-body { font-size: 1rem; } }
   </style>
 </BaseLayout>

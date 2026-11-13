@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+const stories = [
+  { type: 'Artist origins', title: 'Charlie Buster: Founder biography', description: 'From South London and Kent to Graffiti Kings, Grime Art and collector-led work.', slug: 'charlie-buster-biography/' },
+  { type: 'London graffiti', title: 'BUSTER at Leake Street Tunnel', description: 'The roof piece, the Banksy Tunnel and the street roots of a British visual language.', slug: 'leake-street-tunnel/' },
+  { type: 'UK rap & art', title: 'Central Cee — “Ungrateful”', description: 'The Grime Art canvas, the 23 era and contemporary British music visuals.', slug: 'central-cee-ungrateful-grime-art/' },
+  { type: 'UK music', title: 'Big Zuu — Ditto Music canvas', description: 'The creation and delivery story behind a Grime Art music portrait.', slug: 'big-zuu-grime-art-canvas/' },
+  { type: 'Art & hospitality', title: 'Gordon Ramsay — Lucky Cat', description: 'Hand-painted Lucky Cat objects and the unusual story surrounding the commission.', slug: 'gordon-ramsay-lucky-cat-charlie-buster/' },
+];
+---
+<BaseLayout
+  title="NO BALL GAMES Stories | Charlie Buster, Grime Art & Street Culture"
+  description="Explore Charlie Buster artist stories, Leake Street Tunnel graffiti, Grime Art music portraits, Lucky Cat commissions and the NO BALL GAMES creative world."
+  current="stories"
+>
+  <section class="page-hero">
+    <span class="eyebrow">The archive / The art / The people</span>
+    <h1>Stories behind the paint.</h1>
+    <p>No filler. Read about the artist, the walls, the music and the projects behind NO BALL GAMES and Charlie Buster's Grime Art.</p>
+    <div class="cta-row">
+      <a class="button primary" href={`${base}what-is-grime-art/`}>What is Grime Art?</a>
+      <a class="button secondary" href={`${base}charlie-buster-artist-timeline/`}>Artist timeline</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Artist features</h2>
+      <p>Individual stories, with their own dedicated pages — not five links back to About.</p>
+    </div>
+    <div class="card-grid">
+      {stories.map((story) => (
+        <article class="feature-card">
+          <span class="kicker">{story.type}</span>
+          <h3>{story.title}</h3>
+          <p>{story.description}</p>
+          <a class="inline-link" href={`${base}${story.slug}`}>Read this story →</a>
+        </article>
+      ))}
+      <article class="feature-card">
+        <span class="kicker">The movement</span>
+        <h3>What Is Grime Art?</h3>
+        <p>The full guide to the British street-born visual movement, its materials, its influences and its identity.</p>
+        <a class="inline-link" href={`${base}what-is-grime-art/`}>Read the Grime Art guide →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section cta-block">
+    <div class="cta-block-inner">
+      <span class="eyebrow">Explore further</span>
+      <h2>More than one story.</h2>
+      <p>Discover the wider brand, the artist's press materials and the XRP KIDs fictional universe.</p>
+      <div class="cta-row">
+        <a class="button primary" href={`${base}press/`}>Press &amp; gallery resources</a>
+        <a class="button secondary" href={`${base}xrp/`}>XRP KIDs</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
