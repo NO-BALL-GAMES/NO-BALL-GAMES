@@ -203,7 +203,7 @@ Participated in a contemporary group exhibition showcasing current works.
 Co-created and helped launch multiple NFT and blockchain projects including:
 
 - Graffiti Kings
-- Crypto Moon Boys & Girls
+- [Crypto Moonboys & Girls](/crypto-moonboys/) — the Graffiti Kings-connected WAX creator umbrella, character identities, wiki and game world
 - NoBallGames
 
 Contributed to launches generating approximately $3,000,000 USD in cumulative sales and helped achieve a world-record NFT sales milestone exceeding one million NFTs sold within a 24-hour period.
