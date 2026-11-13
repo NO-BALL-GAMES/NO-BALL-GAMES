@@ -108,13 +108,30 @@ The [Press hub](https://nbg1618.com/press/) provides the [official press kit](ht
 
 ---
 
+## BUILT TO BE FOUND. BUILT TO WORK.
+
+The site now includes a custom **NO PAGE GAMES** error page, article breadcrumbs, a reading-progress indicator, keyboard skip-navigation, reduced-motion support and a sitemap generated from the published pages.
+
+**Every production build checks the actual rendered website**, including internal links, local assets, unique page titles, descriptions, canonical URLs and exactly one H1 per page. Broken links or missing SEO essentials stop the build instead of silently going live.
+
+- `npm run check` — Astro and TypeScript diagnostics.
+- `npm run build` — production build, website audit and sitemap generation.
+- `npm run audit:site` — rerun the audit against an existing `dist/` directory.
+- `public/robots.txt` — points search engines at [sitemap.xml](https://nbg1618.com/sitemap.xml) after deployment.
+- `.github/workflows/validate.yml` — automatically validates pull requests.
+- `.github/dependabot.yml` — checks npm packages and GitHub Actions for updates weekly.
+
+The existing `.github/workflows/deploy.yml` handles publishing on pushes to `main`. A passing PR check is not the same as a successful production deployment.
+
+---
+
 ## UNDER THE BONNET
 
 This repository contains the NO BALL GAMES website, built with **[Astro](https://astro.build/)** and deployed to GitHub Pages at **[nbg1618.com](https://nbg1618.com/)**.
 
 ### Run locally
 
-Requires Node.js 18+ and npm.
+Use **Node.js 24** and npm to match GitHub Actions.
 
 ```bash
 npm ci
@@ -131,7 +148,7 @@ npm run build
 npm run preview
 ```
 
-The production build is generated in `dist/`. Astro's site URL is `https://nbg1618.com` and its base path is `/`.
+The audited production build is generated in `dist/`, including `sitemap.xml`. Astro's site URL is `https://nbg1618.com` and its base path is `/`.
 
 ### Project layout
 
