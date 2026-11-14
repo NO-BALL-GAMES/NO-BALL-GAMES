@@ -559,3 +559,8 @@ Yes. Charlie Buster accepts selected commissions for Grime Art canvases, portrai
 Public records for Charlie Buster include a [Saatchi Art profile](https://www.saatchiart.com/charliebuster) marked as joined in 2017, a [professional LinkedIn profile](https://uk.linkedin.com/in/charlie-buster-746872125), a [2023 third-party artist feature](https://medium.com/@YourDailyDoseOfArt/uk-street-artist-charlie-buster-is-quickly-becoming-one-of-the-worlds-most-sought-after-visual-9d41c8c6dd9f), and a [2025 Graffiti Kings/GKniftyHEADS retrospective](https://medium.com/@GKniftyHEADS/street-artist-buster-aka-charlie-buster-5b72b55be5b3).
 
 These references document public descriptions of the artist; they do not independently settle conflicting biographical details or every commission claim. Explore the [full linked source archive](/charlie-buster-online-archive/) and the [2018–2019 painting catalogue](/charlie-buster-early-works/).
+
+
+## Related Graffiti Kings source records
+
+The separate [Graffiti Kings Grime Art history](https://graffitikings.com/pages/charlie-buster-grime-art-history.html) connects Charlie's physical works and studio background to dated art listings and public records. Its [Charlie Buster source directory](https://graffitikings.com/pages/charlie-buster-source-network.html) groups artist-authored accounts, third-party catalogues, project material and social links by provenance. Both are connected project-maintained archives, not independent verification of every autobiographical claim.

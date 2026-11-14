@@ -83,6 +83,19 @@ const collections: ArchiveGroup[] = [
       { title: 'Crypto Moonboys — Project Wiki', date: 'Official project wiki', type: 'Creator-group reference', summary: 'Context for Graffiti Kings, GKniftyHEADS, WAX art, identity routes and connected creative worlds.', url: 'https://cryptomoonboys.com/wiki/crypto-moonboys.html' },
     ],
   },
+  {
+    id: 'graffiti-kings-companion',
+    kicker: 'Related archive / Reciprocal links',
+    heading: 'THE GRAFFITI KINGS CONNECTION.',
+    introduction: 'The connected Graffiti Kings wiki holds supplementary, source-labelled histories and project directories. These are project-maintained cross-references, not independent audits of biographies, token balances or future claims.',
+    sources: [
+      { title: 'Charlie Buster — Grime Art and original artworks', date: 'Related archive', type: 'Project-maintained history', summary: 'Links Charlie’s original paintings, Grime Art terminology and public artist sources, distinguishing catalogued works from promotional biography.', url: 'https://graffitikings.com/pages/charlie-buster-grime-art-history.html' },
+      { title: 'NO BALL GAMES — WAX and XRP KIDs', date: 'Related archive', type: 'Project-maintained source guide', summary: 'Separates the WAX $NBG token proposal, noballgamess NFT collection, XRPL assets and fictional 2035 story.', url: 'https://graffitikings.com/pages/charlie-buster-no-ball-games-nbg.html', internal: 'xrp/', link: 'XRP KIDs on this site' },
+      { title: 'TREEF — linked regeneration concepts', date: 'Related archive', type: 'Source-qualified project record', summary: 'Records the public TREEF/Substack connection without claiming an operating engineering installation or verified ecological outcome.', url: 'https://graffitikings.com/pages/charlie-buster-treef-project.html' },
+      { title: 'Charlie Buster — linked web, press and social directory', date: 'Related archive', type: 'Curated source index', summary: 'Complementary cross-site directory of art catalogues, NO BALL GAMES pages, published fiction, markets and social profile leads.', url: 'https://graffitikings.com/pages/charlie-buster-source-network.html' },
+      { title: 'Graffiti Kings — SER, commissions and press', date: 'Related archive', type: 'Historical source directory', summary: 'Connects the Graffiti Kings movement to interviews, exhibitions and independently published press with claim-level limitations.', url: 'https://graffitikings.com/pages/graffiti-kings-web-network.html' },
+    ],
+  },
 ];
 const sourceCount = collections.reduce((count, group) => count + group.sources.length, 0);
 ---

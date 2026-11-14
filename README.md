@@ -194,3 +194,10 @@ Internal links use `import.meta.env.BASE_URL` where needed. Shared header and fo
 **THEY PUT UP A SIGN. WE BUILT EVERYTHING BEHIND IT.**
 
 [**NBG1618.COM**](https://nbg1618.com/) · [**GRIMEARTIST.COM**](https://grimeartist.com/)
+
+
+## Reciprocal Graffiti Kings archive links
+
+The NO BALL GAMES site links to its related, project-maintained [Graffiti Kings wiki](https://graffitikings.com/), with deeper sources for [Charlie Buster’s Grime Art artwork](https://graffitikings.com/pages/charlie-buster-grime-art-history.html), [NO BALL GAMES’ separate WAX/XRPL records](https://graffitikings.com/pages/charlie-buster-no-ball-games-nbg.html), and the [Charlie Buster source network](https://graffitikings.com/pages/charlie-buster-source-network.html). These references are complementary, not independent certification of artist claims, token balances, or story-lore events.
+
+The reciprocal-link PR adds 22 contextual destinations across nine published pages. `npm run audit:reciprocal` checks their exact route paths and duplicate placements against a fixed allowlist derived from the Graffiti Kings sitemap. It does **not** make live HTTP requests or claim Google indexing. The normal `npm run build` still runs the internal link and metadata audit, and the existing PR validation workflow runs both checks. If GK renames or removes a page, review both sites and update the allowlist deliberately.
