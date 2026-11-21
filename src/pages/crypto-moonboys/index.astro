@@ -5,61 +5,62 @@ const base = import.meta.env.BASE_URL;
 const layers = [
   {
     number: '01',
-    title: 'Graffiti Kings → GKniftyHEADS',
-    text: 'The street-culture foundation and a major character and WAX collection architecture. The tag becomes an identity; the crew becomes a connected creative community.',
-    href: 'https://cryptomoonboys.com/wiki/crypto-moonboys.html',
-    label: 'Explore the foundations',
+    title: 'Graffiti Kings / GKniftyHEADS',
+    text: 'More than four decades of Graffiti Kings culture underpin the public creator umbrella. GKniftyHEADS is the leading Moonboy identity foundation; characters and collections are not the entire mission.',
+    href: 'https://cryptomoonboys.com/about/',
+    label: 'Read the current mission',
   },
   {
     number: '02',
-    title: 'Moonboys, Flygirls & factions',
-    text: 'Develop characters and a world around them. The fictional Year 3008 setting has forty faction cultures; the live selectable options follow the project’s current directory, not the entire lore roster.',
-    href: 'https://cryptomoonboys.com/gkniftyheads-incubator.html',
-    label: 'Meet the identity incubator',
+    title: 'Two paths / One connected universe',
+    text: 'Build a GK Moonboy or Fly Girl world, or keep your original character, art, band, business or brand and develop its unique lore inside the same universe. No compulsory NFT, Moonboy or Arcade gate for existing IP.',
+    href: 'https://cryptomoonboys.com/ai-user.html',
+    label: 'Start the creator journey',
   },
   {
     number: '03',
-    title: 'Arcade, Telegram & MoonPets',
-    text: 'Games, missions, factions, MoonPet and community participation provide optional ways to engage. Verified Telegram identity, accepted activity and current game rules govern persistent XP and eligibility.',
-    href: 'https://cryptomoonboys.com/my-moonboy.html',
-    label: 'Explore My Moonboy',
+    title: 'The public SPARKY starter',
+    text: 'The public Creator Studio offers a portable campaign brief for ChatGPT, Claude, Gemini, Grok, Copilot or another capable AI. The website does not host a running SWARMSY chatbot, and project files do not synchronise automatically.',
+    href: 'https://cryptomoonboys.com/ai-user.html',
+    label: 'Open the public AI starter',
   },
   {
     number: '04',
-    title: 'SWARMSY & creator tools',
-    text: 'The public ChatGPT Creator Studio helps people begin a creative project. SWARMSY is a separate, optional PC beta for creator planning and project context—not a chatbot hosted on the public site.',
-    href: 'https://cryptomoonboys.com/gpt-users.html',
-    label: 'Open the Creator Studio',
+    title: 'SWARMSY PC / Private creator work',
+    text: 'SWARMSY is a separate, optional PC beta built on an AnythingLLM foundation. SPARKY helps with positioning, planning, approved truths and proof review; a local model or user-configured API must actually be installed or connected.',
+    href: 'https://cryptomoonboys.com/swarmsy.html',
+    label: 'Understand the optional PC beta',
   },
   {
     number: '05',
-    title: 'WAX artwork & digital ownership',
-    text: 'NFTs can record specific editions, provenance and ownership on WAX. Any commercial licence or royalty arrangement applies only to qualifying assets under their published terms—not automatically to every NFT.',
-    href: 'https://cryptomoonboys.com/wiki/crypto-moonboys.html',
-    label: 'Read the ownership context',
+    title: 'Games, factions, WAX and real rights',
+    text: 'Telegram-linked participation, Arcade, Battle Chamber, MoonPet and Block Topia are supporting layers with their own rules. WAX assets can record provenance; only qualifying 1/1 character licences have the published commercial rights.',
+    href: 'https://cryptomoonboys.com/my-moonboy.html',
+    label: 'Explore current participation',
   },
   {
     number: '06',
-    title: 'The living wiki & Year 3008',
-    text: 'The public wiki connects creators, factions, artefacts and stories. Block Topia, the forty-faction civilisation and Year 3008 form a science-fiction setting, not a record of real-world events.',
+    title: 'Public wiki / Year 3008 canon',
+    text: 'The living wiki keeps creator references and fictional history distinct. Its current story has the All City Bulls, Nomad Bears, Bitcoin Kid Army and GKniftyHEADS command; Army membership and HODL musters are not separate GK street factions.',
     href: 'https://cryptomoonboys.com/wiki/crypto-moonboys.html',
-    label: 'Read the wiki overview',
+    label: 'Read the current story',
   },
 ];
-
 const sources = [
   { label: 'Official Crypto Moonboys website', href: 'https://cryptomoonboys.com/' },
-  { label: 'Crypto Moonboys — official wiki overview', href: 'https://cryptomoonboys.com/wiki/crypto-moonboys.html' },
+  { label: 'Current mission — What is Crypto Moonboys?', href: 'https://cryptomoonboys.com/about/what-is-crypto-moonboys.html' },
+  { label: 'Public SPARKY creator starter — any browser AI', href: 'https://cryptomoonboys.com/ai-user.html' },
+  { label: 'Current SPARKY creator-campaign guide', href: 'https://cryptomoonboys.com/guides/sparky/creator-campaign.md' },
+  { label: 'SWARMSY PC beta — separate private workspace', href: 'https://cryptomoonboys.com/swarmsy.html' },
+  { label: 'Crypto Moonboys — official fictional wiki overview', href: 'https://cryptomoonboys.com/wiki/crypto-moonboys.html' },
+  { label: 'Current November 2026 canon and brand vision', href: 'https://cryptomoonboys.com/about/latest-canon-and-brand-vision.md' },
   { label: 'Charlie Buster — Crypto Moonboys wiki', href: 'https://cryptomoonboys.com/wiki/charlie-buster.html' },
-  { label: 'Project background and creator routes', href: 'https://cryptomoonboys.com/about/' },
-  { label: 'Graffiti Kings companion wiki — connected project identities', href: 'https://graffitikings.com/pages/crypto-moonboys-gkniftyheads-network.html' },
-  { label: 'Graffiti Kings — historic WAX collection identifiers', href: 'https://graffitikings.com/pages/graffiti-kings-wax-nft-collections.html' },
-  { label: 'Graffiti Kings — press and art-source archive', href: 'https://graffitikings.com/pages/graffiti-kings-web-network.html' },
+  { label: 'Graffiti Kings companion archive', href: 'https://graffitikings.com/pages/crypto-moonboys-gkniftyheads-network.html' },
 ];
 ---
 <BaseLayout
   title="Crypto Moonboys | Graffiti Kings, WAX & Creator Worlds — NO BALL GAMES"
-  description="Explore Crypto Moonboys, Graffiti Kings’ connected creator universe: GKniftyHEADS, WAX NFTs, Moonboys and Flygirls, SWARMSY, Arcade, Charlie Buster and NO BALL GAMES."
+  description="Current Crypto Moonboys mission: two creator-owned worldbuilding routes, SPARKY with any browser AI, optional SWARMSY PC, WAX, Graffiti Kings and the updated Year 3008 fiction."
   current="more"
 >
   <section class="page-hero moonboys-hero">
@@ -68,11 +69,12 @@ const sources = [
       <span class="moonboys-coordinate">THE WALL → THE WORLD</span>
     </div>
     <h1>CRYPTO <span class="moonboys-highlight">MOONBOYS</span></h1>
-    <p class="moonboys-lead">Graffiti culture went digital. The mission stayed the same: <strong>build an identity, make your mark and give your ideas a world of their own.</strong></p>
-    <p>Crypto Moonboys is the wider <strong>Graffiti Kings creator umbrella</strong>—connecting street-art heritage, GKniftyHEADS, character-led worldbuilding, WAX collectibles, a public wiki, optional games and AI-supported creative work. NO BALL GAMES is one of the distinct artist-led projects connected to that culture.</p>
+    <p class="moonboys-lead">ONE UNIVERSE. <strong>YOUR IP OR OURS. BUILD CONNECTED WORLDS TOGETHER.</strong></p>
+    <p>Crypto Moonboys is the <strong>Graffiti Kings public creator umbrella</strong> for identity, visibility, ownership, proof, community and creative momentum. Build a new GK Moonboy or Fly Girl sub-world, or bring your own IP and unique lore into the same shared universe. The website, wiki, game layers, WAX assets and AI tools support that mission; none of them defines the whole project.</p>
+    <p>Charlie Buster’s NO BALL GAMES is an independent artist-led identity with shared Graffiti Kings roots. Its XRP KIDs world is a separate XRPL project, not another name for the WAX Moonboys.</p>
     <div class="cta-row">
       <a class="button primary" href="https://cryptomoonboys.com/" target="_blank" rel="noopener noreferrer">Enter Crypto Moonboys ↗</a>
-      <a class="button secondary" href="https://cryptomoonboys.com/wiki/crypto-moonboys.html" target="_blank" rel="noopener noreferrer">Explore the official wiki ↗</a>
+      <a class="button secondary" href="https://cryptomoonboys.com/ai-user.html" target="_blank" rel="noopener noreferrer">Start with any browser AI ↗</a>
     </div>
     <div class="moonboys-strip" aria-label="The Crypto Moonboys approach">
       <span>STREET ART</span><span>IDENTITY</span><span>WAX</span><span>GAMES</span><span>AI</span><span>WORLD-BUILDING</span>
@@ -82,7 +84,7 @@ const sources = [
   <section class="section">
     <div class="section-header">
       <h2>Not just an NFT collection.</h2>
-      <p>The project describes itself as a creator movement rather than one token, game or marketplace. Each part has a different purpose.</p>
+      <p>The current mission is helping creators turn a name, character or existing idea into a recognisable public identity, supported by original work, proof and sustained action. The token, game and AI layers are optional tools.</p>
     </div>
     <div class="split-grid">
       <article class="panel-card">
@@ -93,9 +95,9 @@ const sources = [
       </article>
       <article class="panel-card">
         <span class="kicker">The bigger creative idea</span>
-        <h3>Your IP or ours. One connected universe.</h3>
-        <p>The character, wiki, game and blockchain layers are intended to help creators develop recognisable work in public. You can take a new Moonboy or Flygirl identity, or bring your own artwork, brand, project or characters into the shared universe.</p>
-        <p>Creative work and approved decisions remain with the creator. Shared publication and official lore still follow the community’s review rules; an NFT purchase is not required to use the existing-identity route.</p>
+        <h3>Your IP or ours. Build worlds together.</h3>
+        <p>Both routes build connected creator worlds. Start with a GK Moonboy or Fly Girl identity you have the rights to use, or preserve your own artist name, character, business, product or brand and connect its unique story to the universe with your approval.</p>
+        <p>You direct the identity, work and approved story connections. You keep the IP you bring; using a GK character follows its published licence. An original-IP creator does not need an NFT, a wallet, Telegram login, Arcade XP or a Moonboy to begin. Official shared lore is reviewed, not automatically accepted.</p>
       </article>
     </div>
   </section>
@@ -103,24 +105,24 @@ const sources = [
   <section class="section">
     <div class="section-header">
       <h2>Two ways to build.</h2>
-      <p>The entry route depends on what you want to create—not on whether you already own a token.</p>
+      <p>Both paths join the same Crypto Moonboys world. Choose a new character or retain your existing IP; neither requires a hosted chatbot or a guaranteed reward.</p>
     </div>
     <div class="project-grid">
       <article class="feature-card moonboys-route">
         <span class="moonboys-step" aria-hidden="true">01</span>
         <span class="kicker">Start with a GK character</span>
         <h3>Build a Moonboy or Flygirl world.</h3>
-        <p>Give a character a name, visual identity, personality and story. Where supported, join a faction, link your Telegram identity, explore the Arcade and develop the character’s place in the wider world.</p>
-        <p>Ownership, progression and qualifying 1/1 licensing are governed by current published eligibility and terms—not by an automatic promise attached to every character.</p>
-        <a class="inline-link" href="https://cryptomoonboys.com/gkniftyheads-incubator.html" target="_blank" rel="noopener noreferrer">Explore the Moonboy route ↗</a>
+        <p>Start with one GK Moonboy or Fly Girl identity you have permission to use. Name the character and clan, develop a distinct emblem and a short story, then make original art and a recognisable public signal. Optional game, faction and Telegram participation are separate from this creative first step.</p>
+        <p>Creative drafts do not prove a qualifying 1/1 licence or HODL Warrior status. Asset-specific ownership, commercial terms, progression and game rewards must be checked against the published rules and live eligibility.</p>
+        <a class="inline-link" href="https://cryptomoonboys.com/ai-user.html" target="_blank" rel="noopener noreferrer">Start a character and faction with SPARKY ↗</a>
       </article>
       <article class="feature-card moonboys-route">
         <span class="moonboys-step" aria-hidden="true">02</span>
         <span class="kicker">Keep the identity you already have</span>
         <h3>Bring your own IP.</h3>
-        <p>Artist, musician, filmmaker, designer, business, character or creative project: keep your identity and develop its own world and lore inside the Crypto Moonboys universe.</p>
-        <p>Start with the public Creator Studio. The separate SWARMSY PC beta can assist with planning and continuity if you choose to install it. Human approval and rights boundaries still determine what gets published.</p>
-        <a class="inline-link" href="https://cryptomoonboys.com/gpt-users.html" target="_blank" rel="noopener noreferrer">Open the public Creator Studio ↗</a>
+        <p>Already an artist, graffiti writer, musician, filmmaker, designer, photographer, product maker or business? Keep your identity and ownership. Develop its own story, message, assets and proposed connections to the wider Crypto Moonboys universe.</p>
+        <p>Start with the public, portable SPARKY brief and your chosen browser AI—or create manually. SWARMSY PC is an optional separate beta, not a website-hosted AI. The user approves publication and the community reviews additions to shared canon.</p>
+        <a class="inline-link" href="https://cryptomoonboys.com/ai-user.html" target="_blank" rel="noopener noreferrer">Open the current public SPARKY starter ↗</a>
       </article>
     </div>
   </section>
@@ -156,7 +158,7 @@ const sources = [
       <span class="kicker">Independent worlds / Shared history</span>
       <h2>Related. Not identical.</h2>
       <div class="moonboys-brand-list">
-        <p><strong>Crypto Moonboys:</strong> Graffiti Kings’ broad creator umbrella, WAX-linked collections, community participation, characters and Year 3008 fiction.</p>
+        <p><strong>Crypto Moonboys:</strong> Graffiti Kings’ public creator umbrella for building identities, visibility, proof, community and worlds. WAX characters, the wiki, public SPARKY starter, games and Year 3008 fiction are supporting layers.</p>
         <p><strong>NO BALL GAMES:</strong> Charlie Buster’s distinct art and street-culture identity, painted work, sign-flip projects and connected digital initiatives.</p>
         <p><strong>XRP KIDs:</strong> Charlie-associated XRPL Genesis artwork with its own separate fictional character universe and lore. It is not the same as GKniftyHEADS or the Moonboy WAX collections.</p>
       </div>
@@ -168,14 +170,14 @@ const sources = [
     <div class="moonboys-disclosure">
       <span class="kicker">Ownership / Live features / Fiction</span>
       <h3>Different layers. Different rules.</h3>
-      <p>WAX assets and XRP Ledger assets are separate. NFT ownership does not automatically transfer copyright, brand rights, royalties or access to future features. The project’s special 1/1 character-licence arrangements apply only when an asset qualifies under its published terms. Games, XP, Telegram missions, reward paths and creator tools can have different current availability. The Year 3008 universe is fiction, not an on-chain transaction history or financial forecast.</p>
+      <p>WAX assets and XRP Ledger assets are separate. Creators keep the original IP they bring; GK character use follows an applicable published licence. NFT ownership alone does not transfer copyright, all brand rights, guaranteed royalties or access to future features. Qualifying 1/1 character rights are asset-specific. Telegram missions, XP, rewards and game features depend on current rules and deployment status. The Year 3008 story is fiction—not real financial transactions, actual military command, or a forecast. Public SPARKY runs in your chosen browser AI; SWARMSY PC does not automatically synchronise projects with it.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="section-header">
       <h2>Follow the source.</h2>
-      <p>Official Crypto Moonboys material and related project-maintained Graffiti Kings source archives. These archives document context; they do not independently certify reward status, ownership rights or on-chain claims. Check live product terms before taking part.</p>
+      <p>Updated against the current Crypto Moonboys mission, 20 November 2026 SPARKY workflow, and the 16 November 2026 approved fictional command structure. Source pages document project direction; they are not evidence of every live reward, commercial entitlement or deployed feature.</p>
     </div>
     <div class="project-grid">
       {sources.map((source) => (
