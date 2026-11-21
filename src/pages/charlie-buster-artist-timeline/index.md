@@ -203,7 +203,7 @@ Participated in a contemporary group exhibition showcasing current works.
 Co-created and helped launch multiple NFT and blockchain projects including:
 
 - Graffiti Kings
-- [Crypto Moonboys & Girls](/crypto-moonboys/) — the Graffiti Kings-connected WAX creator umbrella, character identities, wiki and game world
+- [Crypto Moonboys & Girls](/crypto-moonboys/) — the Graffiti Kings-connected public creator umbrella: new GK character worlds **or** existing creator-owned IP, supported by public SPARKY guidance, a shared wiki, WAX character collections and optional games. Its current creator mission is broader than an NFT or game project. See the [current official mission](https://cryptomoonboys.com/about/what-is-crypto-moonboys.html).
 - NoBallGames
 
 Contributed to launches generating approximately $3,000,000 USD in cumulative sales and helped achieve a world-record NFT sales milestone exceeding one million NFTs sold within a 24-hour period.
